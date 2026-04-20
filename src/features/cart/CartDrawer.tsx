@@ -44,7 +44,7 @@ export function CartDrawer({ open, onOpenChange, productMap }: Props) {
       )
     : '#';
 
-  const basePath = locale === 'en' ? '/en' : '';
+  const basePath = '';
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>

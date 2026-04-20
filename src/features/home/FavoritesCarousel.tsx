@@ -13,7 +13,7 @@ export async function FavoritesCarousel({ locale, products }: Props) {
   if (products.length === 0) return null;
   const t = await getTranslations({ locale, namespace: 'home' });
   const tn = await getTranslations({ locale, namespace: 'nav' });
-  const basePath = locale === 'en' ? '/en' : '';
+  const basePath = '';
 
   return (
     <section className="py-16 md:py-24">

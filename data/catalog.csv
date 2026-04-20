@@ -256,3 +256,9 @@ P254,barramesa-fapsa,Barramesa Fapsa,Fapsa Counter Napkin,higiene,higienicos,27,
 P255,cubreboca-adulto-50pz,Cubreboca Adulto Desechable 50 pz,Adult Disposable Face Mask 50 pc,higiene,higienicos,5,cubreboca;adulto,true,false
 P256,cubreboca-infantil-50pz,Cubreboca Infantil Desechable 50 pz,Kids Disposable Face Mask 50 pc,higiene,higienicos,3,cubreboca;infantil,true,false
 P257,cofias,Cofias,Hair Nets,higiene,higienicos,2.5,cofias;desechable,true,false
+P258,cono-senalizacion,Cono de Señalización,Safety Cone,jarceria,accesorios,96,cono;senalizacion;seguridad,true,false
+P259,cesto-azul,Cesto Azul,Blue Bin,jarceria,accesorios,89,cesto;azul;basura,true,false
+P260,guante-quirurgico,Guante Quirúrgico Desechable,Disposable Surgical Glove,jarceria,guantes,180,guante;quirurgico;desechable,true,false
+P261,pinza-chica,Pinza Chica (12 pzas),Small Clothespins (12 pc),jarceria,accesorios,20,pinza;chica;12piezas,true,false
+P262,varios-pegamoscas,Pegamoscas,Fly Paper Trap,varios,varios,16,pegamoscas;trampa;moscas,true,false
+P263,escoba-hilaza,Escoba Hilaza,Hilaza Broom,jarceria,escobas,58,escoba;hilaza,true,false

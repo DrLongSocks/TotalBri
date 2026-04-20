@@ -15,7 +15,7 @@ export async function CollectionRail({ locale, products, category }: Props) {
   const t = await getTranslations({ locale, namespace: 'home' });
   const tn = await getTranslations({ locale, namespace: 'nav' });
   const meta = CATEGORY_META[category];
-  const basePath = locale === 'en' ? '/en' : '';
+  const basePath = '';
 
   if (products.length === 0) return null;
 

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import type { Locale } from '@/domain/i18n/config';
 import { cn } from '@/lib/cn';
@@ -8,33 +9,51 @@ type Props = {
   className?: string;
 };
 
-export function Logo({ locale, tone = 'ink', className }: Props) {
-  const href = locale === 'en' ? '/en' : '/';
+export function Logo({ locale: _locale, tone = 'ink', className }: Props) {
+  const href = '/';
   return (
     <Link
       href={href}
       aria-label="Total Bri"
-      className={cn('flex items-center gap-2 font-display text-xl font-semibold', className)}
+      className={cn('flex items-center gap-2.5', className)}
     >
-      <span className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-full">
-        <svg viewBox="0 0 40 40" className="h-full w-full" aria-hidden>
-          <defs>
-            <linearGradient id="logogrd" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#14B8A6" />
-              <stop offset="100%" stopColor="#0B6BCB" />
-            </linearGradient>
-          </defs>
-          <circle cx="20" cy="20" r="19" fill="url(#logogrd)" />
-          <path
-            d="M20 10 C24 16, 28 20, 20 30 C12 20, 16 16, 20 10 Z"
-            fill="white"
-            opacity="0.95"
-          />
-        </svg>
-      </span>
-      <span className={cn(tone === 'paper' ? 'text-paper' : 'text-ink', 'leading-none')}>
-        Total <span className="italic">Bri</span>
-      </span>
+      <Image
+        src="/logo.png"
+        alt="Total Bri"
+        width={56}
+        height={56}
+        className="h-14 w-14 object-contain"
+        priority
+      />
+      <div className="text-left leading-none">
+        <div
+          className={cn(
+            'font-display text-[28px] font-extrabold uppercase tracking-wide leading-none',
+            tone === 'paper' ? 'text-paper' : 'text-ink',
+          )}
+        >
+          Total Bri
+        </div>
+        <div
+          className="mt-0.5 text-[9px] font-semibold uppercase tracking-[0.12em] leading-[1.5]"
+          style={{
+            background:
+              tone === 'paper'
+                ? 'linear-gradient(90deg, #a0b4c8 0%, #ffffff 40%, #cce8f0 60%, #a0b4c8 100%)'
+                : 'linear-gradient(90deg, #4a6a8a 0%, #0fb3ac 40%, #7ec8d0 60%, #4a6a8a 100%)',
+            backgroundSize: '200% auto',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            animation: 'metallic-sweep 3.5s linear infinite',
+            width: '100%',
+            textAlign: 'justify',
+            textAlignLast: 'justify',
+          }}
+        >
+          Brillo en tu empresa.<br />Brillo en tu hogar.
+        </div>
+      </div>
     </Link>
   );
 }

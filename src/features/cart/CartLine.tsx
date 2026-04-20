@@ -23,7 +23,7 @@ export function CartLine({ line, product, locale }: Props) {
   const remove = useCartStore((s) => s.remove);
 
   const atMax = line.quantity >= MAX_QTY;
-  const basePath = locale === 'en' ? '/en' : '';
+  const basePath = '';
   const productImage = product.images[0] ?? '';
 
   return (

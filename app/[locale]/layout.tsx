@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { MobileBottomNav } from '@/components/layout/MobileNav';
 import { CartDrawerProvider } from '@/features/cart/CartDrawerProvider';
 import { isLocale, LOCALES } from '@/domain/i18n/config';
 import { getAllProducts } from '@/domain/product/repository';
@@ -24,14 +25,8 @@ export async function generateMetadata({ params }: LayoutProps): Promise<Metadat
   return {
     title: { default: `Total Bri — ${t('tagline')}`, template: '%s · Total Bri' },
     description: t('tagline'),
-    alternates: {
-      languages: {
-        es: '/',
-        en: '/en',
-      },
-    },
     openGraph: {
-      locale: locale === 'es' ? 'es_MX' : 'en_US',
+      locale: 'es_MX',
       siteName: 'Total Bri',
     },
   };
@@ -51,11 +46,12 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
         >
-          Skip to content
+          Ir al contenido
         </a>
         <Header locale={locale} />
         <main id="main">{children}</main>
         <Footer locale={locale} />
+        <MobileBottomNav />
       </CartDrawerProvider>
     </NextIntlClientProvider>
   );

@@ -1,25 +1,37 @@
 @import 'tailwindcss';
 
-@theme {
-  --color-ink: #0a2540;
-  --color-ink-soft: #1e3a5f;
-  --color-azure: #0b6bcb;
-  --color-azure-deep: #074a8f;
-  --color-teal: #14b8a6;
-  --color-teal-soft: #5eead4;
-  --color-porcelain: #f6f9fc;
-  --color-paper: #ffffff;
-  --color-mist: #e3ecf5;
-  --color-slate: #5b6b7f;
-  --color-sale: #dc2626;
+@keyframes shine-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
 
-  --shadow-card: 0 1px 2px rgb(10 37 64 / 0.04);
-  --shadow-card-hover: 0 12px 32px -8px rgb(10 37 64 / 0.12);
-  --shadow-drawer: -24px 0 48px -12px rgb(10 37 64 / 0.18);
+@keyframes metallic-sweep {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@theme {
+  --color-ink: #122C4C;
+  --color-ink-soft: #0B1F3A;
+  --color-azure: #0FB3AC;
+  --color-azure-deep: #0CA09A;
+  --color-teal: #00d9a0;
+  --color-teal-soft: #7eeedd;
+  --color-porcelain: #ECE8DE;
+  --color-paper: #F6F3EC;
+  --color-card: #ffffff;
+  --color-mist: #d0f0f2;
+  --color-slate: #7A8599;
+  --color-sale: #dc2626;
+  --color-line: rgba(18, 44, 76, 0.10);
+
+  --shadow-card: 0 1px 2px rgb(18 44 76 / 0.06);
+  --shadow-card-hover: 0 10px 30px -4px rgb(18 44 76 / 0.12);
+  --shadow-drawer: -24px 0 48px -12px rgb(18 44 76 / 0.18);
 
   --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
 
-  --font-display: 'Fraunces', 'Instrument Serif', Georgia, serif;
+  --font-display: 'Barlow Condensed', Impact, sans-serif;
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -41,6 +53,10 @@
     font-family: var(--font-sans);
     font-feature-settings: 'ss01', 'cv11';
   }
+
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: rgba(18,44,76,0.2); border-radius: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
 
   ::selection {
     background: color-mix(in srgb, var(--color-azure) 30%, transparent);
@@ -71,24 +87,27 @@
   font-family: var(--font-display);
   font-size: clamp(3rem, 7vw, 7.5rem);
   line-height: 0.95;
-  letter-spacing: -0.02em;
-  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 @utility display-l {
   font-family: var(--font-display);
   font-size: clamp(2.25rem, 4.5vw, 4rem);
   line-height: 1;
-  letter-spacing: -0.02em;
-  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 @utility display-m {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 2.2vw, 2rem);
   line-height: 1.1;
-  letter-spacing: -0.015em;
-  font-weight: 500;
+  letter-spacing: 0;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 @utility eyebrow {

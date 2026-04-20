@@ -37,7 +37,7 @@ export function ProductGallery({ product, locale }: Props) {
               key={`${img}-${i}`}
               type="button"
               onClick={() => setActive(i)}
-              aria-label={`Image ${i + 1}`}
+              aria-label={`Imagen ${i + 1}`}
               className={cn(
                 'relative h-20 w-20 overflow-hidden rounded-lg border bg-porcelain',
                 i === active ? 'border-ink' : 'border-mist',

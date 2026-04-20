@@ -27,7 +27,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
 
   const { q = '' } = await searchParams;
   const t = await getTranslations({ locale, namespace: 'search' });
-  const base = locale === 'en' ? '/en' : '';
+  const base = '';
 
   const results = q ? filterProducts({ search: q }) : [];
 

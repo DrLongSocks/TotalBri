@@ -1,12 +1,18 @@
 import { z } from 'zod';
 
 export const CategoryEnum = z.enum([
-  'limpieza-hogar',
-  'lavanderia',
-  'higiene',
-  'jarceria',
-  'automotriz',
+  'detergentes',
+  'suavizantes',
+  'limpiadores-pisos',
+  'desinfectantes',
+  'linea-automotriz',
+  'desengrasantes',
   'aromatizantes',
+  'jarceria',
+  'trapeadores',
+  'escobas',
+  'despachadores',
+  'higienicos',
   'varios',
 ]);
 
@@ -28,6 +34,7 @@ export const ProductSchema = z.object({
   tags: z.array(z.string()),
   inStock: z.boolean(),
   featured: z.boolean(),
+  unit: z.enum(['litro', 'pieza']),
 });
 
 export type Product = z.infer<typeof ProductSchema>;

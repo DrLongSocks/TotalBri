@@ -2,17 +2,15 @@
 
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import type { Locale } from '@/domain/i18n/config';
 
 export function SearchInput({ defaultValue = '' }: { defaultValue?: string }) {
   const t = useTranslations('search');
   const [q, setQ] = useState(defaultValue);
   const router = useRouter();
-  const locale = useLocale() as Locale;
-  const basePath = locale === 'en' ? '/en' : '';
+  const basePath = '';
 
   return (
     <form

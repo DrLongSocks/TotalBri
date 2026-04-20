@@ -27,7 +27,7 @@ export function SearchDialog({ open, onOpenChange }: Props) {
   const [query, setQuery] = useState('');
   const search = useSearch(products);
   const router = useRouter();
-  const basePath = locale === 'en' ? '/en' : '';
+  const basePath = '';
 
   const results = useMemo(() => search(query), [query, search]);
 

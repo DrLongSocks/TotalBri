@@ -18,7 +18,7 @@ export function AnnouncementBar() {
   return (
     <div
       role="region"
-      aria-label="Announcements"
+      aria-label="Anuncios"
       className="bg-ink text-paper"
     >
       <div className="container-shell flex h-9 items-center justify-center overflow-hidden text-[11px] uppercase tracking-[0.15em]">

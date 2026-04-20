@@ -34,7 +34,7 @@ export function ScrollRail({ children, className, arrows = true, ariaLabel }: Pr
         <div className="pointer-events-none absolute inset-y-0 hidden w-full items-center justify-between px-2 md:flex">
           <button
             type="button"
-            aria-label="Previous"
+            aria-label="Anterior"
             onClick={() => scroll('l')}
             className="pointer-events-auto flex h-10 w-10 items-center justify-center rounded-full bg-paper/90 text-ink shadow-[var(--shadow-card)] backdrop-blur transition hover:shadow-[var(--shadow-card-hover)]"
           >
@@ -42,7 +42,7 @@ export function ScrollRail({ children, className, arrows = true, ariaLabel }: Pr
           </button>
           <button
             type="button"
-            aria-label="Next"
+            aria-label="Siguiente"
             onClick={() => scroll('r')}
             className="pointer-events-auto flex h-10 w-10 items-center justify-center rounded-full bg-paper/90 text-ink shadow-[var(--shadow-card)] backdrop-blur transition hover:shadow-[var(--shadow-card-hover)]"
           >

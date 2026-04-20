@@ -18,7 +18,7 @@ export function productJsonLd(product: Product, locale: Locale) {
       availability: product.inStock
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
-      url: `${env.NEXT_PUBLIC_SITE_URL}${locale === 'en' ? '/en' : ''}/producto/${product.slug}`,
+      url: `${env.NEXT_PUBLIC_SITE_URL}/producto/${product.slug}`,
     },
   };
 }

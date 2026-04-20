@@ -16,7 +16,7 @@ export function Pagination({ page, totalPages }: Props) {
   if (totalPages <= 1) return null;
 
   return (
-    <nav className="mt-12 flex items-center justify-center gap-2" aria-label="Pagination">
+    <nav className="mt-12 flex items-center justify-center gap-2" aria-label="Paginación">
       <button
         type="button"
         disabled={page <= 1}

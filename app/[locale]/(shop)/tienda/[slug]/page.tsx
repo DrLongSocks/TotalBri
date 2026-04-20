@@ -9,7 +9,6 @@ import { CATEGORY_META } from '@/domain/category/metadata';
 import { getCategoryNode } from '@/domain/category/tree';
 import {
   filterProducts,
-  paginate,
   getSubcategoriesFor,
   getAllTagsFor,
   type SortOption,
@@ -54,7 +53,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
   const t = await getTranslations({ locale, namespace: 'shop' });
   const meta = CATEGORY_META[category];
   const node = getCategoryNode(category);
-  const base = locale === 'en' ? '/en' : '';
+  const base = '';
 
   const rawParams = await searchParams;
   const filters = parseFilterParams(toSearchParams(rawParams));
@@ -69,7 +68,6 @@ export default async function CategoryPage({ params, searchParams }: Props) {
     sort: (filters.sort as SortOption) ?? 'relevance',
   });
 
-  const { items, page, totalPages, total } = paginate(results, filters.page ?? 1);
   const subs = node ? node.subcategories.map((s) => s.slug) : getSubcategoriesFor(category);
   const tags = getAllTagsFor(category);
 
@@ -84,32 +82,30 @@ export default async function CategoryPage({ params, searchParams }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <section className="relative overflow-hidden bg-ink text-paper">
-        <div className={`absolute inset-0 bg-gradient-to-br ${meta.heroAccent}`} aria-hidden />
-        <div className="noise" />
-        <div className="container-shell relative z-10 py-20 md:py-32">
-          <nav className="mb-6 flex items-center gap-1 text-xs text-paper/70">
-            <Link href={base || '/'} className="hover:text-paper">
-              {t('breadcrumbHome')}
-            </Link>
-            <ChevronRight className="h-3 w-3" />
-            <Link href={`${base}/tienda`} className="hover:text-paper">
-              {t('breadcrumbShop')}
-            </Link>
-            <ChevronRight className="h-3 w-3" />
-            <span className="text-paper">{meta.name[locale]}</span>
-          </nav>
-          <p className="eyebrow mb-4 text-paper/70">{meta.tagline[locale]}</p>
-          <h1 className="display-xl text-paper">{meta.name[locale]}</h1>
-          <p className="mt-6 max-w-xl text-lg text-paper/80">{meta.intro[locale]}</p>
-        </div>
-      </section>
+      {/* Category header */}
+      <div className="mb-6">
+        <nav className="mb-3 flex items-center gap-1 text-xs text-slate">
+          <Link href={base || '/'} className="hover:text-azure">
+            {t('breadcrumbHome')}
+          </Link>
+          <ChevronRight className="h-3 w-3" />
+          <Link href={`${base}/tienda`} className="hover:text-azure">
+            {t('breadcrumbShop')}
+          </Link>
+          <ChevronRight className="h-3 w-3" />
+          <span className="text-ink">{meta.name[locale]}</span>
+        </nav>
+        <h1 className="font-display text-[2.5rem] font-extrabold uppercase leading-none tracking-tight text-ink">
+          {meta.name[locale]}
+        </h1>
+        <p className="mt-2 text-sm text-slate">
+          {results.length} productos · {meta.tagline[locale]}
+        </p>
+      </div>
       <CatalogShell
         locale={locale}
-        products={items}
-        page={page}
-        totalPages={totalPages}
-        total={total}
+        products={results}
+        total={results.length}
         subcategories={subs}
         tags={tags}
         priceBounds={{ min: 0, max: 1000 }}

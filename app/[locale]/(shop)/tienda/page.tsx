@@ -4,7 +4,6 @@ import type { Metadata } from 'next';
 import { isLocale } from '@/domain/i18n/config';
 import {
   filterProducts,
-  paginate,
   getAllTagsFor,
   type SortOption,
 } from '@/domain/product/queries';
@@ -51,25 +50,21 @@ export default async function TiendaPage({ params, searchParams }: Props) {
     sort: (filters.sort as SortOption) ?? 'relevance',
   });
 
-  const { items, page, totalPages, total } = paginate(filtered, filters.page ?? 1);
   const allSubs = CATEGORY_TREE.flatMap((c) => c.subcategories.map((s) => s.slug));
   const allTags = getAllTagsFor();
 
   return (
     <>
-      <section className="border-b border-mist bg-porcelain">
-        <div className="container-shell py-16 md:py-24">
-          <p className="eyebrow mb-3 text-slate">{t('breadcrumbShop')}</p>
-          <h1 className="display-l">{t('allProducts')}</h1>
-          <p className="mt-4 max-w-xl text-slate">{t('intro')}</p>
-        </div>
-      </section>
+      <div className="mb-6">
+        <h1 className="font-display text-[2.5rem] font-extrabold uppercase leading-none tracking-tight text-ink">
+          {t('allProducts')}
+        </h1>
+        <p className="mt-2 text-sm text-slate">{t('intro')}</p>
+      </div>
       <CatalogShell
         locale={locale}
-        products={items}
-        page={page}
-        totalPages={totalPages}
-        total={total}
+        products={filtered}
+        total={filtered.length}
         subcategories={allSubs}
         tags={allTags}
         priceBounds={{ min: 0, max: 1000 }}

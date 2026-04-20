@@ -15,7 +15,7 @@ type Props = {
 export function MegaMenu({ locale }: Props) {
   const t = useTranslations('nav');
   const [open, setOpen] = useState(false);
-  const basePath = locale === 'en' ? '/en' : '';
+  const basePath = '';
 
   return (
     <div

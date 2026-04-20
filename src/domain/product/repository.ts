@@ -30,7 +30,45 @@ function parseTags(raw: string): string[] {
 
 function placeholderUrl(name: string): string {
   const label = encodeURIComponent(name);
-  return `https://placehold.co/800x800/F6F9FC/0A2540?text=${label}`;
+  return `https://placehold.co/800x800/F0FAFA/1A2B3C?text=${label}`;
+}
+
+function mapCategory(csvCategory: string, subcategory: string): Category {
+  switch (csvCategory) {
+    case 'lavanderia':
+      return subcategory.startsWith('suavizante') ? 'suavizantes' : 'detergentes';
+    case 'limpieza-hogar':
+      if (subcategory === 'desinfectantes' || subcategory === 'pastillas-cloro') return 'desinfectantes';
+      if (subcategory === 'desengrasantes') return 'desengrasantes';
+      return 'limpiadores-pisos';
+    case 'automotriz':
+      return 'linea-automotriz';
+    case 'aromatizantes':
+      return 'aromatizantes';
+    case 'jarceria':
+      if (subcategory === 'trapeadores') return 'trapeadores';
+      if (subcategory === 'escobas') return 'escobas';
+      return 'jarceria';
+    case 'higiene':
+      if (subcategory === 'despachadores' || subcategory === 'jabon-manos') return 'despachadores';
+      return 'higienicos';
+    default:
+      return 'varios';
+  }
+}
+
+const LIQUID_CATEGORIES = new Set<Category>([
+  'detergentes',
+  'suavizantes',
+  'limpiadores-pisos',
+  'desinfectantes',
+  'linea-automotriz',
+  'desengrasantes',
+  'aromatizantes',
+]);
+
+function getUnit(category: Category): 'litro' | 'pieza' {
+  return LIQUID_CATEGORIES.has(category) ? 'litro' : 'pieza';
 }
 
 function loadProducts(): { list: readonly Product[]; bySlug: Map<string, Product>; byId: Map<string, Product> } {
@@ -51,7 +89,9 @@ function loadProducts(): { list: readonly Product[]; bySlug: Map<string, Product
       throw new Error(`Invalid price at row ${idx + 2} (id=${row.id}): ${row.price}`);
     }
 
-    const localImage = `/images/products/${row.slug}.webp`;
+    const category = mapCategory(row.category?.trim() ?? '', row.subcategory?.trim() ?? '');
+    const unit = getUnit(category);
+    const localImage = `/images/products/${row.slug}.png`;
     const name = { es: nameEs, en: nameEn };
     const description = buildDescription(name, row.subcategory);
 
@@ -60,13 +100,14 @@ function loadProducts(): { list: readonly Product[]; bySlug: Map<string, Product
       slug: row.slug,
       name,
       description,
-      category: row.category as Category,
+      category,
       subcategory: row.subcategory,
       price,
       images: [localImage, placeholderUrl(nameEs)],
       tags: parseTags(row.tags ?? ''),
       inStock: toBool(row.in_stock ?? 'true'),
       featured: toBool(row.featured ?? 'false'),
+      unit,
     };
 
     try {

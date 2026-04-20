@@ -12,7 +12,7 @@ type Props = {
 
 export async function MayoreoBand({ locale }: Props) {
   const t = await getTranslations({ locale, namespace: 'home' });
-  const basePath = locale === 'en' ? '/en' : '';
+  const basePath = '';
   const waUrl = buildWhatsAppUrl(
     env.NEXT_PUBLIC_WHATSAPP_PRIMARY,
     locale === 'es'

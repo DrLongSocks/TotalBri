@@ -3,10 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { isLocale } from '@/domain/i18n/config';
 import { MayoreoHero } from '@/features/mayoreo/MayoreoHero';
-import { AudienceCards } from '@/features/mayoreo/AudienceCards';
-import { ValueProps } from '@/features/mayoreo/ValueProps';
-import { BulkInquiryForm } from '@/features/mayoreo/BulkInquiryForm';
-import { MayoreoContact } from '@/features/mayoreo/MayoreoContact';
+import { MayoreoInteractiveSection } from '@/features/mayoreo/MayoreoInteractiveSection';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -25,10 +22,7 @@ export default async function MayoreoPage({ params }: Props) {
   return (
     <>
       <MayoreoHero locale={locale} />
-      <AudienceCards locale={locale} />
-      <ValueProps locale={locale} />
-      <BulkInquiryForm />
-      <MayoreoContact locale={locale} />
+      <MayoreoInteractiveSection />
     </>
   );
 }

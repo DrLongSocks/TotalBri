@@ -33,7 +33,7 @@ const SheetContent = React.forwardRef<
 >(({ side = 'right', className, children, ...props }, ref) => {
   const sideClass = {
     right:
-      'right-0 top-0 h-full w-full max-w-[420px] data-[state=closed]:translate-x-full data-[state=open]:translate-x-0',
+      'right-0 top-0 h-full w-full max-w-sm overflow-hidden data-[state=closed]:translate-x-full data-[state=open]:translate-x-0',
     left: 'left-0 top-0 h-full w-full max-w-[420px] data-[state=closed]:-translate-x-full data-[state=open]:translate-x-0',
     bottom:
       'bottom-0 left-0 w-full max-h-[85vh] data-[state=closed]:translate-y-full data-[state=open]:translate-y-0',
@@ -53,7 +53,7 @@ const SheetContent = React.forwardRef<
         {children}
         <SheetClose
           className="absolute right-4 top-4 rounded-full p-2 text-ink hover:bg-mist focus:outline-none focus-visible:outline-2 focus-visible:outline-azure"
-          aria-label="Close"
+          aria-label="Cerrar"
         >
           <X className="h-5 w-5" />
         </SheetClose>

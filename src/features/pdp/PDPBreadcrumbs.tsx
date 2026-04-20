@@ -9,11 +9,11 @@ type Props = { product: Product; locale: Locale };
 
 export async function PDPBreadcrumbs({ product, locale }: Props) {
   const t = await getTranslations({ locale, namespace: 'shop' });
-  const base = locale === 'en' ? '/en' : '';
+  const base = '';
   const categoryMeta = CATEGORY_META[product.category];
 
   return (
-    <nav aria-label="Breadcrumb" className="flex items-center gap-1 text-xs text-slate">
+    <nav aria-label="Ruta de navegación" className="flex items-center gap-1 text-xs text-slate">
       <Link href={base || '/'} className="hover:text-ink">
         {t('breadcrumbHome')}
       </Link>
