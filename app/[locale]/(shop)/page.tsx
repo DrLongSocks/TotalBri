@@ -2,8 +2,10 @@ import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { isLocale } from '@/domain/i18n/config';
 import { HeroCarousel } from '@/features/home/HeroCarousel';
-import { findFeatured } from '@/domain/product/queries';
+import { findFeatured, findByCategory } from '@/domain/product/queries';
 import { ProductCard } from '@/features/catalog/ProductCard';
+import { MobileCategoryCarousel } from '@/features/home/MobileCategoryCarousel';
+import { CATEGORY_TREE } from '@/domain/category/tree';
 import { localBusinessJsonLd } from '@/lib/seo';
 import type { Locale } from '@/domain/i18n/config';
 
@@ -27,6 +29,12 @@ export default async function HomePage({ params }: Props) {
 
   const favorites = findFeatured(8);
 
+  const categoryCards = CATEGORY_TREE.flatMap((cat) => {
+    const products = findByCategory(cat.slug);
+    if (!products.length) return [];
+    return [{ slug: cat.slug, name: cat.name.es, image: products[0].images[0], count: products.length, locale }];
+  });
+
   return (
     <>
       <script
@@ -39,13 +47,23 @@ export default async function HomePage({ params }: Props) {
 
       {/* Bestsellers */}
       {favorites.length > 0 && (
-        <section id="mas-vendidos" className="mt-10">
+        <section id="mas-vendidos" className="mt-12">
           <SectionHeading>Más vendidos</SectionHeading>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4">
-            {favorites.map((p) => (
-              <ProductCard key={p.id} product={p} locale={locale as Locale} />
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+            {favorites.map((p, i) => (
+              <div key={p.id} className={i >= 4 ? 'hidden md:block' : undefined}>
+                <ProductCard product={p} locale={locale as Locale} />
+              </div>
             ))}
           </div>
+        </section>
+      )}
+
+      {/* Categories carousel — mobile only */}
+      {categoryCards.length > 0 && (
+        <section id="categorias" className="mt-12 md:hidden">
+          <SectionHeading>Categorías</SectionHeading>
+          <MobileCategoryCarousel categories={categoryCards} />
         </section>
       )}
     </>

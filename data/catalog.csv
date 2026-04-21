@@ -1,264 +1,264 @@
-id,slug,name_es,name_en,category,subcategory,price,tags,in_stock,featured
-P001,multiusos-bebe,Multiusos Bebé,Baby Scent Multi-Surface,limpieza-hogar,multiusos,12,aroma;bebe;hogar,true,false
-P002,multiusos-manzana-canela,Multiusos Manzana Canela,Apple Cinnamon Multi-Surface,limpieza-hogar,multiusos,12,aroma;manzana;canela,true,false
-P003,multiusos-carolina-herrera,Multiusos Carolina Herrera,Carolina Herrera Multi-Surface,limpieza-hogar,multiusos,12,aroma;perfumado,true,false
-P004,multiusos-manzana-verde,Multiusos Manzana Verde,Green Apple Multi-Surface,limpieza-hogar,multiusos,12,aroma;manzana,true,false
-P005,multiusos-channel,Multiusos Channel,Channel Multi-Surface,limpieza-hogar,multiusos,12,aroma;perfumado,true,false
-P006,multiusos-canela,Multiusos Canela,Cinnamon Multi-Surface,limpieza-hogar,multiusos,12,aroma;canela,true,false
-P007,multiusos-naranja,Multiusos Naranja,Orange Multi-Surface,limpieza-hogar,multiusos,12,aroma;naranja;citrico,true,true
-P008,multiusos-lima-limon,Multiusos Lima-Limón,Lime-Lemon Multi-Surface,limpieza-hogar,multiusos,12,aroma;limon;citrico,true,true
-P009,multiusos-menta,Multiusos Menta,Mint Multi-Surface,limpieza-hogar,multiusos,12,aroma;menta,true,false
-P010,multiusos-floral,Multiusos Floral,Floral Multi-Surface,limpieza-hogar,multiusos,12,aroma;floral,true,false
-P011,multiusos-pino-menta,Multiusos Pino Menta,Pine Mint Multi-Surface,limpieza-hogar,multiusos,12,aroma;pino;menta,true,false
-P012,multiusos-pasion-frutal,Multiusos Pasión Frutal,Fruit Passion Multi-Surface,limpieza-hogar,multiusos,12,aroma;frutal,true,false
-P013,multiusos-pino-citrico,Multiusos Pino Cítrico,Citrus Pine Multi-Surface,limpieza-hogar,multiusos,13,aroma;pino;citrico,true,false
-P014,multiusos-eternity,Multiusos Eternity,Eternity Multi-Surface,limpieza-hogar,multiusos,13,aroma;perfumado,true,false
-P015,multiusos-hugo-boss,Multiusos Hugo Boss,Hugo Boss Multi-Surface,limpieza-hogar,multiusos,13,aroma;perfumado,true,false
-P016,multiusos-lavanda,Multiusos Lavanda,Lavender Multi-Surface,limpieza-hogar,multiusos,13,aroma;lavanda;floral,true,true
-P017,multiusos-kiwi,Multiusos Kiwi,Kiwi Multi-Surface,limpieza-hogar,multiusos,13,aroma;kiwi;frutal,true,false
-P018,multiusos-mar-fresco,Multiusos Tipo Mar Fresco,Fresh Sea Multi-Surface,limpieza-hogar,multiusos,14,aroma;mar;fresco,true,false
-P019,microcapsulas-flor-algodon,Limpiador Microcápsulas Flor de Algodón,Cotton Flower Microcapsule Cleaner,limpieza-hogar,microcapsulas,14,microcapsulas;algodon;larga-duracion,true,true
-P020,microcapsulas-petalos-rosa,Limpiador Microcápsulas Pétalos de Rosa,Rose Petals Microcapsule Cleaner,limpieza-hogar,microcapsulas,14,microcapsulas;rosa;floral,true,false
-P021,especial-limon-germicida,Limón con Germicida,Lemon with Germicide,limpieza-hogar,especiales,15,especial;limon;germicida,true,false
-P022,especial-limpiapisos-fabumoscas,Limpiapisos Fabumoscas (Repelente de Moscas),Fabumoscas Floor Cleaner (Fly Repellent),limpieza-hogar,especiales,15,especial;repelente;moscas,true,false
-P023,especial-repelente-moscos-60ml,Repelente de Moscos 60 ml,Mosquito Repellent 60 ml,limpieza-hogar,especiales,25,repelente;moscos;viaje,true,false
-P024,especial-repelente-moscos,Repelente de Moscos,Mosquito Repellent,limpieza-hogar,especiales,160,repelente;moscos;formato-grande,true,false
-P025,pastilla-cloro-1-pulg,Pastilla Cloro 1 pulg.,Chlorine Tablet 1 in.,limpieza-hogar,pastillas-cloro,145,cloro;pastilla;inodoro,true,false
-P026,tableta-cloro-3-pulg,Tableta Cloro 3 pulg.,Chlorine Tablet 3 in.,limpieza-hogar,pastillas-cloro,160,cloro;tableta;alberca,true,false
-P027,paquete-pastilla-cloro,Paquete Pastilla Cloro,Chlorine Tablet Pack,limpieza-hogar,pastillas-cloro,16,cloro;pastilla;paquete,true,false
-P028,cloro-en-polvo,Cloro en Polvo,Powdered Chlorine,limpieza-hogar,pastillas-cloro,119,cloro;polvo;concentrado,true,false
-P029,cloro-granulado,Cloro Granulado,Granulated Chlorine,limpieza-hogar,pastillas-cloro,160,cloro;granulado,true,false
-P030,desinfectante-bicarbonato-limon,Desinfectante Bicarbonato Limón,Baking Soda Lemon Disinfectant,limpieza-hogar,desinfectantes,13,desinfectante;bicarbonato;limon,true,false
-P031,desinfectante-pino-liquido-verde,Pino Líquido Verde,Green Liquid Pine,limpieza-hogar,desinfectantes,13,desinfectante;pino;verde,true,true
-P032,desinfectante-pino-liquido-transparente,Pino Líquido Transparente,Clear Liquid Pine,limpieza-hogar,desinfectantes,13,desinfectante;pino;transparente,true,false
-P033,desinfectante-sarrigel,Sarrigel,Sarrigel Descaler,limpieza-hogar,desinfectantes,16,desinfectante;sarro;gel,true,false
-P034,desinfectante-alcohol-etilico,Alcohol Etílico,Ethyl Alcohol,limpieza-hogar,desinfectantes,62.5,desinfectante;alcohol,true,true
-P035,desinfectante-cloralex-10l,Cloralex 10 L,Cloralex 10 L,limpieza-hogar,desinfectantes,140,desinfectante;cloro;cloralex;granel,true,true
-P036,desinfectante-cloro-3,Cloro al 3%,3% Chlorine,limpieza-hogar,desinfectantes,7,desinfectante;cloro,true,false
-P037,desinfectante-cloro-6,Cloro al 6%,6% Chlorine,limpieza-hogar,desinfectantes,9,desinfectante;cloro;concentrado,true,false
-P038,desinfectante-hipoclorito-sodio,Hipoclorito de Sodio,Sodium Hypochlorite,limpieza-hogar,desinfectantes,17,desinfectante;cloro;industrial,true,false
-P039,desinfectante-cloro-gel,Cloro en Gel,Chlorine Gel,limpieza-hogar,desinfectantes,19,desinfectante;cloro;gel,true,false
-P040,desinfectante-cloro-mascotas,Cloro Mascotas,Pet-Safe Chlorine,limpieza-hogar,desinfectantes,19,desinfectante;mascotas,true,false
-P041,desinfectante-pino-gel,Pino Gel,Pine Gel,limpieza-hogar,desinfectantes,28,desinfectante;pino;gel,true,true
-P042,desinfectante-lysol,Lysol,Lysol,limpieza-hogar,desinfectantes,138,desinfectante;marca;lysol,true,false
-P043,desengrasante-en-caliente,Desengrasante en Caliente,Hot Degreaser,limpieza-hogar,desengrasantes,16,desengrasante;cocina,true,false
-P044,desengrasante-cocina,Desengrasante Cocina,Kitchen Degreaser,limpieza-hogar,desengrasantes,22,desengrasante;cocina,true,true
-P045,det-desengrasante,Detergente Desengrasante,Degreasing Detergent,limpieza-hogar,desengrasantes,20,desengrasante;detergente,true,false
-P046,desengrasante-industrial,Desengrasante Industrial,Industrial Degreaser,limpieza-hogar,desengrasantes,50,desengrasante;industrial,true,false
-P047,desengrasante-motor,Desengrasante Motor,Engine Degreaser,limpieza-hogar,desengrasantes,30,desengrasante;motor;automotriz,true,false
-P048,detergente-liquido-carisma,Detergente Líquido Carisma,Carisma Liquid Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;ropa,true,false
-P049,detergente-liquido-deterpino,Detergente Deterpino Verde o Café,Deterpino Green or Brown Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;pino,true,false
-P050,detergente-liquido-roma,Detergente Líquido Roma,Roma Liquid Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;marca,true,false
-P051,detergente-liquido-ariel,Detergente Líquido Ariel,Ariel Liquid Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;marca,true,true
-P052,detergente-liquido-zote-rosa,Detergente Líquido Zote Rosa,Zote Pink Liquid Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;zote;rosa,true,false
-P053,detergente-liquido-ace,Detergente Ace Ropa Blanca y Color,Ace White & Color Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;marca,true,false
-P054,detergente-liquido-punos-cuello,Detergente Puños y Cuello,Collar & Cuffs Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;prelavado,true,false
-P055,detergente-liquido-persil-color,Detergente Tipo Persil Ropa de Color,Persil-Style Color Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;color,true,false
-P056,detergente-liquido-vel-rosita,Detergente Vel Rosita,Vel Rosita Liquid Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;delicado,true,false
-P057,detergente-liquido-cloro-ropa-color,Detergente Tipo Cloro P/Ropa Color,Color-Safe Chlorine Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;color,true,false
-P058,detergente-liquido-vinagre,Detergente con Vinagre,Vinegar Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;vinagre,true,false
-P059,detergente-liquido-vanish-gel,Detergente Tipo Vanish Gel,Vanish-Style Gel Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;quitamanchas,true,false
-P060,detergente-liquido-mas-color,Detergente Mas Color,Mas Color Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;color,true,false
-P061,detergente-liquido-mas-color-negro,Detergente Mas Color Negro,Mas Color Black Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;negro,true,false
-P062,detergente-liquido-ariel-downy,Detergente Ariel con Downy,Ariel with Downy Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;marca;suavizante,true,true
-P063,detergente-liquido-multiusos-cafe,Detergente Multiusos Café,Brown Multi-Use Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;multiusos,true,false
-P064,detergente-bicarbonato,Detergente Bicarbonato,Baking Soda Detergent,lavanderia,detergentes-liquidos,19,detergente;liquido;bicarbonato,true,false
-P065,detergente-liquido-pino-mugroso,Detergente Pino Mugroso,Pine Heavy-Duty Detergent,lavanderia,detergentes-liquidos,27,detergente;liquido;pino,true,false
-P066,detergente-liquido-axion-limon,Detergente Axión Limón,Axion Lemon Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;limon;trastes,true,false
-P067,detergente-polvo-multiusos-sueltos,Detergente en Polvo Multiusos (Suelto),Bulk Powder Multi-Use Detergent,lavanderia,detergentes-polvo,35,detergente;polvo;granel,true,false
-P068,detergente-polvo-blanca-nieves,Detergente Blanca Nieves,Blanca Nieves Powder Detergent,lavanderia,detergentes-polvo,43,detergente;polvo;marca,true,false
-P069,detergente-polvo-roma,Detergente Roma en Polvo,Roma Powder Detergent,lavanderia,detergentes-polvo,43,detergente;polvo;marca,true,false
-P070,jabon-barra-carisma,Jabón Barra Carisma,Carisma Bar Soap,lavanderia,jabon-barra,28,jabon;barra;ropa,true,false
-P071,jabon-barra-zote-rosa,Zote Barra Rosa,Zote Pink Bar Soap,lavanderia,jabon-barra,28,jabon;barra;zote,true,true
-P072,suavizante-ensueno,Suavitel Ensueño,Suavitel Dream,lavanderia,suavizantes,18,suavizante;marca,true,false
-P073,suavizante-downy-rosa,Suavizante Downy Rosa,Downy Pink Softener,lavanderia,suavizantes,18,suavizante;marca;rosa,true,true
-P074,suavizante-bebe,Suavitel Bebé,Suavitel Baby,lavanderia,suavizantes,18,suavizante;bebe,true,false
-P075,suavizante-momentos-magicos,Suavitel Momentos Mágicos,Suavitel Magic Moments,lavanderia,suavizantes,18,suavizante;marca,true,false
-P076,suavizante-azul,Suavitel Azul,Suavitel Blue,lavanderia,suavizantes,18,suavizante,true,false
-P077,suavizante-amarillo,Suavitel Amarillo,Suavitel Yellow,lavanderia,suavizantes,18,suavizante,true,false
-P078,suavizante-doble-ensueno,Suavizante Doble Aroma Ensueño,Dream Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma,true,false
-P079,suavizante-doble-downy-rosa,Suavizante Doble Aroma Downy Rosa,Downy Pink Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma;rosa,true,true
-P080,suavizante-doble-bebe,Suavizante Doble Aroma Bebé,Baby Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma;bebe,true,false
-P081,suavizante-doble-momentos-magicos,Suavizante Doble Aroma Momentos Mágicos,Magic Moments Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma,true,false
-P082,suavizante-doble-azul,Suavizante Doble Aroma Azul,Blue Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma,true,false
-P083,suavizante-doble-amarillo,Suavizante Doble Aroma Amarillo,Yellow Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma,true,false
-P084,reforzador-aroma,Reforzador de Aroma (Varios),Scent Booster (Assorted),lavanderia,suavizantes-doble-aroma,33,reforzador;aroma;perlas,true,false
-P085,shampoo-manos-dosificador-1l,Shampoo Manos con Dosificador 1 L,Hand Soap with Dispenser 1 L,higiene,jabon-manos,60,manos;dosificador;oficina,true,true
-P086,shampoo-manos-neutro,Shampoo Manos Neutro,Neutral Hand Soap,higiene,jabon-manos,19,manos;neutro,true,false
-P087,shampoo-manos-kiwi,Shampoo Manos Kiwi,Kiwi Hand Soap,higiene,jabon-manos,19,manos;kiwi,true,false
-P088,shampoo-manos-coco,Shampoo Manos Coco,Coconut Hand Soap,higiene,jabon-manos,19,manos;coco,true,false
-P089,shampoo-manos-frutal,Shampoo Manos Frutal,Fruit Hand Soap,higiene,jabon-manos,19,manos;frutal,true,false
-P090,shampoo-manos-manzana-verde,Shampoo Manos Manzana Verde,Green Apple Hand Soap,higiene,jabon-manos,19,manos;manzana,true,false
-P091,shampoo-manos-carolina-herrera,Shampoo Manos Carolina Herrera,Carolina Herrera Hand Soap,higiene,jabon-manos,19,manos;perfumado,true,false
-P092,gel-antibacterial-granel,Gel Antibacterial a Granel,Bulk Antibacterial Gel,higiene,gel-antibacterial,55,gel;antibacterial;granel,true,true
-P093,gel-antibacterial-60ml,Gel Antibacterial Botella 60 ml,Antibacterial Gel Bottle 60 ml,higiene,gel-antibacterial,20,gel;antibacterial;bolsillo,true,false
-P094,gel-antibacterial-500ml,Gel Antibacterial Botella 1/2 L,Antibacterial Gel Bottle 500 ml,higiene,gel-antibacterial,35,gel;antibacterial,true,false
-P095,gel-antibacterial-1l,Gel Antibacterial Botella 1 L,Antibacterial Gel Bottle 1 L,higiene,gel-antibacterial,60,gel;antibacterial;familiar,true,true
-P096,gel-antibacterial-1l-dosificador,Gel Antibacterial 1 L con Dosificador,Antibacterial Gel 1 L with Dispenser,higiene,gel-antibacterial,85,gel;antibacterial;dosificador,true,true
-P097,sanitizante-granel,Líquido Sanitizante a Granel,Bulk Sanitizing Liquid,higiene,sanitizantes,55,sanitizante;granel,true,false
-P098,sanitizante-250ml,Líquido Sanitizante 250 ml,Sanitizing Liquid 250 ml,higiene,sanitizantes,35,sanitizante,true,false
-P099,shampoo-head-and-shoulders,Shampoo Head & Shoulders,Head & Shoulders Shampoo,higiene,higiene-personal,23,shampoo;cabello;marca,true,false
-P100,aromatizante-madera-oriental,Autofresh Madera Oriental,Oriental Wood Air Freshener,aromatizantes,autofresh,32,aromatizante;madera;oriental,true,false
-P101,aromatizante-channel,Autofresh Channel,Channel Air Freshener,aromatizantes,autofresh,32,aromatizante;perfumado,true,false
-P102,aromatizante-coco,Autofresh Coco,Coconut Air Freshener,aromatizantes,autofresh,32,aromatizante;coco,true,false
-P103,aromatizante-hugo-boss,Autofresh Hugo Boss,Hugo Boss Air Freshener,aromatizantes,autofresh,32,aromatizante;perfumado,true,false
-P104,aromatizante-carolina-herrera,Autofresh Carolina Herrera,Carolina Herrera Air Freshener,aromatizantes,autofresh,32,aromatizante;perfumado,true,false
-P105,aromatizante-total-fresh-60ml,Total Fresh 60 ml,Total Fresh 60 ml,aromatizantes,autofresh,22,aromatizante;marca-total-bri,true,true
-P106,aromatizante-glade,Aromatizante Glade,Glade Air Freshener,aromatizantes,autofresh,69,aromatizante;marca;glade,true,false
-P107,aromatizante-febrize,Aromatizante Febrize,Febrize Air Freshener,aromatizantes,autofresh,94,aromatizante;marca;febrize,true,false
-P108,automotriz-cera-liq-uso-humedo,Cera Líquida Uso Húmedo,Wet Wax,automotriz,linea-automotriz,22,automotriz;cera,true,false
-P109,automotriz-vaselina-industrial,Vaselina Industrial,Industrial Vaseline,automotriz,linea-automotriz,50,automotriz;vaselina;industrial,true,false
-P110,automotriz-shampoo-carrocerias,Shampoo Carrocerías,Car Wash Shampoo,automotriz,linea-automotriz,20,automotriz;shampoo,true,true
-P111,automotriz-shampoo-carro-cera,Shampoo para Carro con Cera,Car Shampoo with Wax,automotriz,linea-automotriz,24,automotriz;shampoo;cera,true,false
-P112,automotriz-almorol,Almorol Líquido,Liquid Almorol,automotriz,linea-automotriz,52,automotriz;armorol,true,false
-P113,automotriz-espuma-activa,Espuma Activa,Active Foam,automotriz,linea-automotriz,24,automotriz;espuma,true,false
-P114,automotriz-liq-llantas,Líquido Llantas Naranja/Negro,Tire Shine Orange/Black,automotriz,linea-automotriz,35,automotriz;llantas,true,false
-P115,automotriz-alumbra,Alumbra,Alumbra Polish,automotriz,linea-automotriz,20,automotriz;alumbra,true,false
-P116,automotriz-envase-alto-brillo-250ml,Envase Alto Brillo 250 ml,High Gloss Bottle 250 ml,automotriz,linea-automotriz,30,automotriz;brillo,true,false
-P117,automotriz-alto-brillo,Alto Brillo,High Gloss,automotriz,linea-automotriz,105,automotriz;brillo;granel,true,false
-P118,automotriz-glicerina,Glicerina,Glycerin,automotriz,linea-automotriz,110,automotriz;glicerina,true,false
-P119,automotriz-envase-glicerina-500ml,Envase Glicerina 500 ml,Glycerin Bottle 500 ml,automotriz,linea-automotriz,46,automotriz;glicerina,true,false
-P120,varios-plegde-aerosol-muebles,Pledge Aerosol para Muebles,Pledge Furniture Aerosol,varios,varios,98,marca;muebles;aerosol,true,false
-P121,varios-raid-casa-jardin,Raid Casa y Jardín,Raid House & Garden,varios,varios,74,marca;insecticida,true,false
-P122,varios-quita-cochambre,Quita Cochambre,Grease Remover,varios,varios,21,cochambre;cocina,true,false
-P123,varios-quita-cochambre-gel,Quita Cochambre en Gel,Gel Grease Remover,varios,varios,21,cochambre;gel,true,false
-P124,varios-limpiavidrios,Limpiavidrios,Glass Cleaner,varios,varios,14,vidrios;limpieza,true,true
-P125,varios-bicarbonato,Bicarbonato,Baking Soda,varios,varios,71,bicarbonato;granel,true,false
-P126,varios-liquido-destapacanos,Líquido Destapacaños,Drain Opener Liquid,varios,varios,20,destapacanos;liquido,true,false
-P127,varios-quitasarro,Quitasarro,Lime Scale Remover,varios,varios,21,sarro;bano,true,false
-P128,varios-liq-insecticida-total,Líquido Insecticida Total,Total Insecticide Liquid,varios,varios,68,insecticida,true,false
-P129,varios-cucarachicida,Cucarachicida,Roach Killer,varios,varios,30,insecticida;cucarachas,true,false
-P130,varios-sosa-liquida-lt,Sosa Líquida L,Liquid Caustic Soda L,varios,varios,52,sosa;caustica;industrial,true,false
-P131,varios-ac-pino,Aceite de Pino,Pine Oil,varios,varios,186,pino;aceite;granel,true,false
-P132,varios-aceite-muebles,Aceite para Muebles,Furniture Oil,varios,varios,81,muebles;aceite,true,false
-P133,varios-sham-perro-carolina,Shampoo para Perro Carolina Herrera,Carolina Herrera Dog Shampoo,varios,mascotas,18,mascotas;perro;shampoo,true,false
-P134,varios-sham-antip-hugo-boss,Shampoo Antipulgas Hugo Boss,Hugo Boss Flea Shampoo,varios,mascotas,25,mascotas;perro;antipulgas,true,false
-P135,varios-liquido-quita-gotas,Líquido Quita Gotas,Drop Remover Liquid,varios,varios,25,gotas;limpieza,true,false
-P136,varios-agita-bolsita,Agita Bolsita,Agita Sachet,varios,varios,75,agita;moscas,true,false
-P137,varios-agita-atomizador-eco,Agita Atomizador Eco,Agita Eco Spray,varios,varios,90,agita;atomizador,true,false
-P138,varios-agita-atomizador,Agita Atomizador,Agita Spray,varios,varios,105,agita;atomizador,true,false
-P139,trapeador-microfibra-chico,Trapeador Microfibra Chico,Small Microfiber Mop,jarceria,trapeadores,67,trapeador;microfibra;chico,true,false
-P140,trapeador-microfibra-extra-mediano,Trapeador Microfibra Extra Mediano,Extra-Medium Microfiber Mop,jarceria,trapeadores,75,trapeador;microfibra;mediano,true,true
-P141,trapeador-microfibra-industrial,Trapeador Microfibra Industrial,Industrial Microfiber Mop,jarceria,trapeadores,100,trapeador;microfibra;industrial,true,true
-P142,trapeador-microfibra-espanola,Trapeador Microfibra Española,Spanish Microfiber Mop,jarceria,trapeadores,93,trapeador;microfibra;espanola,true,false
-P143,trapeador-microfibra-espanola-eco,Trapeador Microfibra Española Eco,Eco Spanish Microfiber Mop,jarceria,trapeadores,71,trapeador;microfibra;eco,true,false
-P144,trapeador-hilaza-25,Trapeador Hilaza #25,Yarn Mop #25,jarceria,trapeadores,50,trapeador;hilaza,true,false
-P145,trapeador-hilaza-industrial,Trapeador Hilaza Industrial,Industrial Yarn Mop,jarceria,trapeadores,55,trapeador;hilaza;industrial,true,false
-P146,trapeador-pabilo-25,Trapeador Pabilo #25,Pabilo Mop #25,jarceria,trapeadores,42,trapeador;pabilo,true,false
-P147,trapeador-pabilo-industrial,Trapeador Pabilo Industrial,Industrial Pabilo Mop,jarceria,trapeadores,50,trapeador;pabilo;industrial,true,false
-P148,escoba-tipo-cepillo,Escoba Tipo Cepillo,Brush-Type Broom,jarceria,escobas,58,escoba;cepillo,true,false
-P149,escoba-cepillo-lava-coches,Cepillo Lava Coches,Car Wash Brush,jarceria,escobas,78,escoba;cepillo;autos,true,false
-P150,escoba-abanico-grande,Escoba Abanico Grande,Large Fan Broom,jarceria,escobas,46,escoba;abanico,true,false
-P151,escoba-veneciana,Escoba Veneciana,Venetian Broom,jarceria,escobas,60,escoba;veneciana,true,false
-P152,escoba-valentina-metal,Escoba Valentina Bastón Metal,Valentina Metal-Handle Broom,jarceria,escobas,80,escoba;metal,true,false
-P153,escoba-romana,Escoba Romana,Roman Broom,jarceria,escobas,58,escoba;romana,true,true
-P154,escoba-arcoiris,Escoba Arcoiris,Rainbow Broom,jarceria,escobas,58,escoba;arcoiris,true,false
-P155,escoba-mega,Escoba Mega,Mega Broom,jarceria,escobas,46,escoba;mega,true,false
-P156,recogedor-metal,Recogedor Metal,Metal Dustpan,jarceria,escobas,40,recogedor;metal,true,false
-P157,recogedor-metal-industrial,Recogedor Metal Industrial,Industrial Metal Dustpan,jarceria,escobas,50,recogedor;industrial,true,false
-P158,recogedor-plastico,Recogedor Plástico Peric,Peric Plastic Dustpan,jarceria,escobas,48,recogedor;plastico,true,false
-P159,jalador-metal-30cm,Jalador Metal 30 cm,Metal Squeegee 30 cm,jarceria,escobas,47,jalador;metal;30cm,true,false
-P160,jalador-metal-50cm,Jalador Metal 50 cm,Metal Squeegee 50 cm,jarceria,escobas,52,jalador;metal;50cm,true,false
-P161,arana-metal,Araña de Metal,Metal Spider Broom,jarceria,escobas,110,arana;metal,true,false
-P162,tambo-100lts,Tambo de 100 L,100 L Drum,jarceria,cubetas,250,tambo;100l,true,false
-P163,colador,Colador,Strainer,jarceria,accesorios,30,colador;plastico,true,false
-P164,jarra-2l,Jarra 2 L,Pitcher 2 L,jarceria,accesorios,38,jarra;2l,true,false
-P165,jarra-4l,Jarra 4 L,Pitcher 4 L,jarceria,accesorios,73,jarra;4l,true,false
-P166,jarra-1l,Jarra 1 L,Pitcher 1 L,jarceria,accesorios,35,jarra;1l,true,false
-P167,cubeta-toscana,Cubeta Toscana,Toscana Bucket,jarceria,cubetas,70,cubeta;toscana,true,false
-P168,cubeta-6,Cubeta #6,Bucket #6,jarceria,cubetas,18,cubeta;chica,true,false
-P169,cubeta-8,Cubeta #8,Bucket #8,jarceria,cubetas,27,cubeta;mediana,true,false
-P170,cubeta-12,Cubeta #12,Bucket #12,jarceria,cubetas,56,cubeta;grande,true,true
-P171,cubeta-14,Cubeta #14,Bucket #14,jarceria,cubetas,66,cubeta;industrial,true,false
-P172,cesto-basura,Cesto Basura,Trash Bin,jarceria,accesorios,35,cesto;basura,true,false
-P173,cesto-papelero,Cesto Papelero,Paper Bin,jarceria,accesorios,118,cesto;papelero,true,false
-P174,jicara,Jícara,Gourd Bowl,jarceria,accesorios,21,jicara,true,false
-P175,embudo-jumbo,Embudo Jumbo,Jumbo Funnel,jarceria,accesorios,45,embudo;jumbo,true,false
-P176,embudo-mediano,Embudo Mediano,Medium Funnel,jarceria,accesorios,31,embudo;mediano,true,false
-P177,embudo-chico,Embudo Chico,Small Funnel,jarceria,accesorios,26,embudo;chico,true,false
-P178,dosificador-1l,Dosificador 1 L,1 L Dispenser,jarceria,accesorios,31,dosificador;1l,true,false
-P179,pistola-atomizador,Pistola Atomizador,Spray Gun,jarceria,atomizadores,40,atomizador;pistola,true,false
-P180,atomizador-medio,Atomizador 1/2 L,Sprayer 1/2 L,jarceria,atomizadores,33,atomizador;medio,true,false
-P181,atomizador-1lt,Atomizador 1 L,Sprayer 1 L,jarceria,atomizadores,40,atomizador;1l,true,true
-P182,atomizador-mini-250ml,Atomizador Mini 250 ml,Mini Sprayer 250 ml,jarceria,atomizadores,23,atomizador;mini,true,false
-P183,lijas-agua,Lijas de Agua,Water Sandpaper,jarceria,accesorios,13,lijas;agua,true,false
-P184,fibra-mini-metalica-espiral,Mini Fibra Metálica Espiral,Mini Spiral Metal Scrubber,jarceria,fibras,10,fibra;metalica;mini,true,false
-P185,fibra-metalica-chica,Fibra Metálica Chica,Small Metal Scrubber,jarceria,fibras,11,fibra;metalica;chica,true,false
-P186,fibra-metalica-mediana,Fibra Metálica Mediana,Medium Metal Scrubber,jarceria,fibras,12,fibra;metalica;mediana,true,false
-P187,fibra-metalica-grande,Fibra Metálica Grande,Large Metal Scrubber,jarceria,fibras,17,fibra;metalica;grande,true,false
-P188,fibra-metalica-jumbo,Fibra Metálica Jumbo,Jumbo Metal Scrubber,jarceria,fibras,22,fibra;metalica;jumbo,true,false
-P189,fibra-negra-p76,Fibra Negra P76,Black Fiber P76,jarceria,fibras,34,fibra;negra;p76,true,false
-P190,fibra-monarca,Fibra Monarca,Monarca Fiber,jarceria,fibras,15,fibra;monarca,true,false
-P191,fibra-verde-scotch-brite,Fibra Verde Scotch-Brite,Green Scotch-Brite Fiber,jarceria,fibras,20,fibra;verde;scotch-brite,true,true
-P192,fibra-prof-verde-scotch,Fibra Profesional Verde Scotch,Professional Green Scotch Fiber,jarceria,fibras,27,fibra;verde;profesional,true,false
-P193,fibra-blanca-p66,Fibra Blanca P66,White Fiber P66,jarceria,fibras,27,fibra;blanca;p66,true,false
-P194,fibra-ajax,Fibra Ajax,Ajax Fiber,jarceria,fibras,6,fibra;ajax,true,false
-P195,esponja-limpia-vidrios,Esponja Limpia Vidrios,Glass-Cleaning Sponge,jarceria,esponjas,68,esponja;vidrios,true,false
-P196,fibras-con-esponja,Fibras con Esponja,Sponge with Fiber,jarceria,esponjas,16,fibra;esponja,true,true
-P197,esponja-cuadritela-trastes,Cuadritela Trastes,Dish Cuadritela,jarceria,esponjas,18,esponja;trastes,true,false
-P198,esponja-fregon,Esponja Fregón,Scouring Sponge,jarceria,esponjas,18,esponja;fregon,true,false
-P199,esponja-grande,Esponja Grande,Large Sponge,jarceria,esponjas,25,esponja;grande,true,false
-P200,esponja-chica-mini-hueso,Esponja Chica Mini Hueso,Small Mini Sponge,jarceria,esponjas,20,esponja;chica,true,false
-P201,esponja-mexico-grande,Esponja México Grande,Large Mexico Sponge,jarceria,esponjas,21,esponja;mexico,true,false
-P202,esponja-circulo,Esponja Círculo,Circle Sponge,jarceria,esponjas,17,esponja;circulo,true,false
-P203,esponja-tabique,Esponja Tabique,Brick Sponge,jarceria,esponjas,31,esponja;tabique,true,false
-P204,escobetilla-raiz-plastico,Escobetilla Raíz Plástico,Plastic Root Brush,jarceria,accesorios,24,escobetilla;plastico,true,false
-P205,escobetilla-raiz,Escobetilla Raíz,Root Brush,jarceria,accesorios,20,escobetilla;raiz,true,false
-P206,guante-nitrilo-verde,Guante Nitrilo Verde,Green Nitrile Glove,jarceria,guantes,51,guantes;nitrilo,true,true
-P207,guantes-latex,Guantes Látex,Latex Gloves,jarceria,guantes,34,guantes;latex,true,false
-P208,tierra-roja,Tierra Roja,Red Clay,jarceria,accesorios,11,tierra;roja;limpieza,true,false
-P209,piedra-pomex,Piedra Pómex (3 pzas),Pumice Stone (3 pcs),jarceria,accesorios,15,pomex;piedra,true,false
-P210,envase-4lt,Envase 4 L,Container 4 L,jarceria,accesorios,10,envase;4l,true,false
-P211,garrafa-20lts,Garrafa 20 L,Jug 20 L,jarceria,accesorios,35,garrafa;20l,true,false
-P212,bolsa-camiseta-chica,Bolsa Camiseta Chica,Small T-Shirt Bag,jarceria,bolsas,82,bolsa;camiseta;chica,true,false
-P213,bolsa-camiseta-grande,Bolsa Camiseta Grande,Large T-Shirt Bag,jarceria,bolsas,82,bolsa;camiseta;grande,true,false
-P214,bolsa-negra-60x90,Bolsa Negra 60x90,Black Bag 60x90,jarceria,bolsas,53,bolsa;negra;60x90,true,false
-P215,bolsa-negra-90x120,Bolsa Negra 90x120,Black Bag 90x120,jarceria,bolsas,53,bolsa;negra;90x120,true,false
-P216,bolsa-negra-60x90-pz,Bolsa Negra 60x90 (Pieza),Black Bag 60x90 (Piece),jarceria,bolsas,4,bolsa;negra;pieza,true,false
-P217,bolsa-negra-90x120-pz,Bolsa Negra 90x120 (Pieza),Black Bag 90x120 (Piece),jarceria,bolsas,8,bolsa;negra;pieza,true,false
-P218,franela-gris-roja,Franela Gris / Roja y Rallada,Gray / Red Striped Flannel,jarceria,accesorios,29,franela;limpieza,true,false
-P219,microfibra-grande-eco,Microfibra Grande Eco,Large Eco Microfiber,jarceria,trapeadores,29,microfibra;grande;eco,true,false
-P220,microfibra-chica-eco,Microfibra Chica Eco,Small Eco Microfiber,jarceria,trapeadores,22,microfibra;chica;eco,true,false
-P221,microfibra-kirkland,Microfibra Kirkland,Kirkland Microfiber,jarceria,trapeadores,29,microfibra;kirkland,true,false
-P222,microfibra-jumbo,Microfibra Jumbo,Jumbo Microfiber,jarceria,trapeadores,32,microfibra;jumbo,true,false
-P223,toalla-scott-shop-azul,Toalla Scott Shop Azul,Blue Scott Shop Towel,jarceria,accesorios,60,toalla;scott;azul,true,false
-P224,bomba-destapacanos,Bomba Destapacaños,Plunger,jarceria,accesorios,34,destapacanos;bomba,true,false
-P225,cepillo-mano,Cepillo de Mano,Hand Brush,jarceria,accesorios,27,cepillo;mano,true,false
-P226,cepillo-lechuguilla,Cepillo Lechuguilla,Lechuguilla Brush,jarceria,accesorios,40,cepillo;lechuguilla,true,false
-P227,cepillo-wc-base,Cepillo WC con Base,Toilet Brush with Base,jarceria,accesorios,42,cepillo;wc,true,true
-P228,lazo-canamo,Lazo Cáñamo,Hemp Rope,jarceria,accesorios,22,lazo;canamo,true,false
-P229,pastilla-deposito-azul,Pastilla Depósito Azul,Blue Tank Tablet,higiene,higienicos,18,pastilla;deposito;azul,true,false
-P230,pastilla-wizi,Pastilla Wizi,Wizi Tablet,higiene,higienicos,17,pastilla;wizi,true,false
-P231,tapete-mingitorio,Tapete Mingitorio,Urinal Mat,higiene,higienicos,53,tapete;mingitorio,true,false
-P232,pega-raton-individual,Pega Ratón Individual,Individual Mouse Trap,varios,varios,27,raton;pega,true,false
-P233,trampa-raton,Trampa para Ratón,Mouse Trap,varios,varios,55,raton;trampa,true,false
-P234,plumero-microfibra,Plumero Microfibra,Microfiber Duster,jarceria,accesorios,80,plumero;microfibra,true,false
-P235,ganchos-plastico,Ganchos Plástico,Plastic Hangers,jarceria,accesorios,38,ganchos;plastico,true,false
-P236,pinza-grande,Pinza Grande,Large Clothespin,jarceria,accesorios,32,pinza;grande,true,false
-P237,despachador-toalla-interdoblada,Despachador Toalla Interdoblada,Interfolded Towel Dispenser,higiene,despachadores,510,despachador;toalla;interdoblada,true,true
-P238,despachador-toalla-rollo-kim,Despachador Toalla en Rollo Kim,Kim Roll Towel Dispenser,higiene,despachadores,895,despachador;toalla;rollo;kim,true,false
-P239,despachador-toalla-rollo-oval,Despachador Toalla en Rollo Oval,Oval Roll Towel Dispenser,higiene,despachadores,880,despachador;toalla;rollo;oval,true,false
-P240,despachador-higienico-jumbo,Despachador Higiénico Jumbo,Jumbo Toilet Paper Dispenser,higiene,despachadores,410,despachador;higienico;jumbo,true,false
-P241,despachador-higienico-jumbo-oval,Despachador Higiénico Jumbo Oval,Oval Jumbo Toilet Paper Dispenser,higiene,despachadores,295,despachador;higienico;oval,true,false
-P242,despachador-barramesa,Despachador Barramesa,Counter Dispenser,higiene,despachadores,195,despachador;barramesa,true,false
-P243,despachador-jabon-liquido,Despachador Jabón Líquido,Liquid Soap Dispenser,higiene,despachadores,420,despachador;jabon;liquido,true,false
-P244,servilleta-taquera-marli,Servilleta Taquera Marli,Marli Taco Napkins,higiene,higienicos,22,servilleta;taquera,true,false
-P245,servilleta-delsey-eco,Servilleta Delsey Eco 100 pz,Delsey Eco Napkins 100 pc,higiene,higienicos,19,servilleta;delsey;eco,true,false
-P246,servilleta-dalia-450,Servilleta Dalia 450 pz,Dalia Napkins 450 pc,higiene,higienicos,41,servilleta;dalia,true,false
-P247,toalla-interdoblada-dalia,Toalla Interdoblada Dalia 20/100,Dalia Interfolded Towel 20/100,higiene,higienicos,19,toalla;interdoblada;dalia,true,false
-P248,toalla-interdoblada-ecologica,Toalla Interdoblada Ecológica 20/100,Eco Interfolded Towel 20/100,higiene,higienicos,20,toalla;interdoblada;eco,true,false
-P249,higienico-dalia-12-200,Higiénico Dalia 12/200,Dalia Toilet Paper 12/200,higiene,higienicos,39,higienico;dalia,true,true
-P250,higienico-jumbo-dalia,Higiénico Jumbo Dalia 6/400,Dalia Jumbo Toilet Paper 6/400,higiene,higienicos,72,higienico;jumbo;dalia,true,false
-P251,higienico-dalia-individual,Higiénico Dalia Individual,Dalia Individual Toilet Paper,higiene,higienicos,11,higienico;dalia;individual,true,false
-P252,higienico-big-quality,Higiénico Big Quality,Big Quality Toilet Paper,higiene,higienicos,12,higienico;big-quality,true,false
-P253,toalla-rollo-fapsa,Toalla en Rollo Fapsa,Fapsa Roll Towel,higiene,higienicos,82,toalla;rollo;fapsa,true,false
-P254,barramesa-fapsa,Barramesa Fapsa,Fapsa Counter Napkin,higiene,higienicos,27,barramesa;fapsa,true,false
-P255,cubreboca-adulto-50pz,Cubreboca Adulto Desechable 50 pz,Adult Disposable Face Mask 50 pc,higiene,higienicos,5,cubreboca;adulto,true,false
-P256,cubreboca-infantil-50pz,Cubreboca Infantil Desechable 50 pz,Kids Disposable Face Mask 50 pc,higiene,higienicos,3,cubreboca;infantil,true,false
-P257,cofias,Cofias,Hair Nets,higiene,higienicos,2.5,cofias;desechable,true,false
-P258,cono-senalizacion,Cono de Señalización,Safety Cone,jarceria,accesorios,96,cono;senalizacion;seguridad,true,false
-P259,cesto-azul,Cesto Azul,Blue Bin,jarceria,accesorios,89,cesto;azul;basura,true,false
-P260,guante-quirurgico,Guante Quirúrgico Desechable,Disposable Surgical Glove,jarceria,guantes,180,guante;quirurgico;desechable,true,false
-P261,pinza-chica,Pinza Chica (12 pzas),Small Clothespins (12 pc),jarceria,accesorios,20,pinza;chica;12piezas,true,false
-P262,varios-pegamoscas,Pegamoscas,Fly Paper Trap,varios,varios,16,pegamoscas;trampa;moscas,true,false
-P263,escoba-hilaza,Escoba Hilaza,Hilaza Broom,jarceria,escobas,58,escoba;hilaza,true,false
+id,slug,name_es,name_en,category,subcategory,price,tags,in_stock,featured,unit,image
+P001,multiusos-bebe,Multiusos Bebé,Baby Scent Multi-Surface,limpieza-hogar,multiusos,12,aroma;bebe;hogar,true,false,,
+P002,multiusos-manzana-canela,Multiusos Manzana Canela,Apple Cinnamon Multi-Surface,limpieza-hogar,multiusos,12,aroma;manzana;canela,true,false,,
+P003,multiusos-carolina-herrera,Multiusos Carolina Herrera,Carolina Herrera Multi-Surface,limpieza-hogar,multiusos,12,aroma;perfumado,true,false,,
+P004,multiusos-manzana-verde,Multiusos Manzana Verde,Green Apple Multi-Surface,limpieza-hogar,multiusos,12,aroma;manzana,true,false,,
+P005,multiusos-channel,Multiusos Channel,Channel Multi-Surface,limpieza-hogar,multiusos,12,aroma;perfumado,true,false,,
+P006,multiusos-canela,Multiusos Canela,Cinnamon Multi-Surface,limpieza-hogar,multiusos,12,aroma;canela,true,false,,
+P007,multiusos-naranja,Multiusos Naranja,Orange Multi-Surface,limpieza-hogar,multiusos,12,aroma;naranja;citrico,true,false,,
+P008,multiusos-lima-limon,Multiusos Lima-Limón,Lime-Lemon Multi-Surface,limpieza-hogar,multiusos,12,aroma;limon;citrico,true,false,,
+P009,multiusos-menta,Multiusos Menta,Mint Multi-Surface,limpieza-hogar,multiusos,12,aroma;menta,true,false,,
+P010,multiusos-floral,Multiusos Floral,Floral Multi-Surface,limpieza-hogar,multiusos,12,aroma;floral,true,false,,
+P011,multiusos-pino-menta,Multiusos Pino Menta,Pine Mint Multi-Surface,limpieza-hogar,multiusos,12,aroma;pino;menta,true,false,,
+P012,multiusos-pasion-frutal,Multiusos Pasión Frutal,Fruit Passion Multi-Surface,limpieza-hogar,multiusos,12,aroma;frutal,true,false,,
+P013,multiusos-pino-citrico,Multiusos Pino Cítrico,Citrus Pine Multi-Surface,limpieza-hogar,multiusos,13,aroma;pino;citrico,true,false,,
+P014,multiusos-eternity,Multiusos Eternity,Eternity Multi-Surface,limpieza-hogar,multiusos,13,aroma;perfumado,true,false,,
+P015,multiusos-hugo-boss,Multiusos Hugo Boss,Hugo Boss Multi-Surface,limpieza-hogar,multiusos,13,aroma;perfumado,true,false,,
+P016,multiusos-lavanda,Multiusos Lavanda,Lavender Multi-Surface,limpieza-hogar,multiusos,13,aroma;lavanda;floral,true,false,,
+P017,multiusos-kiwi,Multiusos Kiwi,Kiwi Multi-Surface,limpieza-hogar,multiusos,13,aroma;kiwi;frutal,true,false,,
+P018,multiusos-mar-fresco,Multiusos Tipo Mar Fresco,Fresh Sea Multi-Surface,limpieza-hogar,multiusos,14,aroma;mar;fresco,true,false,,
+P019,microcapsulas-flor-algodon,Limpiador Microcápsulas Flor de Algodón,Cotton Flower Microcapsule Cleaner,limpieza-hogar,microcapsulas,14,microcapsulas;algodon;larga-duracion,true,false,,
+P020,microcapsulas-petalos-rosa,Limpiador Microcápsulas Pétalos de Rosa,Rose Petals Microcapsule Cleaner,limpieza-hogar,microcapsulas,14,microcapsulas;rosa;floral,true,false,,
+P021,especial-limon-germicida,Limón con Germicida,Lemon with Germicide,limpieza-hogar,especiales,15,especial;limon;germicida,true,false,,
+P022,especial-limpiapisos-fabumoscas,Limpiapisos Fabumoscas (Repelente de Moscas),Fabumoscas Floor Cleaner (Fly Repellent),limpieza-hogar,especiales,15,especial;repelente;moscas,true,false,,
+P023,especial-repelente-moscos-60ml,Repelente de Moscos 60 ml,Mosquito Repellent 60 ml,limpieza-hogar,especiales,25,repelente;moscos;viaje,true,false,,
+P024,especial-repelente-moscos,Repelente de Moscos,Mosquito Repellent,limpieza-hogar,especiales,160,repelente;moscos;formato-grande,true,false,,
+P025,pastilla-cloro-1-pulg,Pastilla Cloro 1 pulg.,Chlorine Tablet 1 in.,limpieza-hogar,pastillas-cloro,145,cloro;pastilla;inodoro,true,false,,
+P026,tableta-cloro-3-pulg,Tableta Cloro 3 pulg.,Chlorine Tablet 3 in.,limpieza-hogar,pastillas-cloro,160,cloro;tableta;alberca,true,false,,
+P027,paquete-pastilla-cloro,Paquete Pastilla Cloro,Chlorine Tablet Pack,limpieza-hogar,pastillas-cloro,16,cloro;pastilla;paquete,true,false,,
+P028,cloro-en-polvo,Cloro en Polvo,Powdered Chlorine,limpieza-hogar,pastillas-cloro,119,cloro;polvo;concentrado,true,false,,
+P029,cloro-granulado,Cloro Granulado,Granulated Chlorine,limpieza-hogar,pastillas-cloro,160,cloro;granulado,true,false,,
+P030,desinfectante-bicarbonato-limon,Desinfectante Bicarbonato Limón,Baking Soda Lemon Disinfectant,limpieza-hogar,desinfectantes,13,desinfectante;bicarbonato;limon,true,false,,
+P031,desinfectante-pino-liquido-verde,Pino Líquido Verde,Green Liquid Pine,limpieza-hogar,desinfectantes,13,desinfectante;pino;verde,true,false,,
+P032,desinfectante-pino-liquido-transparente,Pino Líquido Transparente,Clear Liquid Pine,limpieza-hogar,desinfectantes,13,desinfectante;pino;transparente,true,false,,
+P033,desinfectante-sarrigel,Sarrigel,Sarrigel Descaler,limpieza-hogar,desinfectantes,16,desinfectante;sarro;gel,true,false,,
+P034,desinfectante-alcohol-etilico,Alcohol Etílico,Ethyl Alcohol,limpieza-hogar,desinfectantes,62.5,desinfectante;alcohol,true,false,,
+P035,desinfectante-cloralex-10l,Cloralex 10 L,Cloralex 10 L,limpieza-hogar,desinfectantes,140,desinfectante;cloro;cloralex;granel,true,true,pieza,cloralex-$140.png
+P036,desinfectante-cloro-3,Cloro al 3%,3% Chlorine,limpieza-hogar,desinfectantes,7,desinfectante;cloro,true,false,,
+P037,desinfectante-cloro-6,Cloro al 6%,6% Chlorine,limpieza-hogar,desinfectantes,9,desinfectante;cloro;concentrado,true,false,,
+P038,desinfectante-hipoclorito-sodio,Hipoclorito de Sodio,Sodium Hypochlorite,limpieza-hogar,desinfectantes,17,desinfectante;cloro;industrial,true,false,,
+P039,desinfectante-cloro-gel,Cloro en Gel,Chlorine Gel,limpieza-hogar,desinfectantes,19,desinfectante;cloro;gel,true,false,,
+P040,desinfectante-cloro-mascotas,Cloro Mascotas,Pet-Safe Chlorine,limpieza-hogar,desinfectantes,19,desinfectante;mascotas,true,false,,
+P041,desinfectante-pino-gel,Pino Gel,Pine Gel,limpieza-hogar,desinfectantes,28,desinfectante;pino;gel,true,false,,
+P042,desinfectante-lysol,Lysol,Lysol,limpieza-hogar,desinfectantes,138,desinfectante;marca;lysol,true,false,,
+P043,desengrasante-en-caliente,Desengrasante en Caliente,Hot Degreaser,limpieza-hogar,desengrasantes,16,desengrasante;cocina,true,false,,
+P044,desengrasante-cocina,Desengrasante Cocina,Kitchen Degreaser,limpieza-hogar,desengrasantes,22,desengrasante;cocina,true,false,,
+P045,det-desengrasante,Detergente Desengrasante,Degreasing Detergent,limpieza-hogar,desengrasantes,20,desengrasante;detergente,true,false,,
+P046,desengrasante-industrial,Desengrasante Industrial,Industrial Degreaser,limpieza-hogar,desengrasantes,50,desengrasante;industrial,true,false,,
+P047,desengrasante-motor,Desengrasante Motor,Engine Degreaser,limpieza-hogar,desengrasantes,30,desengrasante;motor;automotriz,true,false,,
+P048,detergente-liquido-carisma,Detergente Líquido Carisma,Carisma Liquid Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;ropa,true,false,,
+P049,detergente-liquido-deterpino,Detergente Deterpino Verde o Café,Deterpino Green or Brown Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;pino,true,false,,
+P050,detergente-liquido-roma,Detergente Líquido Roma,Roma Liquid Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;marca,true,false,,
+P051,detergente-liquido-ariel,Detergente Líquido Ariel,Ariel Liquid Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;marca,true,false,,
+P052,detergente-liquido-zote-rosa,Detergente Líquido Zote Rosa,Zote Pink Liquid Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;zote;rosa,true,false,,
+P053,detergente-liquido-ace,Detergente Ace Ropa Blanca y Color,Ace White & Color Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;marca,true,false,,
+P054,detergente-liquido-punos-cuello,Detergente Puños y Cuello,Collar & Cuffs Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;prelavado,true,false,,
+P055,detergente-liquido-persil-color,Detergente Tipo Persil Ropa de Color,Persil-Style Color Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;color,true,false,,
+P056,detergente-liquido-vel-rosita,Detergente Vel Rosita,Vel Rosita Liquid Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;delicado,true,false,,
+P057,detergente-liquido-cloro-ropa-color,Detergente Tipo Cloro P/Ropa Color,Color-Safe Chlorine Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;color,true,false,,
+P058,detergente-liquido-vinagre,Detergente con Vinagre,Vinegar Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;vinagre,true,false,,
+P059,detergente-liquido-vanish-gel,Detergente Tipo Vanish Gel,Vanish-Style Gel Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;quitamanchas,true,false,,
+P060,detergente-liquido-mas-color,Detergente Mas Color,Mas Color Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;color,true,false,,
+P061,detergente-liquido-mas-color-negro,Detergente Mas Color Negro,Mas Color Black Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;negro,true,false,,
+P062,detergente-liquido-ariel-downy,Detergente Ariel con Downy,Ariel with Downy Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;marca;suavizante,true,false,,
+P063,detergente-liquido-multiusos-cafe,Detergente Multiusos Café,Brown Multi-Use Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;multiusos,true,false,,
+P064,detergente-bicarbonato,Detergente Bicarbonato,Baking Soda Detergent,lavanderia,detergentes-liquidos,19,detergente;liquido;bicarbonato,true,false,,
+P065,detergente-liquido-pino-mugroso,Detergente Pino Mugroso,Pine Heavy-Duty Detergent,lavanderia,detergentes-liquidos,27,detergente;liquido;pino,true,false,,
+P066,detergente-liquido-axion-limon,Detergente Axión Limón,Axion Lemon Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;limon;trastes,true,false,,
+P067,detergente-polvo-multiusos-sueltos,Detergente en Polvo Multiusos (Suelto),Bulk Powder Multi-Use Detergent,lavanderia,detergentes-polvo,35,detergente;polvo;granel,true,false,,
+P068,detergente-polvo-blanca-nieves,Detergente Blanca Nieves,Blanca Nieves Powder Detergent,lavanderia,detergentes-polvo,43,detergente;polvo;marca,true,true,kilo,blanca-nieves-polvo-$43_.png
+P069,detergente-polvo-roma,Detergente Roma en Polvo,Roma Powder Detergent,lavanderia,detergentes-polvo,43,detergente;polvo;marca,true,true,kilo,
+P070,jabon-barra-carisma,Jabón Barra Carisma,Carisma Bar Soap,lavanderia,jabon-barra,28,jabon;barra;ropa,true,true,pieza,Barra-carisma-$28.png
+P071,jabon-barra-zote-rosa,Zote Barra Rosa,Zote Pink Bar Soap,lavanderia,jabon-barra,28,jabon;barra;zote,true,true,pieza,Barra-zote-$28.png
+P072,suavizante-ensueno,Suavitel Ensueño,Suavitel Dream,lavanderia,suavizantes,18,suavizante;marca,true,false,,
+P073,suavizante-downy-rosa,Suavizante Downy Rosa,Downy Pink Softener,lavanderia,suavizantes,18,suavizante;marca;rosa,true,false,,
+P074,suavizante-bebe,Suavitel Bebé,Suavitel Baby,lavanderia,suavizantes,18,suavizante;bebe,true,false,,
+P075,suavizante-momentos-magicos,Suavitel Momentos Mágicos,Suavitel Magic Moments,lavanderia,suavizantes,18,suavizante;marca,true,false,,
+P076,suavizante-azul,Suavitel Azul,Suavitel Blue,lavanderia,suavizantes,18,suavizante,true,false,,
+P077,suavizante-amarillo,Suavitel Amarillo,Suavitel Yellow,lavanderia,suavizantes,18,suavizante,true,false,,
+P078,suavizante-doble-ensueno,Suavizante Doble Aroma Ensueño,Dream Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma,true,false,,
+P079,suavizante-doble-downy-rosa,Suavizante Doble Aroma Downy Rosa,Downy Pink Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma;rosa,true,false,,
+P080,suavizante-doble-bebe,Suavizante Doble Aroma Bebé,Baby Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma;bebe,true,false,,
+P081,suavizante-doble-momentos-magicos,Suavizante Doble Aroma Momentos Mágicos,Magic Moments Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma,true,false,,
+P082,suavizante-doble-azul,Suavizante Doble Aroma Azul,Blue Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma,true,false,,
+P083,suavizante-doble-amarillo,Suavizante Doble Aroma Amarillo,Yellow Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma,true,false,,
+P084,reforzador-aroma,Reforzador de Aroma (Varios),Scent Booster (Assorted),lavanderia,suavizantes-doble-aroma,33,reforzador;aroma;perlas,true,false,,
+P085,shampoo-manos-dosificador-1l,Shampoo Manos con Dosificador 1 L,Hand Soap with Dispenser 1 L,higiene,jabon-manos,60,manos;dosificador;oficina,true,false,,
+P086,shampoo-manos-neutro,Shampoo Manos Neutro,Neutral Hand Soap,higiene,jabon-manos,19,manos;neutro,true,false,,
+P087,shampoo-manos-kiwi,Shampoo Manos Kiwi,Kiwi Hand Soap,higiene,jabon-manos,19,manos;kiwi,true,false,,
+P088,shampoo-manos-coco,Shampoo Manos Coco,Coconut Hand Soap,higiene,jabon-manos,19,manos;coco,true,false,,
+P089,shampoo-manos-frutal,Shampoo Manos Frutal,Fruit Hand Soap,higiene,jabon-manos,19,manos;frutal,true,false,,
+P090,shampoo-manos-manzana-verde,Shampoo Manos Manzana Verde,Green Apple Hand Soap,higiene,jabon-manos,19,manos;manzana,true,false,,
+P091,shampoo-manos-carolina-herrera,Shampoo Manos Carolina Herrera,Carolina Herrera Hand Soap,higiene,jabon-manos,19,manos;perfumado,true,false,,
+P092,gel-antibacterial-granel,Gel Antibacterial a Granel,Bulk Antibacterial Gel,higiene,gel-antibacterial,55,gel;antibacterial;granel,true,false,,
+P093,gel-antibacterial-60ml,Gel Antibacterial Botella 60 ml,Antibacterial Gel Bottle 60 ml,higiene,gel-antibacterial,20,gel;antibacterial;bolsillo,true,false,,
+P094,gel-antibacterial-500ml,Gel Antibacterial Botella 1/2 L,Antibacterial Gel Bottle 500 ml,higiene,gel-antibacterial,35,gel;antibacterial,true,false,,
+P095,gel-antibacterial-1l,Gel Antibacterial Botella 1 L,Antibacterial Gel Bottle 1 L,higiene,gel-antibacterial,60,gel;antibacterial;familiar,true,false,,
+P096,gel-antibacterial-1l-dosificador,Gel Antibacterial 1 L con Dosificador,Antibacterial Gel 1 L with Dispenser,higiene,gel-antibacterial,85,gel;antibacterial;dosificador,true,false,,
+P097,sanitizante-granel,Líquido Sanitizante a Granel,Bulk Sanitizing Liquid,higiene,sanitizantes,55,sanitizante;granel,true,false,,
+P098,sanitizante-250ml,Líquido Sanitizante 250 ml,Sanitizing Liquid 250 ml,higiene,sanitizantes,35,sanitizante,true,false,,
+P099,shampoo-head-and-shoulders,Shampoo Head & Shoulders,Head & Shoulders Shampoo,higiene,higiene-personal,23,shampoo;cabello;marca,true,false,,
+P100,aromatizante-madera-oriental,Autofresh Madera Oriental,Oriental Wood Air Freshener,aromatizantes,autofresh,32,aromatizante;madera;oriental,true,false,,
+P101,aromatizante-channel,Autofresh Channel,Channel Air Freshener,aromatizantes,autofresh,32,aromatizante;perfumado,true,false,,
+P102,aromatizante-coco,Autofresh Coco,Coconut Air Freshener,aromatizantes,autofresh,32,aromatizante;coco,true,false,,
+P103,aromatizante-hugo-boss,Autofresh Hugo Boss,Hugo Boss Air Freshener,aromatizantes,autofresh,32,aromatizante;perfumado,true,false,,
+P104,aromatizante-carolina-herrera,Autofresh Carolina Herrera,Carolina Herrera Air Freshener,aromatizantes,autofresh,32,aromatizante;perfumado,true,false,,
+P105,aromatizante-total-fresh-60ml,Total Fresh 60 ml,Total Fresh 60 ml,aromatizantes,autofresh,22,aromatizante;marca-total-bri,true,false,,
+P106,aromatizante-glade,Aromatizante Glade,Glade Air Freshener,aromatizantes,autofresh,69,aromatizante;marca;glade,true,false,,
+P107,aromatizante-febrize,Aromatizante Febrize,Febrize Air Freshener,aromatizantes,autofresh,94,aromatizante;marca;febrize,true,false,,
+P108,automotriz-cera-liq-uso-humedo,Cera Líquida Uso Húmedo,Wet Wax,automotriz,linea-automotriz,22,automotriz;cera,true,false,,
+P109,automotriz-vaselina-industrial,Vaselina Industrial,Industrial Vaseline,automotriz,linea-automotriz,50,automotriz;vaselina;industrial,true,false,,
+P110,automotriz-shampoo-carrocerias,Shampoo Carrocerías,Car Wash Shampoo,automotriz,linea-automotriz,20,automotriz;shampoo,true,false,,
+P111,automotriz-shampoo-carro-cera,Shampoo para Carro con Cera,Car Shampoo with Wax,automotriz,linea-automotriz,24,automotriz;shampoo;cera,true,false,,
+P112,automotriz-almorol,Almorol Líquido,Liquid Almorol,automotriz,linea-automotriz,52,automotriz;armorol,true,false,,
+P113,automotriz-espuma-activa,Espuma Activa,Active Foam,automotriz,linea-automotriz,24,automotriz;espuma,true,false,,
+P114,automotriz-liq-llantas,Líquido Llantas Naranja/Negro,Tire Shine Orange/Black,automotriz,linea-automotriz,35,automotriz;llantas,true,false,,
+P115,automotriz-alumbra,Alumbra,Alumbra Polish,automotriz,linea-automotriz,20,automotriz;alumbra,true,false,,
+P116,automotriz-envase-alto-brillo-250ml,Envase Alto Brillo 250 ml,High Gloss Bottle 250 ml,automotriz,linea-automotriz,30,automotriz;brillo,true,false,,
+P117,automotriz-alto-brillo,Alto Brillo,High Gloss,automotriz,linea-automotriz,105,automotriz;brillo;granel,true,false,,
+P118,automotriz-glicerina,Glicerina,Glycerin,automotriz,linea-automotriz,110,automotriz;glicerina,true,false,,
+P119,automotriz-envase-glicerina-500ml,Envase Glicerina 500 ml,Glycerin Bottle 500 ml,automotriz,linea-automotriz,46,automotriz;glicerina,true,false,,
+P120,varios-plegde-aerosol-muebles,Pledge Aerosol para Muebles,Pledge Furniture Aerosol,varios,varios,98,marca;muebles;aerosol,true,false,,
+P121,varios-raid-casa-jardin,Raid Casa y Jardín,Raid House & Garden,varios,varios,74,marca;insecticida,true,false,,
+P122,varios-quita-cochambre,Quita Cochambre,Grease Remover,varios,varios,21,cochambre;cocina,true,false,,
+P123,varios-quita-cochambre-gel,Quita Cochambre en Gel,Gel Grease Remover,varios,varios,21,cochambre;gel,true,false,,
+P124,varios-limpiavidrios,Limpiavidrios,Glass Cleaner,varios,varios,14,vidrios;limpieza,true,false,,
+P125,varios-bicarbonato,Bicarbonato,Baking Soda,varios,varios,71,bicarbonato;granel,true,false,,
+P126,varios-liquido-destapacanos,Líquido Destapacaños,Drain Opener Liquid,varios,varios,20,destapacanos;liquido,true,false,,
+P127,varios-quitasarro,Quitasarro,Lime Scale Remover,varios,varios,21,sarro;bano,true,false,,
+P128,varios-liq-insecticida-total,Líquido Insecticida Total,Total Insecticide Liquid,varios,varios,68,insecticida,true,false,,
+P129,varios-cucarachicida,Cucarachicida,Roach Killer,varios,varios,30,insecticida;cucarachas,true,false,,
+P130,varios-sosa-liquida-lt,Sosa Líquida L,Liquid Caustic Soda L,varios,varios,52,sosa;caustica;industrial,true,false,,
+P131,varios-ac-pino,Aceite de Pino,Pine Oil,varios,varios,186,pino;aceite;granel,true,false,,
+P132,varios-aceite-muebles,Aceite para Muebles,Furniture Oil,varios,varios,81,muebles;aceite,true,false,,
+P133,varios-sham-perro-carolina,Shampoo para Perro Carolina Herrera,Carolina Herrera Dog Shampoo,varios,mascotas,18,mascotas;perro;shampoo,true,false,,
+P134,varios-sham-antip-hugo-boss,Shampoo Antipulgas Hugo Boss,Hugo Boss Flea Shampoo,varios,mascotas,25,mascotas;perro;antipulgas,true,false,,
+P135,varios-liquido-quita-gotas,Líquido Quita Gotas,Drop Remover Liquid,varios,varios,25,gotas;limpieza,true,false,,
+P136,varios-agita-bolsita,Agita Bolsita,Agita Sachet,varios,varios,75,agita;moscas,true,true,,agita-bolsa-$75.png
+P137,varios-agita-atomizador-eco,Agita Atomizador Eco,Agita Eco Spray,varios,varios,90,agita;atomizador,true,false,,
+P138,varios-agita-atomizador,Agita Atomizador,Agita Spray,varios,varios,105,agita;atomizador,true,false,,
+P139,trapeador-microfibra-chico,Trapeador Microfibra Chico,Small Microfiber Mop,jarceria,trapeadores,67,trapeador;microfibra;chico,true,false,,
+P140,trapeador-microfibra-extra-mediano,Trapeador Microfibra Extra Mediano,Extra-Medium Microfiber Mop,jarceria,trapeadores,75,trapeador;microfibra;mediano,true,false,,
+P141,trapeador-microfibra-industrial,Trapeador Microfibra Industrial,Industrial Microfiber Mop,jarceria,trapeadores,100,trapeador;microfibra;industrial,true,false,,
+P142,trapeador-microfibra-espanola,Trapeador Microfibra Española,Spanish Microfiber Mop,jarceria,trapeadores,93,trapeador;microfibra;espanola,true,false,,
+P143,trapeador-microfibra-espanola-eco,Trapeador Microfibra Española Eco,Eco Spanish Microfiber Mop,jarceria,trapeadores,71,trapeador;microfibra;eco,true,false,,
+P144,trapeador-hilaza-25,Trapeador Hilaza #25,Yarn Mop #25,jarceria,trapeadores,50,trapeador;hilaza,true,false,,
+P145,trapeador-hilaza-industrial,Trapeador Hilaza Industrial,Industrial Yarn Mop,jarceria,trapeadores,55,trapeador;hilaza;industrial,true,false,,
+P146,trapeador-pabilo-25,Trapeador Pabilo #25,Pabilo Mop #25,jarceria,trapeadores,42,trapeador;pabilo,true,false,,
+P147,trapeador-pabilo-industrial,Trapeador Pabilo Industrial,Industrial Pabilo Mop,jarceria,trapeadores,50,trapeador;pabilo;industrial,true,false,,
+P148,escoba-tipo-cepillo,Escoba Tipo Cepillo,Brush-Type Broom,jarceria,escobas,58,escoba;cepillo,true,false,,
+P149,escoba-cepillo-lava-coches,Cepillo Lava Coches,Car Wash Brush,jarceria,escobas,78,escoba;cepillo;autos,true,false,,
+P150,escoba-abanico-grande,Escoba Abanico Grande,Large Fan Broom,jarceria,escobas,46,escoba;abanico,true,false,,
+P151,escoba-veneciana,Escoba Veneciana,Venetian Broom,jarceria,escobas,60,escoba;veneciana,true,false,,
+P152,escoba-valentina-metal,Escoba Valentina Bastón Metal,Valentina Metal-Handle Broom,jarceria,escobas,80,escoba;metal,true,false,,
+P153,escoba-romana,Escoba Romana,Roman Broom,jarceria,escobas,58,escoba;romana,true,false,,
+P154,escoba-arcoiris,Escoba Arcoiris,Rainbow Broom,jarceria,escobas,58,escoba;arcoiris,true,false,,
+P155,escoba-mega,Escoba Mega,Mega Broom,jarceria,escobas,46,escoba;mega,true,false,,
+P156,recogedor-metal,Recogedor Metal,Metal Dustpan,jarceria,escobas,40,recogedor;metal,true,false,,
+P157,recogedor-metal-industrial,Recogedor Metal Industrial,Industrial Metal Dustpan,jarceria,escobas,50,recogedor;industrial,true,false,,
+P158,recogedor-plastico,Recogedor Plástico Peric,Peric Plastic Dustpan,jarceria,escobas,48,recogedor;plastico,true,false,,
+P159,jalador-metal-30cm,Jalador Metal 30 cm,Metal Squeegee 30 cm,jarceria,escobas,47,jalador;metal;30cm,true,false,,
+P160,jalador-metal-50cm,Jalador Metal 50 cm,Metal Squeegee 50 cm,jarceria,escobas,52,jalador;metal;50cm,true,false,,
+P161,arana-metal,Araña de Metal,Metal Spider Broom,jarceria,escobas,110,arana;metal,true,false,,
+P162,tambo-100lts,Tambo de 100 L,100 L Drum,jarceria,cubetas,250,tambo;100l,true,false,,
+P163,colador,Colador,Strainer,jarceria,accesorios,30,colador;plastico,true,false,,
+P164,jarra-2l,Jarra 2 L,Pitcher 2 L,jarceria,accesorios,38,jarra;2l,true,false,,
+P165,jarra-4l,Jarra 4 L,Pitcher 4 L,jarceria,accesorios,73,jarra;4l,true,false,,
+P166,jarra-1l,Jarra 1 L,Pitcher 1 L,jarceria,accesorios,35,jarra;1l,true,false,,
+P167,cubeta-toscana,Cubeta Toscana,Toscana Bucket,jarceria,cubetas,70,cubeta;toscana,true,false,,
+P168,cubeta-6,Cubeta #6,Bucket #6,jarceria,cubetas,18,cubeta;chica,true,false,,
+P169,cubeta-8,Cubeta #8,Bucket #8,jarceria,cubetas,27,cubeta;mediana,true,false,,
+P170,cubeta-12,Cubeta #12,Bucket #12,jarceria,cubetas,56,cubeta;grande,true,false,,
+P171,cubeta-14,Cubeta #14,Bucket #14,jarceria,cubetas,66,cubeta;industrial,true,false,,
+P172,cesto-basura,Cesto Basura,Trash Bin,jarceria,accesorios,35,cesto;basura,true,true,,cesto-amarillo-$35.png
+P173,cesto-papelero,Cesto Papelero,Paper Bin,jarceria,accesorios,118,cesto;papelero,true,true,,cesto-gris-$118_.png
+P174,jicara,Jícara,Gourd Bowl,jarceria,accesorios,21,jicara,true,true,,Jicara-$21_.png
+P175,embudo-jumbo,Embudo Jumbo,Jumbo Funnel,jarceria,accesorios,45,embudo;jumbo,true,false,,
+P176,embudo-mediano,Embudo Mediano,Medium Funnel,jarceria,accesorios,31,embudo;mediano,true,false,,
+P177,embudo-chico,Embudo Chico,Small Funnel,jarceria,accesorios,26,embudo;chico,true,false,,
+P178,dosificador-1l,Dosificador 1 L,1 L Dispenser,jarceria,accesorios,31,dosificador;1l,true,false,,
+P179,pistola-atomizador,Pistola Atomizador,Spray Gun,jarceria,atomizadores,40,atomizador;pistola,true,false,,
+P180,atomizador-medio,Atomizador 1/2 L,Sprayer 1/2 L,jarceria,atomizadores,33,atomizador;medio,true,true,,atomizador-1_2-litro-$33.png
+P181,atomizador-1lt,Atomizador 1 L,Sprayer 1 L,jarceria,atomizadores,40,atomizador;1l,true,true,,atomizador-1-litro-$40.png
+P182,atomizador-mini-250ml,Atomizador Mini 250 ml,Mini Sprayer 250 ml,jarceria,atomizadores,23,atomizador;mini,true,false,,
+P183,lijas-agua,Lijas de Agua,Water Sandpaper,jarceria,accesorios,13,lijas;agua,true,false,,
+P184,fibra-mini-metalica-espiral,Mini Fibra Metálica Espiral,Mini Spiral Metal Scrubber,jarceria,fibras,10,fibra;metalica;mini,true,false,,
+P185,fibra-metalica-chica,Fibra Metálica Chica,Small Metal Scrubber,jarceria,fibras,11,fibra;metalica;chica,true,false,,
+P186,fibra-metalica-mediana,Fibra Metálica Mediana,Medium Metal Scrubber,jarceria,fibras,12,fibra;metalica;mediana,true,false,,
+P187,fibra-metalica-grande,Fibra Metálica Grande,Large Metal Scrubber,jarceria,fibras,17,fibra;metalica;grande,true,false,,
+P188,fibra-metalica-jumbo,Fibra Metálica Jumbo,Jumbo Metal Scrubber,jarceria,fibras,22,fibra;metalica;jumbo,true,false,,
+P189,fibra-negra-p76,Fibra Negra P76,Black Fiber P76,jarceria,fibras,34,fibra;negra;p76,true,true,,Fibra-negra-p76-$34.png
+P190,fibra-monarca,Fibra Monarca,Monarca Fiber,jarceria,fibras,15,fibra;monarca,true,true,,Fibra-monarca-$15.png
+P191,fibra-verde-scotch-brite,Fibra Verde Scotch-Brite,Green Scotch-Brite Fiber,jarceria,fibras,20,fibra;verde;scotch-brite,true,false,,
+P192,fibra-prof-verde-scotch,Fibra Profesional Verde Scotch,Professional Green Scotch Fiber,jarceria,fibras,27,fibra;verde;profesional,true,false,,
+P193,fibra-blanca-p66,Fibra Blanca P66,White Fiber P66,jarceria,fibras,27,fibra;blanca;p66,true,true,,Fibra-blanca-p66-$27.png
+P194,fibra-ajax,Fibra Ajax,Ajax Fiber,jarceria,fibras,6,fibra;ajax,true,true,,Fibra-ajax-$6.png
+P195,esponja-limpia-vidrios,Esponja Limpia Vidrios,Glass-Cleaning Sponge,jarceria,esponjas,68,esponja;vidrios,true,false,,
+P196,fibras-con-esponja,Fibras con Esponja,Sponge with Fiber,jarceria,esponjas,16,fibra;esponja,true,false,,
+P197,esponja-cuadritela-trastes,Cuadritela Trastes,Dish Cuadritela,jarceria,esponjas,18,esponja;trastes,true,false,,
+P198,esponja-fregon,Esponja Fregón,Scouring Sponge,jarceria,esponjas,18,esponja;fregon,true,false,,
+P199,esponja-grande,Esponja Grande,Large Sponge,jarceria,esponjas,25,esponja;grande,true,false,,
+P200,esponja-chica-mini-hueso,Esponja Chica Mini Hueso,Small Mini Sponge,jarceria,esponjas,20,esponja;chica,true,false,,
+P201,esponja-mexico-grande,Esponja México Grande,Large Mexico Sponge,jarceria,esponjas,21,esponja;mexico,true,false,,
+P202,esponja-circulo,Esponja Círculo,Circle Sponge,jarceria,esponjas,17,esponja;circulo,true,false,,
+P203,esponja-tabique,Esponja Tabique,Brick Sponge,jarceria,esponjas,31,esponja;tabique,true,false,,
+P204,escobetilla-raiz-plastico,Escobetilla Raíz Plástico,Plastic Root Brush,jarceria,accesorios,24,escobetilla;plastico,true,false,,
+P205,escobetilla-raiz,Escobetilla Raíz,Root Brush,jarceria,accesorios,20,escobetilla;raiz,true,false,,
+P206,guante-nitrilo-verde,Guante Nitrilo Verde,Green Nitrile Glove,jarceria,guantes,51,guantes;nitrilo,true,false,,
+P207,guantes-latex,Guantes Látex,Latex Gloves,jarceria,guantes,34,guantes;latex,true,false,,
+P208,tierra-roja,Tierra Roja,Red Clay,jarceria,accesorios,11,tierra;roja;limpieza,true,false,,
+P209,piedra-pomex,Piedra Pómex (3 pzas),Pumice Stone (3 pcs),jarceria,accesorios,15,pomex;piedra,true,false,,
+P210,envase-4lt,Envase 4 L,Container 4 L,jarceria,accesorios,10,envase;4l,true,false,,
+P211,garrafa-20lts,Garrafa 20 L,Jug 20 L,jarceria,accesorios,35,garrafa;20l,true,false,,
+P212,bolsa-camiseta-chica,Bolsa Camiseta Chica,Small T-Shirt Bag,jarceria,bolsas,82,bolsa;camiseta;chica,true,true,,bolsa-camiseta-$82_.png
+P213,bolsa-camiseta-grande,Bolsa Camiseta Grande,Large T-Shirt Bag,jarceria,bolsas,82,bolsa;camiseta;grande,true,false,,
+P214,bolsa-negra-60x90,Bolsa Negra 60x90,Black Bag 60x90,jarceria,bolsas,53,bolsa;negra;60x90,true,true,,bolsa-negra-60x90-$53.png
+P215,bolsa-negra-90x120,Bolsa Negra 90x120,Black Bag 90x120,jarceria,bolsas,53,bolsa;negra;90x120,true,true,,bolsa-negra-90x120-$53.png
+P216,bolsa-negra-60x90-pz,Bolsa Negra 60x90 (Pieza),Black Bag 60x90 (Piece),jarceria,bolsas,4,bolsa;negra;pieza,true,false,,
+P217,bolsa-negra-90x120-pz,Bolsa Negra 90x120 (Pieza),Black Bag 90x120 (Piece),jarceria,bolsas,8,bolsa;negra;pieza,true,false,,
+P218,franela-gris-roja,Franela Gris / Roja y Rallada,Gray / Red Striped Flannel,jarceria,accesorios,29,franela;limpieza,true,false,,
+P219,microfibra-grande-eco,Microfibra Grande Eco,Large Eco Microfiber,jarceria,trapeadores,29,microfibra;grande;eco,true,false,,
+P220,microfibra-chica-eco,Microfibra Chica Eco,Small Eco Microfiber,jarceria,trapeadores,22,microfibra;chica;eco,true,false,,
+P221,microfibra-kirkland,Microfibra Kirkland,Kirkland Microfiber,jarceria,trapeadores,29,microfibra;kirkland,true,false,,
+P222,microfibra-jumbo,Microfibra Jumbo,Jumbo Microfiber,jarceria,trapeadores,32,microfibra;jumbo,true,false,,
+P223,toalla-scott-shop-azul,Toalla Scott Shop Azul,Blue Scott Shop Towel,jarceria,accesorios,60,toalla;scott;azul,true,false,,
+P224,bomba-destapacanos,Bomba Destapacaños,Plunger,jarceria,accesorios,34,destapacanos;bomba,true,false,,
+P225,cepillo-mano,Cepillo de Mano,Hand Brush,jarceria,accesorios,27,cepillo;mano,true,false,,
+P226,cepillo-lechuguilla,Cepillo Lechuguilla,Lechuguilla Brush,jarceria,accesorios,40,cepillo;lechuguilla,true,false,,
+P227,cepillo-wc-base,Cepillo WC con Base,Toilet Brush with Base,jarceria,accesorios,42,cepillo;wc,true,true,,cepillo-wc-$42.png
+P228,lazo-canamo,Lazo Cáñamo,Hemp Rope,jarceria,accesorios,22,lazo;canamo,true,false,,
+P229,pastilla-deposito-azul,Pastilla Depósito Azul,Blue Tank Tablet,higiene,higienicos,18,pastilla;deposito;azul,true,false,,
+P230,pastilla-wizi,Pastilla Wizi,Wizi Tablet,higiene,higienicos,17,pastilla;wizi,true,false,,
+P231,tapete-mingitorio,Tapete Mingitorio,Urinal Mat,higiene,higienicos,53,tapete;mingitorio,true,false,,
+P232,pega-raton-individual,Pega Ratón Individual,Individual Mouse Trap,varios,varios,27,raton;pega,true,false,,
+P233,trampa-raton,Trampa para Ratón,Mouse Trap,varios,varios,55,raton;trampa,true,false,,
+P234,plumero-microfibra,Plumero Microfibra,Microfiber Duster,jarceria,accesorios,80,plumero;microfibra,true,false,,
+P235,ganchos-plastico,Ganchos Plástico,Plastic Hangers,jarceria,accesorios,38,ganchos;plastico,true,false,,
+P236,pinza-grande,Pinza Grande,Large Clothespin,jarceria,accesorios,32,pinza;grande,true,false,,
+P237,despachador-toalla-interdoblada,Despachador Toalla Interdoblada,Interfolded Towel Dispenser,higiene,despachadores,510,despachador;toalla;interdoblada,true,true,,despachador-toalla-interdoblada-$510.png
+P238,despachador-toalla-rollo-kim,Despachador Toalla en Rollo Kim,Kim Roll Towel Dispenser,higiene,despachadores,895,despachador;toalla;rollo;kim,true,false,,
+P239,despachador-toalla-rollo-oval,Despachador Toalla en Rollo Oval,Oval Roll Towel Dispenser,higiene,despachadores,880,despachador;toalla;rollo;oval,true,false,,
+P240,despachador-higienico-jumbo,Despachador Higiénico Jumbo,Jumbo Toilet Paper Dispenser,higiene,despachadores,410,despachador;higienico;jumbo,true,true,,despachador-hig-jr-$410.png
+P241,despachador-higienico-jumbo-oval,Despachador Higiénico Jumbo Oval,Oval Jumbo Toilet Paper Dispenser,higiene,despachadores,295,despachador;higienico;oval,true,false,,
+P242,despachador-barramesa,Despachador Barramesa,Counter Dispenser,higiene,despachadores,195,despachador;barramesa,true,true,,despachador-barra-mesa-$195_.png
+P243,despachador-jabon-liquido,Despachador Jabón Líquido,Liquid Soap Dispenser,higiene,despachadores,420,despachador;jabon;liquido,true,true,,despachador-jabon-líquido-$420.png
+P244,servilleta-taquera-marli,Servilleta Taquera Marli,Marli Taco Napkins,higiene,higienicos,22,servilleta;taquera,true,false,,
+P245,servilleta-delsey-eco,Servilleta Delsey Eco 100 pz,Delsey Eco Napkins 100 pc,higiene,higienicos,19,servilleta;delsey;eco,true,false,,
+P246,servilleta-dalia-450,Servilleta Dalia 450 pz,Dalia Napkins 450 pc,higiene,higienicos,41,servilleta;dalia,true,false,,
+P247,toalla-interdoblada-dalia,Toalla Interdoblada Dalia 20/100,Dalia Interfolded Towel 20/100,higiene,higienicos,19,toalla;interdoblada;dalia,true,false,,
+P248,toalla-interdoblada-ecologica,Toalla Interdoblada Ecológica 20/100,Eco Interfolded Towel 20/100,higiene,higienicos,20,toalla;interdoblada;eco,true,false,,
+P249,higienico-dalia-12-200,Higiénico Dalia 12/200,Dalia Toilet Paper 12/200,higiene,higienicos,39,higienico;dalia,true,false,,
+P250,higienico-jumbo-dalia,Higiénico Jumbo Dalia 6/400,Dalia Jumbo Toilet Paper 6/400,higiene,higienicos,72,higienico;jumbo;dalia,true,false,,
+P251,higienico-dalia-individual,Higiénico Dalia Individual,Dalia Individual Toilet Paper,higiene,higienicos,11,higienico;dalia;individual,true,false,,
+P252,higienico-big-quality,Higiénico Big Quality,Big Quality Toilet Paper,higiene,higienicos,12,higienico;big-quality,true,false,,
+P253,toalla-rollo-fapsa,Toalla en Rollo Fapsa,Fapsa Roll Towel,higiene,higienicos,82,toalla;rollo;fapsa,true,false,,
+P254,barramesa-fapsa,Barramesa Fapsa,Fapsa Counter Napkin,higiene,higienicos,27,barramesa;fapsa,true,false,,
+P255,cubreboca-adulto-50pz,Cubreboca Adulto Desechable 50 pz,Adult Disposable Face Mask 50 pc,higiene,higienicos,5,cubreboca;adulto,true,false,,
+P256,cubreboca-infantil-50pz,Cubreboca Infantil Desechable 50 pz,Kids Disposable Face Mask 50 pc,higiene,higienicos,3,cubreboca;infantil,true,false,,
+P257,cofias,Cofias,Hair Nets,higiene,higienicos,2.5,cofias;desechable,true,false,,
+P258,cono-senalizacion,Cono de Señalización,Safety Cone,jarceria,accesorios,96,cono;senalizacion;seguridad,true,false,,
+P259,cesto-azul,Cesto Azul,Blue Bin,jarceria,accesorios,89,cesto;azul;basura,true,true,,cesto-azul-$89.png
+P260,guante-quirurgico,Guante Quirúrgico Desechable,Disposable Surgical Glove,jarceria,guantes,180,guante;quirurgico;desechable,true,false,,
+P261,pinza-chica,Pinza Chica (12 pzas),Small Clothespins (12 pc),jarceria,accesorios,20,pinza;chica;12piezas,true,false,,
+P262,varios-pegamoscas,Pegamoscas,Fly Paper Trap,varios,varios,16,pegamoscas;trampa;moscas,true,false,,
+P263,escoba-hilaza,Escoba Hilaza,Hilaza Broom,jarceria,escobas,58,escoba;hilaza,true,false,,

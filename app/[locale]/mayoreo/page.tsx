@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { isLocale } from '@/domain/i18n/config';
 import { MayoreoHero } from '@/features/mayoreo/MayoreoHero';
 import { MayoreoInteractiveSection } from '@/features/mayoreo/MayoreoInteractiveSection';
+import { Footer } from '@/components/layout/Footer';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -23,6 +24,7 @@ export default async function MayoreoPage({ params }: Props) {
     <>
       <MayoreoHero locale={locale} />
       <MayoreoInteractiveSection />
+      <Footer locale={locale} heading="¿Tu empresa merece un proveedor que no falla?" />
     </>
   );
 }

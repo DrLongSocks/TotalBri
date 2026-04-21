@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { ShoppingBag, AlertTriangle } from 'lucide-react';
+import { ShoppingCart, AlertTriangle } from 'lucide-react';
 import {
   Sheet,
   SheetContent,
@@ -56,7 +56,7 @@ export function CartDrawer({ open, onOpenChange, productMap }: Props) {
         {hydrated.length === 0 ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 text-center">
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-porcelain">
-              <ShoppingBag className="h-7 w-7 text-slate" />
+              <ShoppingCart className="h-7 w-7 text-slate" />
             </div>
             <SheetTitle className="text-xl">{t('empty')}</SheetTitle>
             <SheetDescription>{t('emptyCopy')}</SheetDescription>

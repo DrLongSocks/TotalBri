@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { Minus, Plus, ShoppingBag } from 'lucide-react';
+import { Minus, Plus, ShoppingCart } from 'lucide-react';
 import { useCartStore } from '@/features/cart/store';
 import { cn } from '@/lib/cn';
 
 type Props = {
   productId: string;
-  unit: 'litro' | 'pieza';
+  unit: 'litro' | 'pieza' | 'kilo';
   inStock: boolean;
 };
 
@@ -32,23 +32,23 @@ export function AddToCartRow({ productId, unit, inStock }: Props) {
 
   return (
     <div className="mt-3 flex items-center gap-2">
-      <div className="flex items-center rounded-xl border border-mist bg-porcelain">
+      <div className="flex flex-1 items-center rounded-xl border border-mist bg-porcelain">
         <button
           type="button"
           onClick={dec}
           aria-label="Menos"
-          className="flex h-9 w-9 items-center justify-center rounded-l-xl text-slate transition hover:bg-mist hover:text-ink"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-l-xl text-slate transition hover:bg-mist hover:text-ink"
         >
           <Minus className="h-3.5 w-3.5" />
         </button>
-        <span className="w-16 text-center text-xs font-medium tabular-nums text-ink">
+        <span className="min-w-0 flex-1 text-center text-xs font-medium tabular-nums text-ink">
           {unitLabel}
         </span>
         <button
           type="button"
           onClick={inc}
           aria-label="Más"
-          className="flex h-9 w-9 items-center justify-center rounded-r-xl text-slate transition hover:bg-mist hover:text-ink"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-r-xl text-slate transition hover:bg-mist hover:text-ink"
         >
           <Plus className="h-3.5 w-3.5" />
         </button>
@@ -64,7 +64,7 @@ export function AddToCartRow({ productId, unit, inStock }: Props) {
           'flex h-9 flex-1 items-center justify-center gap-1.5 rounded-xl bg-azure text-xs font-semibold text-paper transition hover:bg-azure-deep active:scale-95',
         )}
       >
-        <ShoppingBag className="h-3.5 w-3.5" />
+        <ShoppingCart className="h-3.5 w-3.5" />
         Agregar
       </button>
     </div>
