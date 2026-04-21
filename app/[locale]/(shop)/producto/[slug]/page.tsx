@@ -8,7 +8,7 @@ import { PDPBreadcrumbs } from '@/features/pdp/PDPBreadcrumbs';
 import { ProductGallery } from '@/features/pdp/ProductGallery';
 import { ProductInfo } from '@/features/pdp/ProductInfo';
 import { RelatedProducts } from '@/features/pdp/RelatedProducts';
-import { productJsonLd } from '@/lib/seo';
+import { productJsonLd, safeJsonLd } from '@/lib/seo';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -46,7 +46,7 @@ export default async function ProductPage({ params }: Props) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd(product, locale)) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(productJsonLd(product, locale)) }}
       />
 
       <section className="border-b border-mist pt-6">

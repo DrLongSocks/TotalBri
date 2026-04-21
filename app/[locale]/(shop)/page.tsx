@@ -6,7 +6,7 @@ import { findFeatured, findByCategory } from '@/domain/product/queries';
 import { ProductCard } from '@/features/catalog/ProductCard';
 import { MobileCategoryCarousel } from '@/features/home/MobileCategoryCarousel';
 import { CATEGORY_TREE } from '@/domain/category/tree';
-import { localBusinessJsonLd } from '@/lib/seo';
+import { localBusinessJsonLd, safeJsonLd } from '@/lib/seo';
 import type { Locale } from '@/domain/i18n/config';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -39,7 +39,7 @@ export default async function HomePage({ params }: Props) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd()) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(localBusinessJsonLd()) }}
       />
 
       {/* Hero */}

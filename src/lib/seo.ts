@@ -2,6 +2,10 @@ import type { Product } from '@/domain/product/schema';
 import type { Locale } from '@/domain/i18n/config';
 import { env } from './env';
 
+export function safeJsonLd(data: object): string {
+  return JSON.stringify(data).replace(/</g, '\\u003c');
+}
+
 export function productJsonLd(product: Product, locale: Locale) {
   return {
     '@context': 'https://schema.org',
