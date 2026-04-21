@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, ChevronDown, Home, ShoppingBag, Package } from 'lucide-react';
+import { Menu, ChevronDown, Home, ShoppingBag, ShoppingCart, Package } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import {
   Sheet,
@@ -171,7 +171,7 @@ export function MobileBottomNav() {
           isCart ? 'text-azure' : 'text-slate',
         )}
       >
-        <ShoppingBag className="h-5 w-5" />
+        <ShoppingCart className="h-5 w-5" />
         <span className="text-[10px] font-bold uppercase tracking-wide">Pedido</span>
         {mounted && count > 0 ? (
           <span className="absolute right-[30%] top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-azure px-1 text-[9px] font-extrabold text-paper">

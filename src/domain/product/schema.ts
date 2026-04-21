@@ -34,7 +34,7 @@ export const ProductSchema = z.object({
   tags: z.array(z.string()),
   inStock: z.boolean(),
   featured: z.boolean(),
-  unit: z.enum(['litro', 'pieza']),
+  unit: z.enum(['litro', 'pieza', 'kilo']),
 });
 
 export type Product = z.infer<typeof ProductSchema>;

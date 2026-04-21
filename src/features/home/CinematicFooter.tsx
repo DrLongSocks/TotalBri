@@ -2,10 +2,12 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { ShoppingCart } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { cn } from '@/lib/cn';
 import { env } from '@/lib/env';
+import { useCartDrawer } from '@/features/cart/CartDrawerProvider';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -176,12 +178,17 @@ function WAIcon() {
   );
 }
 
-export function CinematicFooter() {
+type CinematicFooterProps = {
+  heading?: string;
+};
+
+export function CinematicFooter({ heading = '¿Todo listo? Completa tu pedido por WhatsApp.' }: CinematicFooterProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const giantTextRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const linksRef = useRef<HTMLDivElement>(null);
 
+  const { openDrawer } = useCartDrawer();
   const waNumber = env.NEXT_PUBLIC_WHATSAPP_PRIMARY ?? '3546880969';
   const waUrl = `https://wa.me/${waNumber.replace(/\D/g, '')}?text=${encodeURIComponent('¡Hola Total Bri! Quiero hacer un pedido.')}`;
 
@@ -191,7 +198,7 @@ export function CinematicFooter() {
       if (giantTextRef.current) {
         gsap.fromTo(
           giantTextRef.current,
-          { y: '10vh', scale: 0.8, opacity: 0 },
+          { y: '10vh', scale: 0.8, opacity: 1 },
           {
             y: '0vh', scale: 1, opacity: 1, ease: 'power1.out',
             scrollTrigger: { trigger: wrapperRef.current, start: 'top 80%', end: 'bottom bottom', scrub: 1 },
@@ -202,7 +209,7 @@ export function CinematicFooter() {
       if (targets.length > 0) {
         gsap.fromTo(
           targets,
-          { y: 50, opacity: 0 },
+          { y: 50, opacity: 1 },
           {
             y: 0, opacity: 1, stagger: 0.15, ease: 'power3.out',
             scrollTrigger: { trigger: wrapperRef.current, start: 'top 40%', end: 'bottom bottom', scrub: 1 },
@@ -259,9 +266,9 @@ export function CinematicFooter() {
           <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 mt-20 w-full max-w-5xl mx-auto">
             <h2
               ref={headingRef}
-              className="text-5xl md:text-8xl font-black footer-text-glow tracking-tighter mb-12 text-center"
+              className="text-3xl sm:text-5xl md:text-8xl font-black footer-text-glow tracking-tighter mb-6 text-center md:mb-12"
             >
-              ¿Tu empresa merece un proveedor que no falla?
+              {heading}
             </h2>
 
             <div ref={linksRef} className="flex flex-col items-center gap-6 w-full">
@@ -272,7 +279,7 @@ export function CinematicFooter() {
                   href={waUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="footer-glass-pill px-10 py-5 rounded-full font-bold text-sm md:text-base flex items-center gap-3"
+                  className="footer-glass-pill px-6 py-4 sm:px-10 sm:py-5 rounded-full font-bold text-sm md:text-base flex items-center gap-3"
                   style={{ background: '#25D366', border: 'none', color: '#fff' }}
                 >
                   <WAIcon />
@@ -280,12 +287,13 @@ export function CinematicFooter() {
                 </MagneticButton>
 
                 <MagneticButton
-                  as={Link}
-                  href="/tienda"
-                  className="footer-glass-pill px-10 py-5 rounded-full font-bold text-sm md:text-base flex items-center gap-3"
+                  as="button"
+                  onClick={openDrawer}
+                  className="footer-glass-pill px-6 py-4 sm:px-10 sm:py-5 rounded-full font-bold text-sm md:text-base flex items-center gap-3"
                   style={{ color: '#F6F3EC' }}
                 >
-                  Ver catálogo →
+                  <ShoppingCart className="h-4 w-4" />
+                  Ver mi pedido
                 </MagneticButton>
               </div>
 
@@ -305,7 +313,7 @@ export function CinematicFooter() {
           </div>
 
           {/* Bottom bar */}
-          <div className="relative z-20 w-full pb-8 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="relative z-20 w-full pb-24 px-6 md:px-12 lg:pb-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-[10px] md:text-xs font-semibold tracking-widest uppercase order-2 md:order-1" style={{ color: 'rgba(246,243,236,0.40)' }}>
               © 2026 Total Bri · Los Reyes
             </div>

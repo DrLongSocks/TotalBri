@@ -15,6 +15,8 @@ type CsvRow = {
   tags: string;
   in_stock: string;
   featured: string;
+  unit?: string;
+  image?: string;
 };
 
 function toBool(value: string): boolean {
@@ -90,8 +92,8 @@ function loadProducts(): { list: readonly Product[]; bySlug: Map<string, Product
     }
 
     const category = mapCategory(row.category?.trim() ?? '', row.subcategory?.trim() ?? '');
-    const unit = getUnit(category);
-    const localImage = `/images/products/${row.slug}.png`;
+    const unit = (row.unit?.trim() as 'litro' | 'pieza' | 'kilo' | undefined) || getUnit(category);
+    const localImage = row.image?.trim() ? `/${row.image.trim()}` : `/images/products/${row.slug}.png`;
     const name = { es: nameEs, en: nameEn };
     const description = buildDescription(name, row.subcategory);
 

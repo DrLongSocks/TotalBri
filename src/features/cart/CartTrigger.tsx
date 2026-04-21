@@ -1,6 +1,6 @@
 'use client';
 
-import { ShoppingBag } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import { useCartDrawer } from './CartDrawerProvider';
 import { useCartStore } from './store';
 import { useHasMounted } from './useHasMounted';
@@ -24,7 +24,7 @@ export function CartTrigger({ variant = 'icon' }: Props) {
         aria-label="Mi pedido"
         className="flex items-center gap-2.5 rounded-[10px] bg-azure px-4 py-2.5 text-paper transition-colors hover:bg-azure-deep"
       >
-        <ShoppingBag className="h-[18px] w-[18px]" />
+        <ShoppingCart className="h-[18px] w-[18px]" />
         <span className="font-display text-[15px] font-extrabold uppercase tracking-wide">
           Mi pedido
         </span>
@@ -47,7 +47,7 @@ export function CartTrigger({ variant = 'icon' }: Props) {
       aria-label="Mi pedido"
       className="relative flex h-10 w-10 items-center justify-center rounded-full text-paper/80 hover:bg-paper/10"
     >
-      <ShoppingBag className="h-5 w-5" />
+      <ShoppingCart className="h-5 w-5" />
       {mounted && count > 0 ? (
         <span
           aria-hidden

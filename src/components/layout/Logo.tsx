@@ -22,13 +22,13 @@ export function Logo({ locale: _locale, tone = 'ink', className }: Props) {
         alt="Total Bri"
         width={56}
         height={56}
-        className="h-14 w-14 object-contain"
+        className="h-10 w-10 object-contain md:h-14 md:w-14"
         priority
       />
       <div className="text-left leading-none">
         <div
           className={cn(
-            'font-display text-[28px] font-extrabold uppercase tracking-wide leading-none',
+            'font-display text-[22px] font-extrabold uppercase tracking-wide leading-none md:text-[28px]',
             tone === 'paper' ? 'text-paper' : 'text-ink',
           )}
         >

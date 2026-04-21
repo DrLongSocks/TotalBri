@@ -26,7 +26,7 @@ export async function Header({ locale }: Props) {
     <header className="sticky top-0 z-30 w-full">
       {/* Nav bar */}
       <div className="bg-ink text-paper">
-        <div className="container-shell flex h-[80px] items-center gap-4">
+        <div className="container-shell flex h-[64px] items-center gap-2 md:h-[80px] md:gap-4">
           {/* Mobile hamburger (kept for category browsing on small screens) */}
           <div className="md:hidden">
             <MobileNav locale={locale} />

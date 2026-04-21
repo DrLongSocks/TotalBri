@@ -11,9 +11,9 @@ export function HeroCarousel() {
       <div className="noise pointer-events-none absolute inset-0" />
       <div className="pointer-events-none absolute right-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-azure/20 blur-[120px]" />
 
-      <div className="relative z-10 flex flex-col items-center gap-8 px-8 py-12 md:flex-row md:items-center md:px-12 md:py-16">
-        {/* Left: copy */}
-        <div className="flex-1">
+      <div className="relative z-10 flex flex-col items-center gap-0 px-8 py-12 text-center md:flex-row md:items-center md:gap-8 md:px-12 md:py-16 md:text-left">
+        {/* Left: eyebrow + heading + description */}
+        <div className="flex flex-1 flex-col items-center md:items-start">
           <p className="eyebrow mb-3 text-azure">Total Bri · 2026 · Los Reyes</p>
           <h1 className="display-xl leading-none text-paper">
             Limpieza profesional
@@ -24,25 +24,27 @@ export function HeroCarousel() {
             Arma tu pedido, elige entrega o recoger, y te confirmamos por WhatsApp.
             Sin apps, sin cuentas complicadas.
           </p>
+        </div>
+
+        {/* Center/Right: logo + CTA stacked */}
+        <div className="flex flex-shrink-0 flex-col items-center gap-6 mt-8 md:mt-0">
+          <div className="relative flex items-center justify-center">
+            <div className="absolute h-96 w-96 rounded-full bg-azure/30 blur-[80px]" />
+            <Image
+              src="/logo.png"
+              alt="Total Bri"
+              width={340}
+              height={340}
+              className="relative z-10 h-56 w-56 object-contain md:h-80 md:w-80 drop-shadow-2xl"
+              priority
+            />
+          </div>
           <Link
             href="#mas-vendidos"
-            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-display text-[15px] font-extrabold uppercase tracking-wide text-paper transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-display text-[15px] font-extrabold uppercase tracking-wide text-paper transition-opacity hover:opacity-90"
           >
             Ver catálogo →
           </Link>
-        </div>
-
-        {/* Right: logo — statement piece, shifted up-left */}
-        <div className="relative flex flex-shrink-0 items-center justify-center -mt-6 -ml-4 md:-mt-10 md:-ml-8">
-          <div className="absolute h-96 w-96 rounded-full bg-azure/30 blur-[80px]" />
-          <Image
-            src="/logo.png"
-            alt="Total Bri"
-            width={340}
-            height={340}
-            className="relative z-10 h-56 w-56 object-contain md:h-80 md:w-80 drop-shadow-2xl"
-            priority
-          />
         </div>
       </div>
     </section>

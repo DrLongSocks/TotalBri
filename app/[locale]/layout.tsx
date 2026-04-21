@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
 import { MobileBottomNav } from '@/components/layout/MobileNav';
 import { CartDrawerProvider } from '@/features/cart/CartDrawerProvider';
 import { isLocale, LOCALES } from '@/domain/i18n/config';
@@ -49,8 +48,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
           Ir al contenido
         </a>
         <Header locale={locale} />
-        <main id="main">{children}</main>
-        <Footer locale={locale} />
+        <main id="main" className="pb-20 lg:pb-0">{children}</main>
         <MobileBottomNav />
       </CartDrawerProvider>
     </NextIntlClientProvider>

@@ -11,7 +11,7 @@ export function SortSelect() {
 
   return (
     <Select value={current} onValueChange={setSort}>
-      <SelectTrigger className="w-56">
+      <SelectTrigger className="w-full sm:w-56">
         <SelectValue placeholder={t('sort')} />
       </SelectTrigger>
       <SelectContent>
