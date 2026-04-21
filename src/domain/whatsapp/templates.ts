@@ -2,6 +2,7 @@ import type { Locale } from '../i18n/config';
 import { formatPrice } from '../i18n/format';
 import type { Product } from '../product/schema';
 import type { HydratedLine } from '../cart/totals';
+import { MAX_QTY } from '../cart/types';
 
 const TRUNCATE_THRESHOLD = 1800;
 
@@ -22,7 +23,9 @@ export function buildOrderMessage(
   subtotal: number,
   locale: Locale,
 ): string {
-  const inStockLines = lines.filter(({ product }) => product.inStock);
+  const inStockLines = lines
+    .filter(({ product }) => product.inStock)
+    .map((l) => ({ ...l, line: { ...l.line, quantity: Math.min(l.line.quantity, MAX_QTY) } }));
   const phrases =
     locale === 'es'
       ? {

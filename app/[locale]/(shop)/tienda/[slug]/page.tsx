@@ -15,7 +15,7 @@ import {
 } from '@/domain/product/queries';
 import { CatalogShell } from '@/features/catalog/CatalogShell';
 import { parseFilterParams } from '@/lib/url';
-import { collectionJsonLd } from '@/lib/seo';
+import { collectionJsonLd, safeJsonLd } from '@/lib/seo';
 import { env } from '@/lib/env';
 
 type Props = {
@@ -80,7 +80,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       {/* Category header */}
       <div className="mb-6">
