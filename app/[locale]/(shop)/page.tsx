@@ -32,7 +32,7 @@ export default async function HomePage({ params }: Props) {
   const categoryCards = CATEGORY_TREE.flatMap((cat) => {
     const products = findByCategory(cat.slug);
     if (!products.length) return [];
-    return [{ slug: cat.slug, name: cat.name.es, image: products[0].images[0], count: products.length, locale }];
+    return [{ slug: cat.slug, name: cat.name.es, image: products[0]?.images?.[0] ?? '', count: products.length, locale }];
   });
 
   return (

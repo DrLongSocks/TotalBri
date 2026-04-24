@@ -25,7 +25,7 @@ export type CategoryCardData = {
 };
 
 function CategoryCard({ slug, name, image, count, locale }: CategoryCardData & { index: number }) {
-  const fallback = ESCOBA_FALLBACKS[Math.abs(slug.length) % ESCOBA_FALLBACKS.length];
+  const fallback = ESCOBA_FALLBACKS[Math.abs(slug.length) % ESCOBA_FALLBACKS.length]!;
 
   return (
     <motion.div
