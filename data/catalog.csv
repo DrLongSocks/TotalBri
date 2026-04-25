@@ -1,26 +1,26 @@
 id,slug,name_es,name_en,category,subcategory,price,tags,in_stock,featured,unit,image
-P001,multiusos-bebe,Limpiapisos Bebé,Baby Scent Multi-Surface,limpieza-hogar,multiusos,12,aroma;bebe;hogar,true,false,,
-P002,multiusos-manzana-canela,Limpiapisos Manzana Canela,Apple Cinnamon Multi-Surface,limpieza-hogar,multiusos,12,aroma;manzana;canela,true,false,,
-P003,multiusos-carolina-herrera,Limpiapisos Carolina Herrera,Carolina Herrera Multi-Surface,limpieza-hogar,multiusos,12,aroma;perfumado,true,false,,
-P004,multiusos-manzana-verde,Limpiapisos Manzana Verde,Green Apple Multi-Surface,limpieza-hogar,multiusos,12,aroma;manzana,true,false,,
-P005,multiusos-channel,Limpiapisos Channel,Channel Multi-Surface,limpieza-hogar,multiusos,12,aroma;perfumado,true,false,,
-P006,multiusos-canela,Limpiapisos Canela,Cinnamon Multi-Surface,limpieza-hogar,multiusos,12,aroma;canela,true,false,,
+P001,multiusos-bebe,Limpiapisos Bebé,Baby Scent Multi-Surface,limpieza-hogar,multiusos,12,aroma;bebe;hogar,true,false,,images/products/limpia-pisos-bebe.png
+P002,multiusos-manzana-canela,Limpiapisos Manzana Canela,Apple Cinnamon Multi-Surface,limpieza-hogar,multiusos,12,aroma;manzana;canela,true,false,,images/products/limpia-pisos-manzana-canela.png
+P003,multiusos-carolina-herrera,Limpiapisos Carolina Herrera,Carolina Herrera Multi-Surface,limpieza-hogar,multiusos,12,aroma;perfumado,true,false,,images/products/limpia-pisos-carolina-herrera.png
+P004,multiusos-manzana-verde,Limpiapisos Manzana Verde,Green Apple Multi-Surface,limpieza-hogar,multiusos,12,aroma;manzana,true,false,,images/products/limpia-pisos-manzana-verde.png
+P005,multiusos-channel,Limpiapisos Channel,Channel Multi-Surface,limpieza-hogar,multiusos,12,aroma;perfumado,true,false,,images/products/limpia-pisos-channel.png
+P006,multiusos-canela,Limpiapisos Canela,Cinnamon Multi-Surface,limpieza-hogar,multiusos,12,aroma;canela,true,false,,images/products/limpia-pisos-canela.png
 P007,multiusos-naranja,Limpiapisos Naranja,Orange Multi-Surface,limpieza-hogar,multiusos,12,aroma;naranja;citrico,true,false,,
-P008,multiusos-lima-limon,Limpiapisos Lima-Limón,Lime-Lemon Multi-Surface,limpieza-hogar,multiusos,12,aroma;limon;citrico,true,false,,
-P009,multiusos-menta,Limpiapisos Menta,Mint Multi-Surface,limpieza-hogar,multiusos,12,aroma;menta,true,false,,
-P010,multiusos-floral,Limpiapisos Floral,Floral Multi-Surface,limpieza-hogar,multiusos,12,aroma;floral,true,false,,
-P011,multiusos-pino-menta,Limpiapisos Pino Menta,Pine Mint Multi-Surface,limpieza-hogar,multiusos,12,aroma;pino;menta,true,false,,
-P012,multiusos-pasion-frutal,Limpiapisos Pasión Frutal,Fruit Passion Multi-Surface,limpieza-hogar,multiusos,12,aroma;frutal,true,false,,
-P013,multiusos-pino-citrico,Limpiapisos Pino Cítrico,Citrus Pine Multi-Surface,limpieza-hogar,multiusos,13,aroma;pino;citrico,true,false,,
-P014,multiusos-eternity,Limpiapisos Eternity,Eternity Multi-Surface,limpieza-hogar,multiusos,13,aroma;perfumado,true,false,,
-P015,multiusos-hugo-boss,Limpiapisos Hugo Boss,Hugo Boss Multi-Surface,limpieza-hogar,multiusos,13,aroma;perfumado,true,false,,
-P016,multiusos-lavanda,Limpiapisos Lavanda,Lavender Multi-Surface,limpieza-hogar,multiusos,13,aroma;lavanda;floral,true,false,,
-P017,multiusos-kiwi,Limpiapisos Kiwi,Kiwi Multi-Surface,limpieza-hogar,multiusos,13,aroma;kiwi;frutal,true,false,,
+P008,multiusos-lima-limon,Limpiapisos Lima-Limón,Lime-Lemon Multi-Surface,limpieza-hogar,multiusos,12,aroma;limon;citrico,true,false,,images/products/limpia-pisos-lima-limon.png
+P009,multiusos-menta,Limpiapisos Menta,Mint Multi-Surface,limpieza-hogar,multiusos,12,aroma;menta,true,false,,images/products/limpia-pisos-menta.png
+P010,multiusos-floral,Limpiapisos Floral,Floral Multi-Surface,limpieza-hogar,multiusos,12,aroma;floral,true,false,,images/products/limpia-pisos-floral.png
+P011,multiusos-pino-menta,Limpiapisos Pino Menta,Pine Mint Multi-Surface,limpieza-hogar,multiusos,12,aroma;pino;menta,true,false,,images/products/limpia-pisos-pino-menta.png
+P012,multiusos-pasion-frutal,Limpiapisos Pasión Frutal,Fruit Passion Multi-Surface,limpieza-hogar,multiusos,12,aroma;frutal,true,false,,images/products/limpia-pisos-pasion-frutal.png
+P013,multiusos-pino-citrico,Limpiapisos Pino Cítrico,Citrus Pine Multi-Surface,limpieza-hogar,multiusos,13,aroma;pino;citrico,true,false,,images/products/limpia-pisos-pino-citrico.png
+P014,multiusos-eternity,Limpiapisos Eternity,Eternity Multi-Surface,limpieza-hogar,multiusos,13,aroma;perfumado,true,false,,images/products/limpia-pisos-eterity.png
+P015,multiusos-hugo-boss,Limpiapisos Hugo Boss,Hugo Boss Multi-Surface,limpieza-hogar,multiusos,13,aroma;perfumado,true,false,,images/products/limpia-pisos-hugo-boss.png
+P016,multiusos-lavanda,Limpiapisos Lavanda,Lavender Multi-Surface,limpieza-hogar,multiusos,13,aroma;lavanda;floral,true,false,,images/products/limpia-pisos-lavanda.png
+P017,multiusos-kiwi,Limpiapisos Kiwi,Kiwi Multi-Surface,limpieza-hogar,multiusos,13,aroma;kiwi;frutal,true,false,,images/products/limpia-pisos-kiwi.png
 P018,multiusos-mar-fresco,Limpiapisos Tipo Mar Fresco,Fresh Sea Multi-Surface,limpieza-hogar,multiusos,14,aroma;mar;fresco,true,false,,
 P019,microcapsulas-flor-algodon,Limpiador Microcápsulas Flor de Algodón,Cotton Flower Microcapsule Cleaner,limpieza-hogar,microcapsulas,14,microcapsulas;algodon;larga-duracion,true,false,,
 P020,microcapsulas-petalos-rosa,Limpiador Microcápsulas Pétalos de Rosa,Rose Petals Microcapsule Cleaner,limpieza-hogar,microcapsulas,14,microcapsulas;rosa;floral,true,false,,
 P021,especial-limon-germicida,Limón con Germicida,Lemon with Germicide,limpieza-hogar,especiales,15,especial;limon;germicida,true,false,,
-P022,especial-limpiapisos-fabumoscas,Limpiapisos Fabumoscas (Repelente de Moscas),Fabumoscas Floor Cleaner (Fly Repellent),limpieza-hogar,especiales,15,especial;repelente;moscas,true,false,,
+P022,especial-limpiapisos-fabumoscas,Limpiapisos Fabumoscas (Repelente de Moscas),Fabumoscas Floor Cleaner (Fly Repellent),limpieza-hogar,especiales,15,especial;repelente;moscas,true,false,,images/products/limpia-pisos-fabumoscas.png
 P023,especial-repelente-moscos-60ml,Repelente de Moscos 60 ml,Mosquito Repellent 60 ml,limpieza-hogar,especiales,25,repelente;moscos;viaje,true,false,,
 P024,especial-repelente-moscos,Repelente de Moscos,Mosquito Repellent,limpieza-hogar,especiales,160,repelente;moscos;formato-grande,true,false,,
 P025,pastilla-cloro-1-pulg,Pastilla Cloro 1 pulg.,Chlorine Tablet 1 in.,limpieza-hogar,pastillas-cloro,145,cloro;pastilla;inodoro,true,false,,
