@@ -7,13 +7,13 @@ import Link from 'next/link';
 import { cn } from '@/lib/cn';
 
 const ESCOBA_FALLBACKS = [
-  '/images/products/escoba-abanico-grande.png',
-  '/images/products/escoba-arcoiris.png',
-  '/images/products/escoba-tipo-cepillo.png',
-  '/images/products/escoba-mega.png',
-  '/images/products/escoba-romana.png',
-  '/images/products/escoba-veneciana.png',
-  '/images/products/escoba-hilaza.png',
+  '/images/products/escoba-arcoiris.jpg',
+  '/images/products/escoba-arcoiris.jpg',
+  '/images/products/escoba-tipo-cepillo.jpg',
+  '/images/products/escoba-mega.jpg',
+  '/images/products/escoba-roma.jpg',
+  '/images/products/escoba-veneciana.jpg',
+  '/images/products/escoba-hiliza.jpg',
 ];
 
 export type CategoryCardData = {

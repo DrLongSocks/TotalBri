@@ -93,7 +93,7 @@ function loadProducts(): { list: readonly Product[]; bySlug: Map<string, Product
 
     const category = mapCategory(row.category?.trim() ?? '', row.subcategory?.trim() ?? '');
     const unit = (row.unit?.trim() as 'litro' | 'pieza' | 'kilo' | undefined) || getUnit(category);
-    const localImage = row.image?.trim() ? `/${row.image.trim()}` : `/images/products/${row.slug}.png`;
+    const localImage = row.image?.trim() ? `/${row.image.trim()}` : `/images/products/${row.slug}.jpg`;
     const name = { es: nameEs, en: nameEn };
     const description = buildDescription(name, row.subcategory);
 
