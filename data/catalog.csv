@@ -267,3 +267,11 @@ P265,pastilla-mary,Pastilla Mary,Mary Tablet,higiene,higienicos,15,pastilla;mary
 P266,limpia-pisos-coco,Limpiapisos Coco,Coconut Multi-Surface Cleaner,limpieza-hogar,multiusos,12,limpieza;coco;aroma,true,false,litro,images/products/limpia-pisos-coco.jpg
 P267,jerga-rayada,Jerga Rayada,Striped Cleaning Cloth,jarceria,accesorios,29,jerga;rayada;limpieza,true,false,pieza,images/products/jerga-rayada-29.jpg
 P268,despachador-generico,Despachador,Dispenser,higiene,despachadores,195,despachador,true,false,pieza,images/products/despachador.jpg
+P269,autofresh-roma,Autofresh Roma,Roma Air Freshener,aromatizantes,autofresh,69,aromatizante;roma;perfumado,true,true,pieza,images/products/autofresh-liquido-roma.jpg
+P270,cofias-pieza,Cofias por Pieza,Hair Net per Piece,higiene,higienicos,2.5,cofias;pieza;desechable,true,true,pieza,images/products/cofias-pieza-2.5.jpg
+P271,cubeta-16,Cubeta #16,Bucket #16,jarceria,cubetas,56,cubeta;industrial,true,true,pieza,images/products/cubetas-16-56.jpg
+P272,higienico-dalia-individual-pz,Higiénico Dalia Individual Pz,Dalia Individual Toilet Paper Unit,higiene,higienicos,11,higienico;dalia;individual;pieza,true,true,pieza,images/products/dalia-hig-individual-11.jpg
+P273,embudo-jumbo-46,Embudo Jumbo,Jumbo Funnel,jarceria,accesorios,46,embudo;jumbo,true,true,pieza,images/products/embudo-jumbo-46.jpg
+P274,escoba-veneciana-60,Escoba Veneciana,Venetian Broom,jarceria,escobas,60,escoba;veneciana,true,true,pieza,images/products/escoba-veneciana-60.jpg
+P275,franela-gris,Franela Gris,Gray Flannel,jarceria,accesorios,29,franela;gris;limpieza,true,true,pieza,images/products/franela-gris-29.jpg
+P276,toalla-rollo-pz,Toalla en Rollo,Roll Towel,higiene,higienicos,82,toalla;rollo,true,true,pieza,images/products/toalla-rollo-pz-82.jpg
