@@ -31,12 +31,13 @@ export function HeroCarousel() {
           <div className="relative flex items-center justify-center">
             <div className="absolute h-96 w-96 rounded-full bg-azure/30 blur-[80px]" />
             <Image
-              src="/logo.png"
+              src="/logo.svg"
               alt="Total Bri"
               width={340}
               height={340}
               className="relative z-10 h-56 w-56 object-contain md:h-80 md:w-80 drop-shadow-2xl"
               priority
+              unoptimized
             />
           </div>
           <Link

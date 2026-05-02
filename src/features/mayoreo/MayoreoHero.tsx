@@ -39,12 +39,13 @@ export async function MayoreoHero({ locale }: Props) {
           <div className="relative flex items-center justify-center">
             <div className="absolute h-[500px] w-[500px] rounded-full bg-azure/30 blur-[100px]" />
             <Image
-              src="/logo.png"
+              src="/logo.svg"
               alt="Total Bri"
               width={520}
               height={520}
               className="relative z-10 h-64 w-64 object-contain md:h-[440px] md:w-[440px] drop-shadow-2xl"
               priority
+              unoptimized
             />
           </div>
           <MayoreoHeroCTA waUrl={waUrl} label={t('heroCta')} />

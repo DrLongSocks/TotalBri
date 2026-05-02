@@ -18,12 +18,13 @@ export function Logo({ locale: _locale, tone = 'ink', className }: Props) {
       className={cn('flex items-center gap-2.5', className)}
     >
       <Image
-        src="/logo.png"
+        src="/logo.svg"
         alt="Total Bri"
         width={56}
         height={56}
         className="h-10 w-10 object-contain md:h-14 md:w-14"
         priority
+        unoptimized
       />
       <div className="text-left leading-none">
         <div
