@@ -9,3 +9,6 @@ out
 next-env.d.ts
 coverage
 .turbo
+
+# Raw source images — only processed outputs in public/images/products/ are committed
+public/images/website-pic-collection/

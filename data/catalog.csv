@@ -22,7 +22,7 @@ P020,microcapsulas-petalos-rosa,Limpiador Microcápsulas Pétalos de Rosa,Rose P
 P021,especial-limon-germicida,Limón con Germicida,Lemon with Germicide,limpieza-hogar,especiales,15,especial;limon;germicida,true,false,,images/products/limpia-pisos-limon-germicida.jpg
 P022,especial-limpiapisos-fabumoscas,Limpiapisos Fabumoscas (Repelente de Moscas),Fabumoscas Floor Cleaner (Fly Repellent),limpieza-hogar,especiales,15,especial;repelente;moscas,true,false,,images/products/limpia-pisos-fabumoscas.jpg
 P023,especial-repelente-moscos-60ml,Repelente de Moscos 60 ml,Mosquito Repellent 60 ml,limpieza-hogar,especiales,25,repelente;moscos;viaje,true,false,,images/products/limpia-pisos-repelente.jpg
-P024,especial-repelente-moscos,Repelente de Moscos,Mosquito Repellent,limpieza-hogar,especiales,160,repelente;moscos;formato-grande,true,false,,
+P024,especial-repelente-moscos,Repelente de Moscos,Mosquito Repellent,limpieza-hogar,especiales,160,repelente;moscos;formato-grande,true,false,,images/products/repelente-de-moscos.jpg
 P025,pastilla-cloro-1-pulg,Pastilla Cloro 1 pulg.,Chlorine Tablet 1 in.,limpieza-hogar,pastillas-cloro,145,cloro;pastilla;inodoro,true,false,,images/products/tableta-cloro-1-pulg.jpg
 P026,tableta-cloro-3-pulg,Tableta Cloro 3 pulg.,Chlorine Tablet 3 in.,limpieza-hogar,pastillas-cloro,160,cloro;tableta;alberca,true,false,,images/products/tableta-cloro-3-pulg.jpg
 P027,paquete-pastilla-cloro,Paquete Pastilla Cloro,Chlorine Tablet Pack,limpieza-hogar,pastillas-cloro,16,cloro;pastilla;paquete,true,false,,images/products/paq-pastilla-cloro-16.jpg
@@ -71,12 +71,12 @@ P069,detergente-polvo-roma,Detergente Roma en Polvo,Roma Powder Detergent,lavand
 P070,jabon-barra-carisma,Jabón Barra Carisma,Carisma Bar Soap,lavanderia,jabon-barra,28,jabon;barra;ropa,true,true,pieza,images/products/barra-carisma-28.jpg
 P071,jabon-barra-zote-rosa,Zote Barra Rosa,Zote Pink Bar Soap,lavanderia,jabon-barra,28,jabon;barra;zote,true,true,pieza,images/products/barra-zote-28.jpg
 P072,suavizante-ensueno,Suavitel Ensueño,Suavitel Dream,lavanderia,suavizantes,18,suavizante;marca,true,false,,images/products/suavitel-ensueno.jpg
-P073,suavizante-downy-rosa,Suavizante Downy Rosa,Downy Pink Softener,lavanderia,suavizantes,18,suavizante;marca;rosa,true,false,,
+P073,suavizante-downy-rosa,Suavizante Downy Rosa,Downy Pink Softener,lavanderia,suavizantes,18,suavizante;marca;rosa,true,false,,images/products/suavitel-downy-rosa.jpg
 P074,suavizante-bebe,Suavitel Bebé,Suavitel Baby,lavanderia,suavizantes,18,suavizante;bebe,true,false,,images/products/suavitel-bebe.jpg
 P075,suavizante-momentos-magicos,Suavitel Momentos Mágicos,Suavitel Magic Moments,lavanderia,suavizantes,18,suavizante;marca,true,false,,images/products/suavitel-momentos-magicos.jpg
 P076,suavizante-azul,Suavitel Azul,Suavitel Blue,lavanderia,suavizantes,18,suavizante,true,false,,
 P077,suavizante-amarillo,Suavitel Amarillo,Suavitel Yellow,lavanderia,suavizantes,18,suavizante,true,false,,images/products/suavitel-amarillo.jpg
-P078,suavizante-doble-ensueno,Suavizante Doble Aroma Ensueño,Dream Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma,true,false,,
+P078,suavizante-doble-ensueno,Suavizante Doble Aroma Ensueño,Dream Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma,true,false,,images/products/suavitel-doble-aroma-ensueno.jpg
 P079,suavizante-doble-downy-rosa,Suavizante Doble Aroma Downy Rosa,Downy Pink Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma;rosa,true,false,,images/products/suavitel-doble-aroma-downy-rosa.jpg
 P080,suavizante-doble-bebe,Suavizante Doble Aroma Bebé,Baby Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma;bebe,true,false,,images/products/suavitel-doble-aroma-bebe.jpg
 P081,suavizante-doble-momentos-magicos,Suavizante Doble Aroma Momentos Mágicos,Magic Moments Double-Scent Softener,lavanderia,suavizantes-doble-aroma,21,suavizante;doble-aroma,true,false,,images/products/suavitel-doble-aroma-momentos-magicos.jpg
@@ -177,7 +177,7 @@ P175,embudo-jumbo,Embudo Jumbo,Jumbo Funnel,jarceria,accesorios,45,embudo;jumbo,
 P176,embudo-mediano,Embudo Mediano,Medium Funnel,jarceria,accesorios,31,embudo;mediano,true,false,,images/products/embudo-med-31.jpg
 P177,embudo-chico,Embudo Chico,Small Funnel,jarceria,accesorios,26,embudo;chico,true,false,,images/products/embudo-chico-26.jpg
 P178,dosificador-1l,Dosificador 1 L,1 L Dispenser,jarceria,accesorios,31,dosificador;1l,true,false,,images/products/dosificador-1l.jpg
-P179,pistola-atomizador,Pistola Atomizador,Spray Gun,jarceria,atomizadores,40,atomizador;pistola,true,false,,
+P179,pistola-atomizador,Pistola Atomizador,Spray Gun,jarceria,atomizadores,40,atomizador;pistola,true,false,,images/products/pistola-atomizador.jpg
 P180,atomizador-medio,Atomizador 1/2 L,Sprayer 1/2 L,jarceria,atomizadores,33,atomizador;medio,true,true,,images/products/atomizador-1_2-litro-33.jpg
 P181,atomizador-1lt,Atomizador 1 L,Sprayer 1 L,jarceria,atomizadores,40,atomizador;1l,true,true,,images/products/atomizador-1-litro-$40.jpg
 P182,atomizador-mini-250ml,Atomizador Mini 250 ml,Mini Sprayer 250 ml,jarceria,atomizadores,23,atomizador;mini,true,false,,images/products/atomizador-mini-250ml.jpg

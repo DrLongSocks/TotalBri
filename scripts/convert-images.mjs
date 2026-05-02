@@ -7,7 +7,7 @@ import { dirname } from 'path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 
-const INPUT_DIR = join(ROOT, 'public', 'images', 'website pic collection');
+const INPUT_DIR = join(ROOT, 'public', 'images', 'website-pic-collection');
 const OUTPUT_DIR = join(ROOT, 'public', 'images', 'products');
 const QUALITY = 85;
 
