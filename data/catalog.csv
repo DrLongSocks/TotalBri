@@ -136,21 +136,19 @@ P134,varios-sham-antip-hugo-boss,Shampoo Antipulgas Hugo Boss,Hugo Boss Flea Sha
 P135,varios-liquido-quita-gotas,Líquido Quita Gotas,Drop Remover Liquid,varios,varios,25,gotas;limpieza,true,false,,
 P136,varios-agita-bolsita,Agita Bolsita,Agita Sachet,varios,varios,75,agita;moscas,true,true,,images/products/agita-bolsa-75.jpg
 P137,varios-agita-atomizador-eco,Agita Atomizador Eco,Agita Eco Spray,varios,varios,90,agita;atomizador,true,false,,
-P138,varios-agita-atomizador,Agita Atomizador,Agita Spray,varios,varios,105,agita;atomizador,true,false,,
 P139,trapeador-microfibra-chico,Trapeador Microfibra Chico,Small Microfiber Mop,jarceria,trapeadores,67,trapeador;microfibra;chico,true,false,,images/products/trapeador-microfibra.jpg
 P140,trapeador-microfibra-extra-mediano,Trapeador Microfibra Extra Mediano,Extra-Medium Microfiber Mop,jarceria,trapeadores,75,trapeador;microfibra;mediano,true,false,,
 P141,trapeador-microfibra-industrial,Trapeador Microfibra Industrial,Industrial Microfiber Mop,jarceria,trapeadores,100,trapeador;microfibra;industrial,true,false,,images/products/mop-159.jpg
 P142,trapeador-microfibra-espanola,Trapeador Microfibra Española,Spanish Microfiber Mop,jarceria,trapeadores,93,trapeador;microfibra;espanola,true,false,,images/products/microfibra-espanola-93.jpg
 P143,trapeador-microfibra-espanola-eco,Trapeador Microfibra Española Eco,Eco Spanish Microfiber Mop,jarceria,trapeadores,71,trapeador;microfibra;eco,true,false,,images/products/trapeador-espanola.jpg
 P144,trapeador-hilaza-25,Trapeador Hilaza #25,Yarn Mop #25,jarceria,trapeadores,50,trapeador;hilaza,true,false,,images/products/trapeador-hiliza.jpg
-P145,trapeador-hilaza-industrial,Trapeador Hilaza Industrial,Industrial Yarn Mop,jarceria,trapeadores,55,trapeador;hilaza;industrial,true,false,,
+P145,trapeador-hilaza-industrial,Trapeador Hilaza Industrial,Industrial Yarn Mop,jarceria,trapeadores,55,trapeador;hilaza;industrial,true,false,,images/products/trapeador-hiliza.jpg
 P146,trapeador-pabilo-25,Trapeador Pabilo #25,Pabilo Mop #25,jarceria,trapeadores,42,trapeador;pabilo,true,false,,images/products/trapeador-pabilo.jpg
-P147,trapeador-pabilo-industrial,Trapeador Pabilo Industrial,Industrial Pabilo Mop,jarceria,trapeadores,50,trapeador;pabilo;industrial,true,false,,
+P147,trapeador-pabilo-industrial,Trapeador Pabilo Industrial,Industrial Pabilo Mop,jarceria,trapeadores,50,trapeador;pabilo;industrial,true,false,,images/products/trapeador-pabilo.jpg
 P148,escoba-tipo-cepillo,Escoba Tipo Cepillo,Brush-Type Broom,jarceria,escobas,58,escoba;cepillo,true,false,,images/products/escoba-tipo-cepillo.jpg
 P149,escoba-cepillo-lava-coches,Cepillo Lava Coches,Car Wash Brush,jarceria,escobas,78,escoba;cepillo;autos,true,false,,images/products/escoba-lava-coches.jpg
-P150,escoba-abanico-grande,Escoba Abanico Grande,Large Fan Broom,jarceria,escobas,46,escoba;abanico,true,false,,
+P150,escoba-abanico-grande,Escoba Abanico Grande,Large Fan Broom,jarceria,escobas,46,escoba;abanico,true,false,,images/products/escoba-abanico-grande.jpg
 P151,escoba-veneciana,Escoba Veneciana,Venetian Broom,jarceria,escobas,60,escoba;veneciana,true,false,,images/products/escoba-veneciana.jpg
-P152,escoba-valentina-metal,Escoba Valentina Bastón Metal,Valentina Metal-Handle Broom,jarceria,escobas,80,escoba;metal,true,false,,
 P153,escoba-romana,Escoba Romana,Roman Broom,jarceria,escobas,58,escoba;romana,true,false,,images/products/escoba-roma.jpg
 P154,escoba-arcoiris,Escoba Arcoiris,Rainbow Broom,jarceria,escobas,58,escoba;arcoiris,true,false,,images/products/escoba-arcoiris.jpg
 P155,escoba-mega,Escoba Mega,Mega Broom,jarceria,escobas,46,escoba;mega,true,false,,images/products/escoba-mega.jpg
@@ -166,8 +164,8 @@ P164,jarra-2l,Jarra 2 L,Pitcher 2 L,jarceria,accesorios,38,jarra;2l,true,false,,
 P165,jarra-4l,Jarra 4 L,Pitcher 4 L,jarceria,accesorios,73,jarra;4l,true,false,,images/products/jarra-4l-73.jpg
 P166,jarra-1l,Jarra 1 L,Pitcher 1 L,jarceria,accesorios,35,jarra;1l,true,false,,images/products/jarra-1l.jpg
 P167,cubeta-toscana,Cubeta Toscana,Toscana Bucket,jarceria,cubetas,70,cubeta;toscana,true,false,,images/products/cubeta-toscana.jpg
-P168,cubeta-6,Cubeta #6,Bucket #6,jarceria,cubetas,18,cubeta;chica,true,false,,
-P169,cubeta-8,Cubeta #8,Bucket #8,jarceria,cubetas,27,cubeta;mediana,true,false,,
+P168,cubeta-6,Cubeta #6,Bucket #6,jarceria,cubetas,18,cubeta;chica,true,false,,images/products/cubeta-6.jpg
+P169,cubeta-8,Cubeta #8,Bucket #8,jarceria,cubetas,27,cubeta;mediana,true,false,,images/products/cubeta-8.jpg
 P170,cubeta-12,Cubeta #12,Bucket #12,jarceria,cubetas,56,cubeta;grande,true,false,,images/products/cubeta-12-42.jpg
 P171,cubeta-14,Cubeta #14,Bucket #14,jarceria,cubetas,66,cubeta;industrial,true,false,,images/products/cubeta-16-56.jpg
 P172,cesto-basura,Cesto Basura,Trash Bin,jarceria,accesorios,35,cesto;basura,true,true,,images/products/cesto-amarillo-35.jpg
@@ -206,21 +204,21 @@ P204,escobetilla-raiz-plastico,Escobetilla Raíz Plástico,Plastic Root Brush,ja
 P205,escobetilla-raiz,Escobetilla Raíz,Root Brush,jarceria,accesorios,20,escobetilla;raiz,true,false,,images/products/escobetilla-raiz-20.jpg
 P206,guante-nitrilo-verde,Guante Nitrilo Verde,Green Nitrile Glove,jarceria,guantes,51,guantes;nitrilo,true,false,,images/products/guante-verde-51.jpg
 P207,guantes-latex,Guantes Látex,Latex Gloves,jarceria,guantes,34,guantes;latex,true,false,,images/products/guante-latex-rojo-34.jpg
-P208,tierra-roja,Tierra Roja,Red Clay,jarceria,accesorios,11,tierra;roja;limpieza,true,false,,
+P208,tierra-roja,Tierra Roja,Red Clay,jarceria,accesorios,11,tierra;roja;limpieza,true,false,,images/products/tierra-roja.jpg
 P209,piedra-pomex,Piedra Pómex (3 pzas),Pumice Stone (3 pcs),jarceria,accesorios,15,pomex;piedra,true,false,,images/products/piedra-pomes-3-pzas.jpg
 P210,envase-4lt,Envase 4 L,Container 4 L,jarceria,accesorios,10,envase;4l,true,false,,
 P211,garrafa-20lts,Garrafa 20 L,Jug 20 L,jarceria,accesorios,35,garrafa;20l,true,false,,images/products/garrafa-20l.jpg
 P212,bolsa-camiseta-chica,Bolsa Camiseta Chica,Small T-Shirt Bag,jarceria,bolsas,82,bolsa;camiseta;chica,true,true,,images/products/bolsa-camiseta-82.jpg
-P213,bolsa-camiseta-grande,Bolsa Camiseta Grande,Large T-Shirt Bag,jarceria,bolsas,82,bolsa;camiseta;grande,true,false,,
+P213,bolsa-camiseta-grande,Bolsa Camiseta Grande,Large T-Shirt Bag,jarceria,bolsas,82,bolsa;camiseta;grande,true,false,,images/products/bolsa-camiseta-82.jpg
 P214,bolsa-negra-60x90,Bolsa Negra 60x90,Black Bag 60x90,jarceria,bolsas,53,bolsa;negra;60x90,true,true,,images/products/bolsa-negra-60x90-53.jpg
 P215,bolsa-negra-90x120,Bolsa Negra 90x120,Black Bag 90x120,jarceria,bolsas,53,bolsa;negra;90x120,true,true,,images/products/bolsa-negra-90x120-53.jpg
 P216,bolsa-negra-60x90-pz,Bolsa Negra 60x90 (Pieza),Black Bag 60x90 (Piece),jarceria,bolsas,4,bolsa;negra;pieza,true,false,,images/products/bolsa-negra-60x90-pieza.jpg
 P217,bolsa-negra-90x120-pz,Bolsa Negra 90x120 (Pieza),Black Bag 90x120 (Piece),jarceria,bolsas,8,bolsa;negra;pieza,true,false,,images/products/bolsa-negra-90x120-pieza.jpg
 P218,franela-gris-roja,Franela Gris / Roja y Rallada,Gray / Red Striped Flannel,jarceria,accesorios,29,franela;limpieza,true,false,,images/products/franela-roja-29.jpg
-P219,microfibra-grande-eco,Microfibra Grande Eco,Large Eco Microfiber,jarceria,trapeadores,29,microfibra;grande;eco,true,false,,
-P220,microfibra-chica-eco,Microfibra Chica Eco,Small Eco Microfiber,jarceria,trapeadores,22,microfibra;chica;eco,true,false,,
+P219,microfibra-grande-eco,Microfibra Grande Eco,Large Eco Microfiber,jarceria,trapeadores,29,microfibra;grande;eco,true,false,,images/products/fibra-metalica-grande.jpg
+P220,microfibra-chica-eco,Microfibra Chica Eco,Small Eco Microfiber,jarceria,trapeadores,22,microfibra;chica;eco,true,false,,images/products/fibra-metalica-grande.jpg
 P221,microfibra-kirkland,Microfibra Kirkland,Kirkland Microfiber,jarceria,trapeadores,29,microfibra;kirkland,true,false,,images/products/microfibra-kirk-29.jpg
-P222,microfibra-jumbo,Microfibra Jumbo,Jumbo Microfiber,jarceria,trapeadores,32,microfibra;jumbo,true,false,,
+P222,microfibra-jumbo,Microfibra Jumbo,Jumbo Microfiber,jarceria,trapeadores,32,microfibra;jumbo,true,false,,images/products/fibra-metalica-grande.jpg
 P223,toalla-scott-shop-azul,Toalla Scott Shop Azul,Blue Scott Shop Towel,jarceria,accesorios,60,toalla;scott;azul,true,false,,images/products/toalla-scott-azul-60.jpg
 P224,bomba-destapacanos,Bomba Destapacaños,Plunger,jarceria,accesorios,34,destapacanos;bomba,true,false,,
 P225,cepillo-mano,Cepillo de Mano,Hand Brush,jarceria,accesorios,27,cepillo;mano,true,false,,images/products/cepillo-mano-27.jpg
@@ -236,8 +234,8 @@ P234,plumero-microfibra,Plumero Microfibra,Microfiber Duster,jarceria,accesorios
 P235,ganchos-plastico,Ganchos Plástico,Plastic Hangers,jarceria,accesorios,38,ganchos;plastico,true,false,,images/products/ganchos-plastico.jpg
 P236,pinza-grande,Pinza Grande,Large Clothespin,jarceria,accesorios,32,pinza;grande,true,false,,images/products/pinza-grande-32.jpg
 P237,despachador-toalla-interdoblada,Despachador Toalla Interdoblada,Interfolded Towel Dispenser,higiene,despachadores,510,despachador;toalla;interdoblada,true,true,,images/products/despachador-toalla-interdoblada-510.jpg
-P238,despachador-toalla-rollo-kim,Despachador Toalla en Rollo Kim,Kim Roll Towel Dispenser,higiene,despachadores,895,despachador;toalla;rollo;kim,true,false,,images/products/despachador-kim-barra.jpg
-P239,despachador-toalla-rollo-oval,Despachador Toalla en Rollo Oval,Oval Roll Towel Dispenser,higiene,despachadores,880,despachador;toalla;rollo;oval,true,false,,images/products/despachador-kim-barra.jpg
+P238,despachador-toalla-rollo-kim,Despachador Toalla en Rollo Kim,Kim Roll Towel Dispenser,higiene,despachadores,895,despachador;toalla;rollo;kim,true,false,,
+P239,despachador-toalla-rollo-oval,Despachador Toalla en Rollo Oval,Oval Roll Towel Dispenser,higiene,despachadores,880,despachador;toalla;rollo;oval,true,false,,
 P240,despachador-higienico-jumbo,Despachador Higiénico Jumbo,Jumbo Toilet Paper Dispenser,higiene,despachadores,410,despachador;higienico;jumbo,true,true,,images/products/despachador-hig-jr-410.jpg
 P241,despachador-higienico-jumbo-oval,Despachador Higiénico Jumbo Oval,Oval Jumbo Toilet Paper Dispenser,higiene,despachadores,295,despachador;higienico;oval,true,false,,images/products/despachador-hig-jumbo-510.jpg
 P242,despachador-barramesa,Despachador Barramesa,Counter Dispenser,higiene,despachadores,195,despachador;barramesa,true,true,,images/products/despachador-barra-mesa-195.jpg
@@ -247,28 +245,26 @@ P245,servilleta-delsey-eco,Servilleta Delsey Eco 100 pz,Delsey Eco Napkins 100 p
 P246,servilleta-dalia-450,Servilleta Dalia 450 pz,Dalia Napkins 450 pc,higiene,higienicos,41,servilleta;dalia,true,false,,images/products/servilleta-dalia-41.jpg
 P247,toalla-interdoblada-dalia,Toalla Interdoblada Dalia 20/100,Dalia Interfolded Towel 20/100,higiene,higienicos,19,toalla;interdoblada;dalia,true,false,,images/products/pieza-interdoblada-19.jpg
 P248,toalla-interdoblada-ecologica,Toalla Interdoblada Ecológica 20/100,Eco Interfolded Towel 20/100,higiene,higienicos,20,toalla;interdoblada;eco,true,false,,images/products/toalla-interdoblada-ecologica-20-100.jpg
-P249,higienico-dalia-12-200,Higiénico Dalia 12/200,Dalia Toilet Paper 12/200,higiene,higienicos,39,higienico;dalia,true,false,,
+P249,higienico-dalia-12-200,Higiénico Dalia 12/200,Dalia Toilet Paper 12/200,higiene,higienicos,39,higienico;dalia,true,false,,images/products/higienico-dalia-12-200.jpg
 P250,higienico-jumbo-dalia,Higiénico Jumbo Dalia 6/400,Dalia Jumbo Toilet Paper 6/400,higiene,higienicos,72,higienico;jumbo;dalia,true,false,,images/products/higienico-jumbo-dalia-6_400.jpg
 P251,higienico-dalia-individual,Higiénico Dalia Individual,Dalia Individual Toilet Paper,higiene,higienicos,11,higienico;dalia;individual,true,false,,images/products/hig-dalia-pieza-39.jpg
 P252,higienico-big-quality,Higiénico Big Quality,Big Quality Toilet Paper,higiene,higienicos,12,higienico;big-quality,true,false,,images/products/big-quality-12.jpg
 P253,toalla-rollo-fapsa,Toalla en Rollo Fapsa,Fapsa Roll Towel,higiene,higienicos,82,toalla;rollo;fapsa,true,false,,images/products/toalla-en-rollo-fapsa-tr180.jpg
 P254,barramesa-fapsa,Barramesa Fapsa,Fapsa Counter Napkin,higiene,higienicos,27,barramesa;fapsa,true,false,,images/products/barramesa-fapsa-25.jpg
 P255,cubreboca-adulto-50pz,Cubreboca Adulto Desechable 50 pz,Adult Disposable Face Mask 50 pc,higiene,higienicos,5,cubreboca;adulto,true,false,,images/products/cubreboca-adulto-desechable-50pz.jpg
-P256,cubreboca-infantil-50pz,Cubreboca Infantil Desechable 50 pz,Kids Disposable Face Mask 50 pc,higiene,higienicos,3,cubreboca;infantil,true,false,,
 P257,cofias,Cofias,Hair Nets,higiene,higienicos,2.5,cofias;desechable,true,false,,images/products/cofias.jpg
 P258,cono-senalizacion,Cono de Señalización,Safety Cone,jarceria,accesorios,96,cono;senalizacion;seguridad,true,false,,images/products/cono-96.jpg
 P259,cesto-azul,Cesto Azul,Blue Bin,jarceria,accesorios,89,cesto;azul;basura,true,true,,images/products/cesto-azul-89.jpg
 P260,guante-quirurgico,Guante Quirúrgico Desechable,Disposable Surgical Glove,jarceria,guantes,180,guante;quirurgico;desechable,true,false,,images/products/guante-quirurgico-180.jpg
 P261,pinza-chica,Pinza Chica (12 pzas),Small Clothespins (12 pc),jarceria,accesorios,20,pinza;chica;12piezas,true,false,,images/products/pinza-ch-12-piezas-20.jpg
 P262,varios-pegamoscas,Pegamoscas,Fly Paper Trap,varios,varios,16,pegamoscas;trampa;moscas,true,false,,images/products/pegamoscas-16.jpg
-P263,escoba-hilaza,Escoba Hilaza,Hilaza Broom,jarceria,escobas,58,escoba;hilaza,true,false,,images/products/escoba-hiliza.jpg
 P264,jabon-de-tocador-rosa,Jabón de Tocador Rosa,Pink Bar Soap,varios,varios,20,jabon;tocador;rosa,true,false,pieza,images/products/jabon-de-tocador-rosa.jpg
 P265,pastilla-mary,Pastilla Mary,Mary Tablet,higiene,higienicos,15,pastilla;mary,true,false,pieza,images/products/pastilla-mary-15.jpg
 P266,limpia-pisos-coco,Limpiapisos Coco,Coconut Multi-Surface Cleaner,limpieza-hogar,multiusos,12,limpieza;coco;aroma,true,false,litro,images/products/limpia-pisos-coco.jpg
 P267,jerga-rayada,Jerga Rayada,Striped Cleaning Cloth,jarceria,accesorios,29,jerga;rayada;limpieza,true,false,pieza,images/products/jerga-rayada-29.jpg
 P268,despachador-generico,Despachador,Dispenser,higiene,despachadores,195,despachador,true,false,pieza,images/products/despachador.jpg
 P269,autofresh-roma,Autofresh Roma,Roma Air Freshener,aromatizantes,autofresh,69,aromatizante;roma;perfumado,true,true,pieza,images/products/autofresh-liquido-roma.jpg
-P270,cofias-pieza,Cofias por Pieza,Hair Net per Piece,higiene,higienicos,2.5,cofias;pieza;desechable,true,true,pieza,images/products/cofias-pieza-2.5.jpg
+P270,cofias-pieza,Cofias por Pieza,Hair Net per Piece,higiene,higienicos,2.5,cofias;pieza;desechable,true,true,pieza,images/products/cofias.jpg
 P271,cubeta-16,Cubeta #16,Bucket #16,jarceria,cubetas,56,cubeta;industrial,true,true,pieza,images/products/cubetas-16-56.jpg
 P272,higienico-dalia-individual-pz,Higiénico Dalia Individual Pz,Dalia Individual Toilet Paper Unit,higiene,higienicos,11,higienico;dalia;individual;pieza,true,true,pieza,images/products/dalia-hig-individual-11.jpg
 P273,embudo-jumbo-46,Embudo Jumbo,Jumbo Funnel,jarceria,accesorios,46,embudo;jumbo,true,true,pieza,images/products/embudo-jumbo-46.jpg
