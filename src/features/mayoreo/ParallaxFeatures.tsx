@@ -2,7 +2,6 @@
 
 import React, { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
-import Image from 'next/image';
 
 /* ── ContainerScroll ─────────────────────────────────────────────────────── */
 
@@ -65,24 +64,18 @@ function ContainerScroll({
 
 const SECTIONS = [
   {
-    imageSrc: '/sample-1.png',
-    imageAlt: 'Distribuidores Total Bri',
     heading: 'Inicia tu propio negocio',
     description: 'Precios de mayoreo, apoyo directo y productos de alta demanda.',
     cta: 'https://wa.me/3546880969?text=Hola%2C+me+interesa+ser+distribuidor+de+Total+Bri.',
     ctaLabel: 'Ser distribuidor',
   },
   {
-    imageSrc: '/sample-2.png',
-    imageAlt: 'Mayoreo por volumen Total Bri',
     heading: 'Mayoreo para pedidos grandes',
     description: 'Entre más compras, más ahorras. Sin contratos ni membresías.',
     cta: 'https://wa.me/3546880969?text=Hola%2C+necesito+precios+al+mayoreo.',
     ctaLabel: 'Ver precios',
   },
   {
-    imageSrc: '/sample-3.jpg',
-    imageAlt: 'Cotiza por WhatsApp Total Bri',
     heading: 'Cotiza por WhatsApp',
     description: 'Precio, disponibilidad y entrega — todo en un chat, en minutos.',
     cta: 'https://wa.me/3546880969?text=Hola%2C+quiero+cotizar+productos+al+mayoreo.',
@@ -113,13 +106,7 @@ export function ParallaxFeatures({ onCtaClick }: { onCtaClick: () => void }) {
       <div className="grid h-full grid-cols-1 md:grid-cols-3">
         {SECTIONS.map((s) => (
           <div key={s.heading} className="group relative overflow-hidden">
-            <Image
-              src={s.imageSrc}
-              alt={s.imageAlt}
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, 33vw"
-            />
+            <div className="absolute inset-0 bg-slate/20" />
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
             {/* Text */}

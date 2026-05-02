@@ -66,7 +66,7 @@ describe('product queries (uses real CSV)', () => {
   });
 
   it('paginate returns correct page slice', () => {
-    const all = findByCategory('limpieza-hogar');
+    const all = findByCategory('jarceria');
     const { items, page, totalPages } = paginate(all, 2, 10);
     expect(page).toBe(2);
     expect(totalPages).toBe(Math.ceil(all.length / 10));

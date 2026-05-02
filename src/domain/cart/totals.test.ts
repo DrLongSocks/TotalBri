@@ -11,6 +11,7 @@ function makeProduct(id: string, price: number, inStock = true): Product {
     category: 'varios',
     subcategory: 'varios',
     price,
+    unit: 'pieza',
     images: ['/x.webp', 'https://placehold.co/1'],
     tags: [],
     inStock,

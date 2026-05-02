@@ -6,16 +6,6 @@ import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/cn';
 
-const ESCOBA_FALLBACKS = [
-  '/images/products/escoba-arcoiris.jpg',
-  '/images/products/escoba-arcoiris.jpg',
-  '/images/products/escoba-tipo-cepillo.jpg',
-  '/images/products/escoba-mega.jpg',
-  '/images/products/escoba-roma.jpg',
-  '/images/products/escoba-veneciana.jpg',
-  '/images/products/escoba-hiliza.jpg',
-];
-
 export type CategoryCardData = {
   slug: string;
   name: string;
@@ -24,9 +14,7 @@ export type CategoryCardData = {
   locale: string;
 };
 
-function CategoryCard({ slug, name, image, count, locale }: CategoryCardData & { index: number }) {
-  const fallback = ESCOBA_FALLBACKS[Math.abs(slug.length) % ESCOBA_FALLBACKS.length]!;
-
+function CategoryCard({ slug, name, count, locale }: CategoryCardData & { index: number }) {
   return (
     <motion.div
       whileHover={{ y: -6 }}
@@ -34,15 +22,9 @@ function CategoryCard({ slug, name, image, count, locale }: CategoryCardData & {
       className="relative flex-shrink-0 w-[200px] h-[260px] rounded-2xl overflow-hidden snap-start"
     >
       <Link href={`/${locale}/tienda?categoria=${slug}`} className="block h-full group">
-        {/* Image — top 55% */}
+        {/* Image placeholder — top 55% */}
         <div className="h-[55%] w-full bg-porcelain overflow-hidden">
-          <img
-            src={image}
-            alt={name}
-            onError={(e) => { (e.currentTarget as HTMLImageElement).src = fallback; }}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            loading="lazy"
-          />
+          <div className="w-full h-full bg-teal-50" />
         </div>
 
         {/* Info — bottom 45% */}

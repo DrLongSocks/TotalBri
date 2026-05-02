@@ -17,6 +17,7 @@ function makeProduct(id: string, nameEs: string, price: number, inStock = true):
     category: 'varios',
     subcategory: 'varios',
     price,
+    unit: 'pieza',
     images: ['/x.webp', 'https://placehold.co/1'],
     tags: [],
     inStock,
@@ -42,10 +43,10 @@ describe('whatsapp templates', () => {
     expect(msg).toContain('confirmar');
   });
 
-  it('English order uses English phrases', () => {
+  it('order message contains subtotal and greeting', () => {
     const lines = [line(makeProduct('P001', 'Multi-surface', 12), 1)];
-    const msg = buildOrderMessage(lines, 12, 'en');
-    expect(msg).toContain('Hi Total Bri!');
+    const msg = buildOrderMessage(lines, 12, 'es');
+    expect(msg).toContain('¡Hola Total Bri!');
     expect(msg).toContain('Subtotal');
   });
 

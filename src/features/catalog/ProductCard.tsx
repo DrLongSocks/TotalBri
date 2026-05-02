@@ -32,7 +32,7 @@ export function ProductCard({ product, locale, className, railVariant, priority 
         tabIndex={0}
       >
         {/* Product image */}
-        <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-porcelain">
+        <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-card">
           <ProductImage
             src={primary ?? ''}
             fallback={fallback ?? ''}
