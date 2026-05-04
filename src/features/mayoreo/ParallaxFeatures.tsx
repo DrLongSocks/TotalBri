@@ -49,9 +49,9 @@ function ContainerScroll({
             boxShadow:
               '0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003',
           }}
-          className="mx-auto -mt-12 h-[30rem] w-full max-w-5xl rounded-[30px] border-4 border-[#6C6C6C] bg-[#222222] p-2 shadow-2xl md:h-[40rem] md:p-6"
+          className="mx-auto -mt-12 w-full max-w-5xl rounded-[30px] border-4 border-[#6C6C6C] bg-[#222222] p-2 shadow-2xl md:p-6"
         >
-          <div className="h-full w-full overflow-hidden rounded-2xl bg-ink md:rounded-2xl">
+          <div className="w-full overflow-hidden rounded-2xl bg-ink md:rounded-2xl">
             {children}
           </div>
         </motion.div>
@@ -64,21 +64,21 @@ function ContainerScroll({
 
 const SECTIONS = [
   {
+    bg: 'bg-gradient-to-br from-azure/40 to-azure/10',
     heading: 'Inicia tu propio negocio',
     description: 'Precios de mayoreo, apoyo directo y productos de alta demanda.',
-    cta: 'https://wa.me/3546880969?text=Hola%2C+me+interesa+ser+distribuidor+de+Total+Bri.',
     ctaLabel: 'Ser distribuidor',
   },
   {
+    bg: 'bg-gradient-to-br from-slate/40 to-slate/10',
     heading: 'Mayoreo para pedidos grandes',
     description: 'Entre más compras, más ahorras. Sin contratos ni membresías.',
-    cta: 'https://wa.me/3546880969?text=Hola%2C+necesito+precios+al+mayoreo.',
     ctaLabel: 'Ver precios',
   },
   {
+    bg: 'bg-gradient-to-br from-ink/80 to-ink/40',
     heading: 'Cotiza por WhatsApp',
     description: 'Precio, disponibilidad y entrega — todo en un chat, en minutos.',
-    cta: 'https://wa.me/3546880969?text=Hola%2C+quiero+cotizar+productos+al+mayoreo.',
     ctaLabel: 'Cotizar ahora',
   },
 ] as const;
@@ -102,15 +102,13 @@ export function ParallaxFeatures({ onCtaClick }: { onCtaClick: () => void }) {
         </div>
       }
     >
-      {/* Three-column grid inside the 3-D card */}
-      <div className="grid h-full grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3">
         {SECTIONS.map((s) => (
-          <div key={s.heading} className="group relative overflow-hidden">
-            <div className="absolute inset-0 bg-slate/20" />
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
+          <div key={s.heading} className={`group relative min-h-[14rem] overflow-hidden md:min-h-0 md:h-full ${s.bg}`}>
+            {/* Bottom gradient for text legibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent" />
             {/* Text */}
-            <div className="absolute bottom-0 left-0 right-0 p-5">
+            <div className="relative z-10 flex h-full flex-col justify-end p-5">
               <h3 className="font-display text-[15px] font-extrabold uppercase leading-tight tracking-tight text-paper md:text-lg">
                 {s.heading}
               </h3>
@@ -120,7 +118,7 @@ export function ParallaxFeatures({ onCtaClick }: { onCtaClick: () => void }) {
               <button
                 type="button"
                 onClick={onCtaClick}
-                className="mt-3 inline-flex items-center gap-1.5 rounded-lg bg-azure px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide text-paper transition-opacity hover:opacity-90"
+                className="mt-3 inline-flex w-fit items-center gap-1.5 rounded-lg bg-azure px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide text-paper transition-opacity hover:opacity-90"
               >
                 {s.ctaLabel} →
               </button>
