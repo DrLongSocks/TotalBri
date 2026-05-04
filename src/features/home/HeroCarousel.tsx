@@ -29,7 +29,7 @@ export function HeroCarousel() {
         {/* Center/Right: logo + CTA stacked */}
         <div className="flex flex-shrink-0 flex-col items-center gap-6 mt-8 md:mt-0">
           <div className="relative flex items-center justify-center">
-            <div className="absolute h-96 w-96 rounded-full bg-azure/30 blur-[80px]" />
+            <div className="absolute h-96 w-96 rounded-full bg-azure/30 blur-[80px] pointer-events-none" />
             <Image
               src="/logo.svg"
               alt="Total Bri"

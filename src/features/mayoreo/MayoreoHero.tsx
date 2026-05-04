@@ -37,7 +37,7 @@ export async function MayoreoHero({ locale }: Props) {
         {/* Center/Right: logo + CTA stacked */}
         <div className="flex flex-shrink-0 flex-col items-center gap-8 mt-10 md:mt-0 md:translate-x-12">
           <div className="relative flex items-center justify-center">
-            <div className="absolute h-[500px] w-[500px] rounded-full bg-azure/30 blur-[100px]" />
+            <div className="absolute h-[500px] w-[500px] rounded-full bg-azure/30 blur-[100px] pointer-events-none" />
             <Image
               src="/logo.svg"
               alt="Total Bri"
