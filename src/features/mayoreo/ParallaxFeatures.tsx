@@ -32,7 +32,7 @@ function ContainerScroll({
 
   return (
     <div
-      className="relative flex h-[80rem] items-center justify-center p-2 md:h-[100rem] md:p-20"
+      className="relative flex h-[60rem] items-center justify-center p-2 md:h-[80rem] md:p-20"
       ref={containerRef}
     >
       <div className="relative w-full py-10 md:py-40" style={{ perspective: '1000px' }}>
@@ -50,7 +50,7 @@ function ContainerScroll({
             boxShadow:
               '0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003',
           }}
-          className="mx-auto -mt-12 w-full max-w-5xl rounded-[30px] border-4 border-[#6C6C6C] bg-[#222222] p-2 shadow-2xl md:p-6"
+          className="mx-auto -mt-12 h-auto w-full max-w-5xl rounded-[30px] border-4 border-[#6C6C6C] bg-[#222222] p-2 shadow-2xl md:h-[40rem] md:p-6"
         >
           <div className="w-full overflow-hidden rounded-2xl bg-ink md:rounded-2xl">
             {children}
@@ -106,15 +106,15 @@ export function ParallaxFeatures({ onCtaClick }: { onCtaClick: () => void }) {
         </div>
       }
     >
-      <div className="grid grid-cols-1">
+      <div className="grid h-full grid-cols-1 md:grid-cols-3">
         {SECTIONS.map((s) => (
-          <div key={s.heading} className="group relative h-52 overflow-hidden md:h-64">
+          <div key={s.heading} className="group relative h-52 overflow-hidden md:h-full">
             <Image
               src={s.imageSrc}
               alt={s.imageAlt}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, 33vw"
             />
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
