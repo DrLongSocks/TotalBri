@@ -65,7 +65,7 @@ function ContainerScroll({
 
 const SECTIONS = [
   {
-    imageSrc: '/images/products/mayorea-page-1.jpg',
+    imageSrc: '/images/products/mayorea-page-3.jpg',
     imageAlt: 'Distribuidores Total Bri',
     heading: 'Inicia tu propio negocio',
     description: 'Precios de mayoreo, apoyo directo y productos de alta demanda.',
@@ -79,7 +79,7 @@ const SECTIONS = [
     ctaLabel: 'Ver precios',
   },
   {
-    imageSrc: '/images/products/mayorea-page-3.jpg',
+    imageSrc: '/images/products/mayorea-page-1.jpg',
     imageAlt: 'Cotiza por WhatsApp Total Bri',
     heading: 'Cotiza por WhatsApp',
     description: 'Precio, disponibilidad y entrega — todo en un chat, en minutos.',
