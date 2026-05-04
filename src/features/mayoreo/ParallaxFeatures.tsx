@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
+import Image from 'next/image';
 
 /* ── ContainerScroll ─────────────────────────────────────────────────────── */
 
@@ -31,7 +32,7 @@ function ContainerScroll({
 
   return (
     <div
-      className="relative flex h-[60rem] items-center justify-center p-2 md:h-[80rem] md:p-20"
+      className="relative flex h-[80rem] items-center justify-center p-2 md:h-[100rem] md:p-20"
       ref={containerRef}
     >
       <div className="relative w-full py-10 md:py-40" style={{ perspective: '1000px' }}>
@@ -64,19 +65,22 @@ function ContainerScroll({
 
 const SECTIONS = [
   {
-    bg: 'bg-gradient-to-br from-azure/40 to-azure/10',
+    imageSrc: '/images/products/mayorea-page-1.jpg',
+    imageAlt: 'Distribuidores Total Bri',
     heading: 'Inicia tu propio negocio',
     description: 'Precios de mayoreo, apoyo directo y productos de alta demanda.',
     ctaLabel: 'Ser distribuidor',
   },
   {
-    bg: 'bg-gradient-to-br from-slate/40 to-slate/10',
+    imageSrc: '/images/products/mayorea-page-2.jpg',
+    imageAlt: 'Mayoreo por volumen Total Bri',
     heading: 'Mayoreo para pedidos grandes',
     description: 'Entre más compras, más ahorras. Sin contratos ni membresías.',
     ctaLabel: 'Ver precios',
   },
   {
-    bg: 'bg-gradient-to-br from-ink/80 to-ink/40',
+    imageSrc: '/images/products/mayorea-page-3.jpg',
+    imageAlt: 'Cotiza por WhatsApp Total Bri',
     heading: 'Cotiza por WhatsApp',
     description: 'Precio, disponibilidad y entrega — todo en un chat, en minutos.',
     ctaLabel: 'Cotizar ahora',
@@ -102,11 +106,18 @@ export function ParallaxFeatures({ onCtaClick }: { onCtaClick: () => void }) {
         </div>
       }
     >
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1">
         {SECTIONS.map((s) => (
-          <div key={s.heading} className={`group relative min-h-[14rem] overflow-hidden md:min-h-0 md:h-full ${s.bg}`}>
-            {/* Bottom gradient for text legibility */}
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent" />
+          <div key={s.heading} className="group relative h-52 overflow-hidden md:h-64">
+            <Image
+              src={s.imageSrc}
+              alt={s.imageAlt}
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="100vw"
+            />
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
             {/* Text */}
             <div className="relative z-10 flex h-full flex-col justify-end p-5">
               <h3 className="font-display text-[15px] font-extrabold uppercase leading-tight tracking-tight text-paper md:text-lg">
