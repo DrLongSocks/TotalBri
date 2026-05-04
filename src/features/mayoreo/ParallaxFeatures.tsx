@@ -52,7 +52,7 @@ function ContainerScroll({
           }}
           className="mx-auto -mt-12 h-auto w-full max-w-5xl rounded-[30px] border-4 border-[#6C6C6C] bg-[#222222] p-2 shadow-2xl md:h-[40rem] md:p-6"
         >
-          <div className="w-full overflow-hidden rounded-2xl bg-ink md:rounded-2xl">
+          <div className="w-full overflow-hidden rounded-2xl bg-ink md:h-full md:rounded-2xl">
             {children}
           </div>
         </motion.div>
