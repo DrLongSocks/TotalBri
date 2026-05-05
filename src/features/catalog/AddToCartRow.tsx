@@ -20,6 +20,8 @@ export function AddToCartRow({ productId, unit, inStock }: Props) {
 
   const unitLabel = unit === 'litro'
     ? qty === 1 ? '1 litro' : `${qty} litros`
+    : unit === 'kilo'
+    ? qty === 1 ? '1 kilo' : `${qty} kilos`
     : qty === 1 ? '1 pieza' : `${qty} piezas`;
 
   if (!inStock) {
