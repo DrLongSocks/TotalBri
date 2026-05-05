@@ -21,17 +21,17 @@ P019,microcapsulas-flor-algodon,Limpiador Microcápsulas Flor de Algodón,Cotton
 P020,microcapsulas-petalos-rosa,Limpiador Microcápsulas Pétalos de Rosa,Rose Petals Microcapsule Cleaner,limpieza-hogar,microcapsulas,14,microcapsulas;rosa;floral,true,false,,images/products/limpia-pisos-microcapsulas-petalos-de-rosa.jpg
 P021,especial-limon-germicida,Limón con Germicida,Lemon with Germicide,limpieza-hogar,especiales,15,especial;limon;germicida,true,false,,images/products/limpia-pisos-limon-germicida.jpg
 P022,especial-limpiapisos-fabumoscas,Limpiapisos Fabumoscas (Repelente de Moscas),Fabumoscas Floor Cleaner (Fly Repellent),limpieza-hogar,especiales,15,especial;repelente;moscas,true,false,,images/products/limpia-pisos-fabumoscas.jpg
-P023,especial-repelente-moscos-60ml,Repelente de Moscos 60 ml,Mosquito Repellent 60 ml,limpieza-hogar,especiales,25,repelente;moscos;viaje,true,false,,images/products/limpia-pisos-repelente.jpg
+P023,especial-repelente-moscos-60ml,Repelente de Moscos 60 ml,Mosquito Repellent 60 ml,limpieza-hogar,especiales,25,repelente;moscos;viaje,true,false,pieza,images/products/limpia-pisos-repelente.jpg
 P024,especial-repelente-moscos,Repelente de Moscos,Mosquito Repellent,limpieza-hogar,especiales,160,repelente;moscos;formato-grande,true,false,,images/products/repelente-de-moscos.jpg
-P025,pastilla-cloro-1-pulg,Pastilla Cloro 1 pulg.,Chlorine Tablet 1 in.,limpieza-hogar,pastillas-cloro,145,cloro;pastilla;inodoro,true,false,,images/products/tableta-cloro-1-pulg.jpg
-P026,tableta-cloro-3-pulg,Tableta Cloro 3 pulg.,Chlorine Tablet 3 in.,limpieza-hogar,pastillas-cloro,160,cloro;tableta;alberca,true,false,,images/products/tableta-cloro-3-pulg.jpg
-P027,paquete-pastilla-cloro,Paquete Pastilla Cloro,Chlorine Tablet Pack,limpieza-hogar,pastillas-cloro,16,cloro;pastilla;paquete,true,false,,images/products/paq-pastilla-cloro-16.jpg
-P028,cloro-en-polvo,Cloro en Polvo,Powdered Chlorine,limpieza-hogar,pastillas-cloro,119,cloro;polvo;concentrado,true,false,,images/products/cloro-en-polvo.jpg
-P029,cloro-granulado,Cloro Granulado,Granulated Chlorine,limpieza-hogar,pastillas-cloro,160,cloro;granulado,true,false,,images/products/cloro-granulado.jpg
+P025,pastilla-cloro-1-pulg,Pastilla Cloro 1 pulg.,Chlorine Tablet 1 in.,limpieza-hogar,pastillas-cloro,145,cloro;pastilla;inodoro,true,false,kilo,images/products/tableta-cloro-1-pulg.jpg
+P026,tableta-cloro-3-pulg,Tableta Cloro 3 pulg.,Chlorine Tablet 3 in.,limpieza-hogar,pastillas-cloro,160,cloro;tableta;alberca,true,false,kilo,images/products/tableta-cloro-3-pulg.jpg
+P027,paquete-pastilla-cloro,Paquete Pastilla Cloro,Chlorine Tablet Pack,limpieza-hogar,pastillas-cloro,16,cloro;pastilla;paquete,true,false,pieza,images/products/paq-pastilla-cloro-16.jpg
+P028,cloro-en-polvo,Cloro en Polvo,Powdered Chlorine,limpieza-hogar,pastillas-cloro,119,cloro;polvo;concentrado,true,false,kilo,images/products/cloro-en-polvo.jpg
+P029,cloro-granulado,Cloro Granulado,Granulated Chlorine,limpieza-hogar,pastillas-cloro,160,cloro;granulado,true,false,kilo,images/products/cloro-granulado.jpg
 P030,desinfectante-bicarbonato-limon,Desinfectante Bicarbonato Limón,Baking Soda Lemon Disinfectant,limpieza-hogar,desinfectantes,13,desinfectante;bicarbonato;limon,true,false,,images/products/missing-photo-replacement.jpg
 P031,desinfectante-pino-liquido-verde,Pino Líquido Verde,Green Liquid Pine,limpieza-hogar,desinfectantes,13,desinfectante;pino;verde,true,false,,images/products/missing-photo-replacement.jpg
 P032,desinfectante-pino-liquido-transparente,Pino Líquido Transparente,Clear Liquid Pine,limpieza-hogar,desinfectantes,13,desinfectante;pino;transparente,true,false,,images/products/missing-photo-replacement.jpg
-P033,desinfectante-sarrigel,Sarrigel,Sarrigel Descaler,limpieza-hogar,desinfectantes,16,desinfectante;sarro;gel,true,false,,images/products/missing-photo-replacement.jpg
+P033,desinfectante-sarrigel,Sarrigel,Sarrigel Descaler,limpieza-hogar,desinfectantes,16,desinfectante;sarro;gel,true,false,kilo,images/products/missing-photo-replacement.jpg
 P034,desinfectante-alcohol-etilico,Alcohol Etílico,Ethyl Alcohol,limpieza-hogar,desinfectantes,62.5,desinfectante;alcohol,true,false,,images/products/missing-photo-replacement.jpg
 P035,desinfectante-cloralex-10l,Cloralex 10 L,Cloralex 10 L,limpieza-hogar,desinfectantes,140,desinfectante;cloro;cloralex;granel,true,true,pieza,images/products/cloralex-140.jpg
 P036,desinfectante-cloro-3,Cloro al 3%,3% Chlorine,limpieza-hogar,desinfectantes,7,desinfectante;cloro,true,false,,images/products/missing-photo-replacement.jpg
@@ -39,8 +39,7 @@ P037,desinfectante-cloro-6,Cloro al 6%,6% Chlorine,limpieza-hogar,desinfectantes
 P038,desinfectante-hipoclorito-sodio,Hipoclorito de Sodio,Sodium Hypochlorite,limpieza-hogar,desinfectantes,17,desinfectante;cloro;industrial,true,false,,images/products/missing-photo-replacement.jpg
 P039,desinfectante-cloro-gel,Cloro en Gel,Chlorine Gel,limpieza-hogar,desinfectantes,19,desinfectante;cloro;gel,true,false,,images/products/missing-photo-replacement.jpg
 P040,desinfectante-cloro-mascotas,Cloro Mascotas,Pet-Safe Chlorine,limpieza-hogar,desinfectantes,19,desinfectante;mascotas,true,false,,images/products/missing-photo-replacement.jpg
-P041,desinfectante-pino-gel,Pino Gel,Pine Gel,limpieza-hogar,desinfectantes,28,desinfectante;pino;gel,true,false,,images/products/missing-photo-replacement.jpg
-P042,desinfectante-lysol,Lysol,Lysol,limpieza-hogar,desinfectantes,138,desinfectante;marca;lysol,true,false,,images/products/missing-photo-replacement.jpg
+P041,desinfectante-pino-gel,Pino Gel,Pine Gel,limpieza-hogar,desinfectantes,28,desinfectante;pino;gel,true,false,kilo,images/products/missing-photo-replacement.jpg
 P043,desengrasante-en-caliente,Desengrasante en Caliente,Hot Degreaser,limpieza-hogar,desengrasantes,16,desengrasante;cocina,true,false,,images/products/desengrasante-en-caliente.jpg
 P044,desengrasante-cocina,Desengrasante Cocina,Kitchen Degreaser,limpieza-hogar,desengrasantes,22,desengrasante;cocina,true,false,,images/products/desengrasante-cocina.jpg
 P045,det-desengrasante,Detergente Desengrasante,Degreasing Detergent,limpieza-hogar,desengrasantes,20,desengrasante;detergente,true,false,,images/products/detergente-desengrasante.jpg
@@ -65,7 +64,7 @@ P063,detergente-liquido-multiusos-cafe,Detergente Multiusos Café,Brown Multi-Us
 P064,detergente-bicarbonato,Detergente Bicarbonato,Baking Soda Detergent,lavanderia,detergentes-liquidos,19,detergente;liquido;bicarbonato,true,false,,images/products/detergente-bicarbonato.jpg
 P065,detergente-liquido-pino-mugroso,Detergente Pino Mugroso,Pine Heavy-Duty Detergent,lavanderia,detergentes-liquidos,27,detergente;liquido;pino,true,false,,images/products/detergente-pino-mugroso.jpg
 P066,detergente-liquido-axion-limon,Detergente Axión Limón,Axion Lemon Detergent,lavanderia,detergentes-liquidos,18,detergente;liquido;limon;trastes,true,false,,images/products/detergente-axion-limon.jpg
-P067,detergente-polvo-multiusos-sueltos,Detergente en Polvo Multiusos (Suelto),Bulk Powder Multi-Use Detergent,lavanderia,detergentes-polvo,35,detergente;polvo;granel,true,false,,images/products/detergente-polvo-multiusos.jpg
+P067,detergente-polvo-multiusos-sueltos,Detergente en Polvo Multiusos (Suelto),Bulk Powder Multi-Use Detergent,lavanderia,detergentes-polvo,35,detergente;polvo;granel,true,false,kilo,images/products/detergente-polvo-multiusos.jpg
 P068,detergente-polvo-blanca-nieves,Detergente Blanca Nieves,Blanca Nieves Powder Detergent,lavanderia,detergentes-polvo,43,detergente;polvo;marca,true,true,kilo,images/products/blanca-nieves-polvo-43.jpg
 P069,detergente-polvo-roma,Detergente Roma en Polvo,Roma Powder Detergent,lavanderia,detergentes-polvo,43,detergente;polvo;marca,true,true,kilo,images/products/roma-polvo-43.jpg
 P070,jabon-barra-carisma,Jabón Barra Carisma,Carisma Bar Soap,lavanderia,jabon-barra,28,jabon;barra;ropa,true,true,pieza,images/products/barra-carisma-28.jpg
@@ -90,21 +89,21 @@ P088,shampoo-manos-coco,Shampoo Manos Coco,Coconut Hand Soap,higiene,jabon-manos
 P089,shampoo-manos-frutal,Shampoo Manos Frutal,Fruit Hand Soap,higiene,jabon-manos,19,manos;frutal,true,false,,images/products/shampoo-manos-frutal.jpg
 P090,shampoo-manos-manzana-verde,Shampoo Manos Manzana Verde,Green Apple Hand Soap,higiene,jabon-manos,19,manos;manzana,true,false,,images/products/shampoo-manos-manzana-verde.jpg
 P091,shampoo-manos-carolina-herrera,Shampoo Manos Carolina Herrera,Carolina Herrera Hand Soap,higiene,jabon-manos,19,manos;perfumado,true,false,,images/products/shampoo-manos-carolina-herrera.jpg
-P092,gel-antibacterial-granel,Gel Antibacterial a Granel,Bulk Antibacterial Gel,higiene,gel-antibacterial,55,gel;antibacterial;granel,true,false,,images/products/missing-photo-replacement.jpg
+P092,gel-antibacterial-granel,Gel Antibacterial a Granel,Bulk Antibacterial Gel,higiene,gel-antibacterial,55,gel;antibacterial;granel,true,false,kilo,images/products/missing-photo-replacement.jpg
 P093,gel-antibacterial-60ml,Gel Antibacterial Botella 60 ml,Antibacterial Gel Bottle 60 ml,higiene,gel-antibacterial,20,gel;antibacterial;bolsillo,true,false,,images/products/missing-photo-replacement.jpg
 P094,gel-antibacterial-500ml,Gel Antibacterial Botella 1/2 L,Antibacterial Gel Bottle 500 ml,higiene,gel-antibacterial,35,gel;antibacterial,true,false,,images/products/missing-photo-replacement.jpg
 P095,gel-antibacterial-1l,Gel Antibacterial Botella 1 L,Antibacterial Gel Bottle 1 L,higiene,gel-antibacterial,60,gel;antibacterial;familiar,true,false,,images/products/missing-photo-replacement.jpg
 P096,gel-antibacterial-1l-dosificador,Gel Antibacterial 1 L con Dosificador,Antibacterial Gel 1 L with Dispenser,higiene,gel-antibacterial,85,gel;antibacterial;dosificador,true,false,,images/products/missing-photo-replacement.jpg
-P097,sanitizante-granel,Líquido Sanitizante a Granel,Bulk Sanitizing Liquid,higiene,sanitizantes,55,sanitizante;granel,true,false,,images/products/missing-photo-replacement.jpg
+P097,sanitizante-granel,Líquido Sanitizante a Granel,Bulk Sanitizing Liquid,higiene,sanitizantes,55,sanitizante;granel,true,false,litro,images/products/missing-photo-replacement.jpg
 P098,sanitizante-250ml,Líquido Sanitizante 250 ml,Sanitizing Liquid 250 ml,higiene,sanitizantes,35,sanitizante,true,false,,images/products/missing-photo-replacement.jpg
-P099,shampoo-head-and-shoulders,Shampoo Head & Shoulders,Head & Shoulders Shampoo,higiene,higiene-personal,23,shampoo;cabello;marca,true,false,,images/products/missing-photo-replacement.jpg
+P099,shampoo-head-and-shoulders,Shampoo Head & Shoulders,Head & Shoulders Shampoo,higiene,higiene-personal,23,shampoo;cabello;marca,true,false,litro,images/products/missing-photo-replacement.jpg
 P100,aromatizante-madera-oriental,Autofresh Madera Oriental,Oriental Wood Air Freshener,aromatizantes,autofresh,32,aromatizante;madera;oriental,true,false,,images/products/autofresh-madera-oriental.jpg
 P101,aromatizante-channel,Autofresh Channel,Channel Air Freshener,aromatizantes,autofresh,32,aromatizante;perfumado,true,false,,images/products/autofresh-channel.jpg
 P102,aromatizante-coco,Autofresh Coco,Coconut Air Freshener,aromatizantes,autofresh,32,aromatizante;coco,true,false,,images/products/autofresh-coco.jpg
 P103,aromatizante-hugo-boss,Autofresh Hugo Boss,Hugo Boss Air Freshener,aromatizantes,autofresh,32,aromatizante;perfumado,true,false,,images/products/autofresh-hugo-boss.jpg
 P104,aromatizante-carolina-herrera,Autofresh Carolina Herrera,Carolina Herrera Air Freshener,aromatizantes,autofresh,32,aromatizante;perfumado,true,false,,images/products/autofresh-carolina-herrera.jpg
-P106,aromatizante-glade,Aromatizante Glade,Glade Air Freshener,aromatizantes,autofresh,69,aromatizante;marca;glade,true,false,,images/products/glade-69.jpg
-P107,aromatizante-febrize,Aromatizante Febrize,Febrize Air Freshener,aromatizantes,autofresh,94,aromatizante;marca;febrize,true,false,,images/products/febrezee-94.jpg
+P106,aromatizante-glade,Aromatizante Glade,Glade Air Freshener,aromatizantes,autofresh,69,aromatizante;marca;glade,true,false,pieza,images/products/glade-69.jpg
+P107,aromatizante-febrize,Aromatizante Febrize,Febrize Air Freshener,aromatizantes,autofresh,94,aromatizante;marca;febrize,true,false,pieza,images/products/febrezee-94.jpg
 P108,automotriz-cera-liq-uso-humedo,Cera Líquida Uso Húmedo,Wet Wax,automotriz,linea-automotriz,22,automotriz;cera,true,false,,images/products/cera-liquido-uso-humedo.jpg
 P109,automotriz-vaselina-industrial,Vaselina Industrial,Industrial Vaseline,automotriz,linea-automotriz,50,automotriz;vaselina;industrial,true,false,,images/products/vaselina-industrial.jpg
 P110,automotriz-shampoo-carrocerias,Shampoo Carrocerías,Car Wash Shampoo,automotriz,linea-automotriz,20,automotriz;shampoo,true,false,,images/products/shampoo-carrocerias.jpg
@@ -116,26 +115,26 @@ P115,automotriz-alumbra,Alumbra,Alumbra Polish,automotriz,linea-automotriz,20,au
 P116,automotriz-envase-alto-brillo-250ml,Envase Alto Brillo 250 ml,High Gloss Bottle 250 ml,automotriz,linea-automotriz,30,automotriz;brillo,true,false,,images/products/envase-alto-brillo.jpg
 P117,automotriz-alto-brillo,Alto Brillo,High Gloss,automotriz,linea-automotriz,105,automotriz;brillo;granel,true,false,,images/products/alto-brillo.jpg
 P118,automotriz-glicerina,Glicerina,Glycerin,automotriz,linea-automotriz,110,automotriz;glicerina,true,false,,images/products/envase-glicerina-500ml.jpg
-P119,automotriz-envase-glicerina-500ml,Envase Glicerina 500 ml,Glycerin Bottle 500 ml,automotriz,linea-automotriz,46,automotriz;glicerina,true,false,,images/products/envase-glicerina-500ml.jpg
+P119,automotriz-envase-glicerina-500ml,Envase Glicerina 500 ml,Glycerin Bottle 500 ml,automotriz,linea-automotriz,46,automotriz;glicerina,true,false,pieza,images/products/envase-glicerina-500ml.jpg
 P120,varios-plegde-aerosol-muebles,Pledge Aerosol para Muebles,Pledge Furniture Aerosol,varios,varios,98,marca;muebles;aerosol,true,false,,images/products/pledge-98.jpg
 P121,varios-raid-casa-jardin,Raid Casa y Jardín,Raid House & Garden,varios,varios,74,marca;insecticida,true,false,,images/products/raid-74.jpg
-P122,varios-quita-cochambre,Quita Cochambre,Grease Remover,varios,varios,21,cochambre;cocina,true,false,,images/products/missing-photo-replacement.jpg
-P123,varios-quita-cochambre-gel,Quita Cochambre en Gel,Gel Grease Remover,varios,varios,21,cochambre;gel,true,false,,images/products/missing-photo-replacement.jpg
-P124,varios-limpiavidrios,Limpiavidrios,Glass Cleaner,varios,varios,14,vidrios;limpieza,true,false,,images/products/missing-photo-replacement.jpg
+P122,varios-quita-cochambre,Quita Cochambre,Grease Remover,varios,varios,21,cochambre;cocina,true,false,litro,images/products/missing-photo-replacement.jpg
+P123,varios-quita-cochambre-gel,Quita Cochambre en Gel,Gel Grease Remover,varios,varios,21,cochambre;gel,true,false,kilo,images/products/missing-photo-replacement.jpg
+P124,varios-limpiavidrios,Limpiavidrios,Glass Cleaner,varios,varios,14,vidrios;limpieza,true,false,litro,images/products/missing-photo-replacement.jpg
 P125,varios-bicarbonato,Bicarbonato,Baking Soda,varios,varios,71,bicarbonato;granel,true,false,,images/products/missing-photo-replacement.jpg
-P126,varios-liquido-destapacanos,Líquido Destapacaños,Drain Opener Liquid,varios,varios,20,destapacanos;liquido,true,false,,images/products/destapacanos-34.jpg
-P127,varios-quitasarro,Quitasarro,Lime Scale Remover,varios,varios,21,sarro;bano,true,false,,images/products/missing-photo-replacement.jpg
-P128,varios-liq-insecticida-total,Líquido Insecticida Total,Total Insecticide Liquid,varios,varios,68,insecticida,true,false,,images/products/missing-photo-replacement.jpg
-P129,varios-cucarachicida,Cucarachicida,Roach Killer,varios,varios,30,insecticida;cucarachas,true,false,,images/products/jeringa-cucarachas-130.jpg
+P126,varios-liquido-destapacanos,Líquido Destapacaños,Drain Opener Liquid,varios,varios,20,destapacanos;liquido,true,false,,
+P127,varios-quitasarro,Quitasarro,Lime Scale Remover,varios,varios,21,sarro;bano,true,false,litro,images/products/missing-photo-replacement.jpg
+P128,varios-liq-insecticida-total,Líquido Insecticida Total,Total Insecticide Liquid,varios,varios,68,insecticida,true,false,litro,images/products/missing-photo-replacement.jpg
+P129,varios-cucarachicida,Cucarachicida,Roach Killer,varios,varios,30,insecticida;cucarachas,true,false,litro,
 P130,varios-sosa-liquida-lt,Sosa Líquida L,Liquid Caustic Soda L,varios,varios,52,sosa;caustica;industrial,true,false,,images/products/missing-photo-replacement.jpg
-P131,varios-ac-pino,Aceite de Pino,Pine Oil,varios,varios,186,pino;aceite;granel,true,false,,images/products/missing-photo-replacement.jpg
-P132,varios-aceite-muebles,Aceite para Muebles,Furniture Oil,varios,varios,81,muebles;aceite,true,false,,images/products/missing-photo-replacement.jpg
-P133,varios-sham-perro-carolina,Shampoo para Perro Carolina Herrera,Carolina Herrera Dog Shampoo,varios,mascotas,18,mascotas;perro;shampoo,true,false,,images/products/missing-photo-replacement.jpg
-P134,varios-sham-antip-hugo-boss,Shampoo Antipulgas Hugo Boss,Hugo Boss Flea Shampoo,varios,mascotas,25,mascotas;perro;antipulgas,true,false,,images/products/missing-photo-replacement.jpg
-P135,varios-liquido-quita-gotas,Líquido Quita Gotas,Drop Remover Liquid,varios,varios,25,gotas;limpieza,true,false,,images/products/missing-photo-replacement.jpg
+P131,varios-ac-pino,Aceite de Pino,Pine Oil,varios,varios,186,pino;aceite;granel,true,false,litro,images/products/missing-photo-replacement.jpg
+P132,varios-aceite-muebles,Aceite para Muebles,Furniture Oil,varios,varios,81,muebles;aceite,true,false,litro,images/products/missing-photo-replacement.jpg
+P133,varios-sham-perro-carolina,Shampoo para Perro Carolina Herrera,Carolina Herrera Dog Shampoo,varios,mascotas,18,mascotas;perro;shampoo,true,false,litro,images/products/missing-photo-replacement.jpg
+P134,varios-sham-antip-hugo-boss,Shampoo Antipulgas Hugo Boss,Hugo Boss Flea Shampoo,varios,mascotas,25,mascotas;perro;antipulgas,true,false,litro,images/products/missing-photo-replacement.jpg
+P135,varios-liquido-quita-gotas,Líquido Quita Gotas,Drop Remover Liquid,varios,varios,25,gotas;limpieza,true,false,litro,images/products/missing-photo-replacement.jpg
 P136,varios-agita-bolsita,Agita Bolsita,Agita Sachet,varios,varios,75,agita;moscas,true,true,,images/products/agita-bolsa-75.jpg
 P139,trapeador-microfibra-chico,Trapeador Microfibra Chico,Small Microfiber Mop,jarceria,trapeadores,67,trapeador;microfibra;chico,true,false,,images/products/trapeador-microfibra.jpg
-P141,trapeador-microfibra-industrial,Trapeador Microfibra Industrial,Industrial Microfiber Mop,jarceria,trapeadores,100,trapeador;microfibra;industrial,true,false,,images/products/mop-159.jpg
+P141,trapeador-microfibra-industrial,Trapeador Microfibra Industrial,Industrial Microfiber Mop,jarceria,trapeadores,100,trapeador;microfibra;industrial,true,false,,images/products/trapeador-microfibra.jpg
 P142,trapeador-microfibra-espanola,Trapeador Microfibra Española,Spanish Microfiber Mop,jarceria,trapeadores,93,trapeador;microfibra;espanola,true,false,,images/products/microfibra-espanola-93.jpg
 P143,trapeador-microfibra-espanola-eco,Trapeador Microfibra Española Eco,Eco Spanish Microfiber Mop,jarceria,trapeadores,71,trapeador;microfibra;eco,true,false,,images/products/trapeador-espanola.jpg
 P144,trapeador-hilaza-25,Trapeador Hilaza #25,Yarn Mop #25,jarceria,trapeadores,50,trapeador;hilaza,true,false,,images/products/trapeador-hiliza.jpg
@@ -155,7 +154,7 @@ P158,recogedor-plastico,Recogedor Plástico Peric,Peric Plastic Dustpan,jarceria
 P159,jalador-metal-30cm,Jalador Metal 30 cm,Metal Squeegee 30 cm,jarceria,escobas,47,jalador;metal;30cm,true,false,,images/products/jalador-30cm.jpg
 P160,jalador-metal-50cm,Jalador Metal 50 cm,Metal Squeegee 50 cm,jarceria,escobas,52,jalador;metal;50cm,true,false,,images/products/jalador-50cm.jpg
 P161,arana-metal,Araña de Metal,Metal Spider Broom,jarceria,escobas,110,arana;metal,true,false,,images/products/arana-metal-110.jpg
-P162,tambo-100lts,Tambo de 100 L,100 L Drum,jarceria,cubetas,250,tambo;100l,true,false,,images/products/tambo-plastico-200-litros.jpg
+P162,tambo-100lts,Tambo de 100 L,100 L Drum,jarceria,cubetas,250,tambo;100l,true,false,,
 P163,colador,Colador,Strainer,jarceria,accesorios,30,colador;plastico,true,false,,images/products/colador.jpg
 P164,jarra-2l,Jarra 2 L,Pitcher 2 L,jarceria,accesorios,38,jarra;2l,true,false,,images/products/jarra-2l-38.jpg
 P165,jarra-4l,Jarra 4 L,Pitcher 4 L,jarceria,accesorios,73,jarra;4l,true,false,,images/products/jarra-4l-73.jpg
@@ -174,7 +173,7 @@ P177,embudo-chico,Embudo Chico,Small Funnel,jarceria,accesorios,26,embudo;chico,
 P178,dosificador-1l,Dosificador 1 L,1 L Dispenser,jarceria,accesorios,31,dosificador;1l,true,false,,images/products/dosificador-1l.jpg
 P179,pistola-atomizador,Pistola Atomizador,Spray Gun,jarceria,atomizadores,40,atomizador;pistola,true,false,,images/products/pistola-atomizador.jpg
 P180,atomizador-medio,Atomizador 1/2 L,Sprayer 1/2 L,jarceria,atomizadores,33,atomizador;medio,true,true,,images/products/atomizador-1_2-litro-33.jpg
-P181,atomizador-1lt,Atomizador 1 L,Sprayer 1 L,jarceria,atomizadores,40,atomizador;1l,true,true,,images/products/atomizador-1-litro-40.jpg
+P181,atomizador-1lt,Atomizador 1 L,Sprayer 1 L,jarceria,atomizadores,40,atomizador;1l,true,true,,
 P182,atomizador-mini-250ml,Atomizador Mini 250 ml,Mini Sprayer 250 ml,jarceria,atomizadores,23,atomizador;mini,true,false,,images/products/atomizador-mini-250ml.jpg
 P183,lijas-agua,Lijas de Agua,Water Sandpaper,jarceria,accesorios,13,lijas;agua,true,false,,images/products/lija-de-agua.jpg
 P184,fibra-mini-metalica-espiral,Mini Fibra Metálica Espiral,Mini Spiral Metal Scrubber,jarceria,fibras,10,fibra;metalica;mini,true,false,,images/products/mini-fibra-metalica-espiral.jpg
@@ -207,8 +206,8 @@ P210,envase-4lt,Envase 4 L,Container 4 L,jarceria,accesorios,10,envase;4l,true,f
 P211,garrafa-20lts,Garrafa 20 L,Jug 20 L,jarceria,accesorios,35,garrafa;20l,true,false,,images/products/garrafa-20l.jpg
 P212,bolsa-camiseta-chica,Bolsa Camiseta Chica,Small T-Shirt Bag,jarceria,bolsas,82,bolsa;camiseta;chica,true,true,,images/products/bolsa-camiseta-82.jpg
 P213,bolsa-camiseta-grande,Bolsa Camiseta Grande,Large T-Shirt Bag,jarceria,bolsas,82,bolsa;camiseta;grande,true,false,,images/products/bolsa-camiseta-82.jpg
-P214,bolsa-negra-60x90,Bolsa Negra 60x90,Black Bag 60x90,jarceria,bolsas,53,bolsa;negra;60x90,true,true,,images/products/bolsa-negra-60x90-53.jpg
-P215,bolsa-negra-90x120,Bolsa Negra 90x120,Black Bag 90x120,jarceria,bolsas,53,bolsa;negra;90x120,true,true,,images/products/bolsa-negra-90x120-53.jpg
+P214,bolsa-negra-60x90,Bolsa Negra 60x90,Black Bag 60x90,jarceria,bolsas,53,bolsa;negra;60x90,true,true,kilo,images/products/bolsa-negra-60x90-53.jpg
+P215,bolsa-negra-90x120,Bolsa Negra 90x120,Black Bag 90x120,jarceria,bolsas,53,bolsa;negra;90x120,true,true,kilo,images/products/bolsa-negra-90x120-53.jpg
 P216,bolsa-negra-60x90-pz,Bolsa Negra 60x90 (Pieza),Black Bag 60x90 (Piece),jarceria,bolsas,4,bolsa;negra;pieza,true,false,,images/products/bolsa-negra-60x90-pieza.jpg
 P217,bolsa-negra-90x120-pz,Bolsa Negra 90x120 (Pieza),Black Bag 90x120 (Piece),jarceria,bolsas,8,bolsa;negra;pieza,true,false,,images/products/bolsa-negra-90x120-pieza.jpg
 P218,franela-gris-roja,Franela Gris / Roja y Rallada,Gray / Red Striped Flannel,jarceria,accesorios,29,franela;limpieza,true,false,,images/products/franela-roja-29.jpg
@@ -260,7 +259,6 @@ P265,pastilla-mary,Pastilla Mary,Mary Tablet,higiene,higienicos,15,pastilla;mary
 P266,limpia-pisos-coco,Limpiapisos Coco,Coconut Multi-Surface Cleaner,limpieza-hogar,multiusos,12,limpieza;coco;aroma,true,false,litro,images/products/limpia-pisos-coco.jpg
 P267,jerga-rayada,Jerga Rayada,Striped Cleaning Cloth,jarceria,accesorios,29,jerga;rayada;limpieza,true,false,pieza,images/products/jerga-rayada-29.jpg
 P268,despachador-generico,Despachador,Dispenser,higiene,despachadores,195,despachador,true,false,pieza,images/products/despachador.jpg
-P269,autofresh-roma,Autofresh Roma,Roma Air Freshener,aromatizantes,autofresh,69,aromatizante;roma;perfumado,true,true,pieza,images/products/autofresh-liquido-roma.jpg
 P270,cofias-pieza,Cofias por Pieza,Hair Net per Piece,higiene,higienicos,2.5,cofias;pieza;desechable,true,true,pieza,images/products/cofias.jpg
 P271,cubeta-16,Cubeta #16,Bucket #16,jarceria,cubetas,56,cubeta;industrial,true,true,pieza,images/products/cubetas-16-56.jpg
 P272,higienico-dalia-individual-pz,Higiénico Dalia Individual Pz,Dalia Individual Toilet Paper Unit,higiene,higienicos,11,higienico;dalia;individual;pieza,true,true,pieza,images/products/dalia-hig-individual-11.jpg
