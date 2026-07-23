@@ -9,6 +9,7 @@ out
 next-env.d.ts
 coverage
 .turbo
+.claude/settings.local.json
 
 # Raw source images — only processed outputs in public/images/products/ are committed
 public/images/website-pic-collection/
