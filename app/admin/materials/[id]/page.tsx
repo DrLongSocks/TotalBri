@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { db } from '@/db';
 import { getAdminMessages } from '@/domain/admin-i18n/messages';
 import { AdminPageHeading } from '@/features/admin/layout/AdminPageHeading';
-import { relinkNfcTag, updateMaterial } from '@/features/admin/materials/actions';
+import { createRestock, relinkNfcTag, updateMaterial } from '@/features/admin/materials/actions';
 import { getAdminLocale } from '@/lib/admin-locale';
 import { requireAdminSession } from '@/lib/auth/require-admin';
 
@@ -69,6 +69,36 @@ export default async function MaterialDetailPage({
           {messages.relinkTag}
         </Button>
       </form>
+
+      <div className="rounded-2xl border border-ink/10 bg-card p-6 shadow-[var(--shadow-card)]">
+        <h2 className="eyebrow mb-3 text-slate">{messages.weightedAvgCost}</h2>
+        <p className="mb-4 font-display text-xl font-extrabold text-ink">
+          {Number(material.weightedAvgCost) > 0
+            ? `$${Number(material.weightedAvgCost).toFixed(2)} / ${material.unit}`
+            : messages.costNotRecorded}
+        </p>
+        <form action={createRestock.bind(null, material.id)} className="grid grid-cols-2 gap-4">
+          <Input
+            name="quantity"
+            type="number"
+            step="0.01"
+            inputMode="decimal"
+            placeholder={`${messages.restockQuantity} (${material.unit})`}
+            required
+          />
+          <Input
+            name="totalCost"
+            type="number"
+            step="0.01"
+            inputMode="decimal"
+            placeholder={messages.restockTotalCost}
+            required
+          />
+          <Button type="submit" variant="secondary" className="col-span-2">
+            {messages.restock}
+          </Button>
+        </form>
+      </div>
     </div>
   );
 }

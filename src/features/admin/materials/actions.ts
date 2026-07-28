@@ -5,6 +5,7 @@ import { eq } from 'drizzle-orm';
 import { z } from 'zod';
 import { db } from '@/db';
 import { materials } from '@/db/schema';
+import { restockAtomic } from '@/db/queries/restock';
 import { auth } from '@/lib/auth/auth';
 
 async function requireAdmin() {
@@ -101,4 +102,32 @@ export async function relinkNfcTag(materialId: string, formData: FormData) {
 
   revalidatePath('/materials');
   revalidatePath(`/materials/${materialId}`);
+}
+
+const createRestockSchema = z.object({
+  quantity: z.coerce.number().positive(),
+  totalCost: z.coerce.number().nonnegative(),
+});
+
+export async function createRestock(materialId: string, formData: FormData) {
+  const session = await auth();
+  if (session?.user.role !== 'admin') {
+    throw new Error('Forbidden');
+  }
+
+  const parsed = createRestockSchema.parse({
+    quantity: formData.get('quantity'),
+    totalCost: formData.get('totalCost'),
+  });
+
+  await restockAtomic({
+    materialId,
+    quantity: parsed.quantity,
+    totalCost: parsed.totalCost,
+    loggedByUserId: session.user.id,
+  });
+
+  revalidatePath('/materials');
+  revalidatePath(`/materials/${materialId}`);
+  revalidatePath('/dashboard');
 }

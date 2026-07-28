@@ -8,16 +8,16 @@ describe.skipIf(!process.env.DATABASE_URL)('logUsageAtomic concurrency', () => {
   it('never loses an update under many concurrent calls to the same material', async () => {
     const { eq } = await import('drizzle-orm');
     const { db } = await import('@/db');
-    const { materials, products, inventoryTransactions } = await import('@/db/schema');
+    const { materials, inventoryTransactions } = await import('@/db/schema');
     const { logUsageAtomic } = await import('./log-usage');
 
     const suffix = Date.now();
-    const [product] = await db
-      .insert(products)
-      .values({ name: `concurrency-test-product-${suffix}` })
-      .returning();
+    // Not a real catalog id — logUsageAtomic doesn't validate against the
+    // catalog itself (that check lives in the server action), so any string
+    // exercises the atomic-update path being tested here.
+    const testProductId = `concurrency-test-product-${suffix}`;
     const [user] = await db.query.users.findMany({ limit: 1 });
-    if (!product || !user) {
+    if (!user) {
       throw new Error('Expected at least one seeded user to run this test — run `pnpm db:seed` first.');
     }
 
@@ -43,7 +43,8 @@ describe.skipIf(!process.env.DATABASE_URL)('logUsageAtomic concurrency', () => {
           logUsageAtomic({
             materialId: material.id,
             quantityDelta: DELTA,
-            productId: product.id,
+            productId: testProductId,
+            productQuantity: 1,
             loggedByUserId: user.id,
           }),
         ),
@@ -54,7 +55,6 @@ describe.skipIf(!process.env.DATABASE_URL)('logUsageAtomic concurrency', () => {
     } finally {
       await db.delete(inventoryTransactions).where(eq(inventoryTransactions.materialId, material.id));
       await db.delete(materials).where(eq(materials.id, material.id));
-      await db.delete(products).where(eq(products.id, product.id));
     }
   });
 });

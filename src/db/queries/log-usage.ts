@@ -16,16 +16,22 @@ export type LogUsageResult = {
 // the low-stock crossing check (didCrossLowStockThreshold) correct.
 //
 // `quantityDelta` is signed — negative for usage (stock going down).
+// `productId` is the real storefront catalog's product id (e.g. "P010"),
+// not a Postgres FK — see the comment on inventoryTransactions.productId in
+// src/db/schema.ts. `productQuantity` is how much of that product this
+// consumption produced (e.g. 500 for "500 litros").
 export async function logUsageAtomic({
   materialId,
   quantityDelta,
   productId,
+  productQuantity,
   loggedByUserId,
   note,
 }: {
   materialId: string;
   quantityDelta: number;
   productId: string;
+  productQuantity: number;
   loggedByUserId: string;
   note?: string;
 }): Promise<LogUsageResult> {
@@ -35,9 +41,9 @@ export async function logUsageAtomic({
     ),
     ins AS (
       INSERT INTO inventory_transactions
-        (material_id, type, quantity, product_id, logged_by_user_id, logged_at, note)
+        (material_id, type, quantity, product_id, product_quantity, logged_by_user_id, logged_at, note)
       VALUES
-        (${materialId}, 'usage', ${quantityDelta}, ${productId}, ${loggedByUserId}, now(), ${note ?? null})
+        (${materialId}, 'usage', ${quantityDelta}, ${productId}, ${productQuantity}, ${loggedByUserId}, now(), ${note ?? null})
     ),
     upd AS (
       UPDATE materials

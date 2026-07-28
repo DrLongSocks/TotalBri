@@ -1,6 +1,8 @@
 import { db } from '@/db';
 import { getAdminMessages } from '@/domain/admin-i18n/messages';
-import { LogUsageForm } from '@/features/admin/usage/LogUsageForm';
+import { getAllProducts, getProductById } from '@/domain/product/repository';
+import { LogUsageFlow } from '@/features/admin/usage/LogUsageFlow';
+import { getRecentProductIdsForMaterial } from '@/features/admin/usage/queries';
 import { getAdminLocale } from '@/lib/admin-locale';
 
 export default async function LogUsagePage({
@@ -9,10 +11,9 @@ export default async function LogUsagePage({
   params: Promise<{ nfcTagId: string }>;
 }) {
   const { nfcTagId } = await params;
-  const [locale, material, allProducts] = await Promise.all([
+  const [locale, material] = await Promise.all([
     getAdminLocale(),
     db.query.materials.findFirst({ where: (m, { eq }) => eq(m.nfcTagId, nfcTagId) }),
-    db.query.products.findMany({ orderBy: (p, { asc }) => asc(p.name) }),
   ]);
   const messages = getAdminMessages(locale).log;
 
@@ -24,13 +25,25 @@ export default async function LogUsagePage({
     );
   }
 
+  const recentProductIds = await getRecentProductIdsForMaterial(material.id);
+  const recentProducts = recentProductIds
+    .map((id) => getProductById(id))
+    .filter((product) => product !== undefined);
+
   return (
     <div className="mx-auto max-w-sm">
       <h1 className="mb-2 font-display text-2xl">{material.name}</h1>
       <p className="mb-6 text-sm text-slate">
         {messages.currentStock}: {material.currentStock} {material.unit}
       </p>
-      <LogUsageForm nfcTagId={nfcTagId} products={allProducts} messages={messages} />
+      <LogUsageFlow
+        nfcTagId={nfcTagId}
+        materialName={material.name}
+        materialUnit={material.unit}
+        products={getAllProducts()}
+        recentProducts={recentProducts}
+        messages={messages}
+      />
     </div>
   );
 }

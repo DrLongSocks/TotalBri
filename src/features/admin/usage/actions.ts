@@ -5,13 +5,19 @@ import { z } from 'zod';
 import { db } from '@/db';
 import { logUsageAtomic } from '@/db/queries/log-usage';
 import { didCrossLowStockThreshold } from '@/domain/inventory/stock';
+import { getProductById } from '@/domain/product/repository';
 import { auth } from '@/lib/auth/auth';
 import { sendLowStockAlert } from '@/lib/email/low-stock-alert';
 
 const logUsageSchema = z.object({
   nfcTagId: z.string().min(1),
   amountMl: z.coerce.number().positive(),
-  productId: z.string().uuid(),
+  // Validated against the real storefront catalog (data/catalog.csv), not a
+  // uuid — see the comment on inventoryTransactions.productId in schema.ts.
+  productId: z.string().min(1).refine((id) => getProductById(id) !== undefined, {
+    message: 'Unknown product',
+  }),
+  productQuantity: z.coerce.number().positive(),
 });
 
 export type LogUsageState = { error?: string; success?: boolean } | undefined;
@@ -30,6 +36,7 @@ export async function logUsage(_prevState: LogUsageState, formData: FormData): P
     nfcTagId: formData.get('nfcTagId'),
     amountMl: formData.get('amountMl'),
     productId: formData.get('productId'),
+    productQuantity: formData.get('productQuantity'),
   });
   if (!parsed.success) {
     return { error: 'invalid' };
@@ -46,6 +53,7 @@ export async function logUsage(_prevState: LogUsageState, formData: FormData): P
     materialId: material.id,
     quantityDelta: -parsed.data.amountMl,
     productId: parsed.data.productId,
+    productQuantity: parsed.data.productQuantity,
     loggedByUserId: session.user.id,
   });
 

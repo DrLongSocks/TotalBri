@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FlaskConical, LayoutDashboard, Package, Users } from 'lucide-react';
+import { FlaskConical, LayoutDashboard, Users } from 'lucide-react';
 import type { AdminLocale } from '@/domain/admin-i18n/locale';
 import { getAdminMessages } from '@/domain/admin-i18n/messages';
 import { cn } from '@/lib/cn';
@@ -47,7 +47,6 @@ export function AdminSideNav({
   const items = [
     { href: '/dashboard', label: messages.dashboard, icon: LayoutDashboard, adminOnly: false },
     { href: '/materials', label: messages.materials, icon: FlaskConical, adminOnly: true },
-    { href: '/products', label: messages.products, icon: Package, adminOnly: true },
     { href: '/workers', label: messages.workers, icon: Users, adminOnly: true },
   ].filter((item) => isAdmin || !item.adminOnly);
 
