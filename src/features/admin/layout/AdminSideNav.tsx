@@ -45,9 +45,9 @@ export function AdminSideNav({
   const messages = getAdminMessages(locale).nav;
 
   const items = [
-    { href: '/dashboard', label: messages.dashboard, icon: LayoutDashboard, adminOnly: false },
-    { href: '/materials', label: messages.materials, icon: FlaskConical, adminOnly: true },
-    { href: '/workers', label: messages.workers, icon: Users, adminOnly: true },
+    { href: '/admin/dashboard', label: messages.dashboard, icon: LayoutDashboard, adminOnly: false },
+    { href: '/admin/materials', label: messages.materials, icon: FlaskConical, adminOnly: true },
+    { href: '/admin/workers', label: messages.workers, icon: Users, adminOnly: true },
   ].filter((item) => isAdmin || !item.adminOnly);
 
   return (

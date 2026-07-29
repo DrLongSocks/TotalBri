@@ -32,7 +32,7 @@ export function DashboardFiltersBar({
     params.set('range', range);
     if (filters.materialId) params.set('material', filters.materialId);
     if (filters.productId) params.set('product', filters.productId);
-    return `/dashboard?${params.toString()}`;
+    return `/admin/dashboard?${params.toString()}`;
   }
 
   const rangeLabels: Record<DashboardRange, string> = {
@@ -54,7 +54,7 @@ export function DashboardFiltersBar({
           </Link>
         ))}
       </div>
-      <form action="/dashboard" className="grid gap-3 sm:grid-cols-[1fr_1fr_auto_auto_auto] sm:items-end">
+      <form action="/admin/dashboard" className="grid gap-3 sm:grid-cols-[1fr_1fr_auto_auto_auto] sm:items-end">
         <input type="hidden" name="range" value={filters.range} />
         <select
           name="material"

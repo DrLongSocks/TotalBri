@@ -76,7 +76,7 @@ export default async function WorkersPage() {
                 {invite.email} · {invite.role === 'admin' ? messages.roleAdmin : messages.roleWorker}
               </span>
               <span className="text-xs text-slate">
-                {messages.inviteLink}: /invite/accept?token={invite.token}
+                {messages.inviteLink}: /admin/invite/accept?token={invite.token}
               </span>
             </li>
           ))}

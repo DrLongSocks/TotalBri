@@ -49,7 +49,7 @@ export default async function MaterialsPage() {
                 <td className="px-4 py-3">{material.lowStockThreshold}</td>
                 <td className="px-4 py-3">{material.nfcTagId ?? '—'}</td>
                 <td className="px-4 py-3">
-                  <Link href={`/materials/${material.id}`} className="font-medium text-azure hover:underline">
+                  <Link href={`/admin/materials/${material.id}`} className="font-medium text-azure hover:underline">
                     {messages.viewDetail}
                   </Link>
                 </td>

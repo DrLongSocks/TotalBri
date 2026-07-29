@@ -36,7 +36,7 @@ export async function createInvite(formData: FormData) {
     expiresAt: new Date(Date.now() + INVITE_TTL_MS),
   });
 
-  revalidatePath('/workers');
+  revalidatePath('/admin/workers');
 }
 
 const acceptInviteSchema = z.object({
@@ -79,5 +79,5 @@ export async function acceptInvite(
     await tx.update(invites).set({ usedAt: new Date() }).where(eq(invites.id, invite.id));
   });
 
-  redirect('/login');
+  redirect('/admin/login');
 }

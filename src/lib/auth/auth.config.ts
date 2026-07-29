@@ -6,7 +6,7 @@ import type { NextAuthConfig } from 'next-auth';
 // this file alone.
 export const authConfig = {
   pages: {
-    signIn: '/login',
+    signIn: '/admin/login',
   },
   session: {
     strategy: 'jwt',

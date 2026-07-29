@@ -4,12 +4,15 @@ import { getAllProducts, getProductById } from '@/domain/product/repository';
 import { LogUsageFlow } from '@/features/admin/usage/LogUsageFlow';
 import { getRecentProductIdsForMaterial } from '@/features/admin/usage/queries';
 import { getAdminLocale } from '@/lib/admin-locale';
+import { requireSession } from '@/lib/auth/require-admin';
 
 export default async function LogUsagePage({
   params,
 }: {
   params: Promise<{ nfcTagId: string }>;
 }) {
+  await requireSession();
+
   const { nfcTagId } = await params;
   const [locale, material] = await Promise.all([
     getAdminLocale(),

@@ -13,7 +13,7 @@ export default async function AdminLoginPage({
   return (
     <div className="mx-auto max-w-sm">
       <h1 className="mb-6 font-display text-2xl">{messages.login.title}</h1>
-      <LoginForm messages={messages.login} callbackUrl={params.callbackUrl ?? '/dashboard'} />
+      <LoginForm messages={messages.login} callbackUrl={params.callbackUrl ?? '/admin/dashboard'} />
     </div>
   );
 }

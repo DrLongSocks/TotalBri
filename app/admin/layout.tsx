@@ -18,7 +18,7 @@ export default async function AdminLayout({ children }: { children: ReactNode })
 
   async function handleSignOut() {
     'use server';
-    await signOut({ redirectTo: '/login' });
+    await signOut({ redirectTo: '/admin/login' });
   }
 
   return (

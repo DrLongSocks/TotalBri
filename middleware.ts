@@ -9,39 +9,37 @@ const intlMiddleware = createMiddleware({
   localePrefix: 'as-needed',
 });
 
-const ADMIN_HOST = process.env.ADMIN_HOST ?? 'admin.totalbri.mx';
-const PUBLIC_ADMIN_PATHS = ['/login', '/invite/accept'];
-
-function isAdminHost(host: string) {
-  return host === ADMIN_HOST || host.startsWith('admin.localhost') || host.startsWith('admin-');
-}
+const PUBLIC_ADMIN_PATHS = ['/admin/login', '/admin/invite/accept'];
 
 export default async function middleware(req: NextRequest) {
-  const host = req.headers.get('host') ?? '';
+  const { pathname } = req.nextUrl;
 
-  if (isAdminHost(host)) {
-    return handleAdminHost(req);
+  if (pathname.startsWith('/admin')) {
+    return handleAdminPath(req);
   }
 
-  // Unchanged for every other host — the storefront's locale routing never
+  // Unchanged for every other path — the storefront's locale routing never
   // sees the admin branch above.
   return intlMiddleware(req);
 }
 
-async function handleAdminHost(req: NextRequest) {
+async function handleAdminPath(req: NextRequest) {
   const { pathname } = req.nextUrl;
+
+  if (pathname === '/admin' || pathname === '/admin/') {
+    return NextResponse.redirect(new URL('/admin/dashboard', req.url));
+  }
+
   const isPublic = PUBLIC_ADMIN_PATHS.some((p) => pathname.startsWith(p));
   const session = isPublic ? null : await auth();
 
   if (!isPublic && !session) {
-    const url = new URL('/login', req.url);
+    const url = new URL('/admin/login', req.url);
     url.searchParams.set('callbackUrl', pathname);
     return NextResponse.redirect(url);
   }
 
-  const url = req.nextUrl.clone();
-  url.pathname = `/admin${pathname === '/' ? '/dashboard' : pathname}`;
-  return NextResponse.rewrite(url);
+  return NextResponse.next();
 }
 
 export const config = {

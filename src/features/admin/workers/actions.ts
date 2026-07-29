@@ -26,5 +26,5 @@ export async function removeWorker(formData: FormData) {
 
   await db.update(users).set({ disabledAt: new Date() }).where(eq(users.id, parsed.userId));
 
-  revalidatePath('/workers');
+  revalidatePath('/admin/workers');
 }

@@ -48,7 +48,7 @@ export async function createMaterial(formData: FormData) {
     nfcTagId: parsed.nfcTagId ?? null,
   });
 
-  revalidatePath('/materials');
+  revalidatePath('/admin/materials');
 }
 
 const updateMaterialSchema = z.object({
@@ -83,8 +83,8 @@ export async function updateMaterial(materialId: string, formData: FormData) {
     })
     .where(eq(materials.id, materialId));
 
-  revalidatePath('/materials');
-  revalidatePath(`/materials/${materialId}`);
+  revalidatePath('/admin/materials');
+  revalidatePath(`/admin/materials/${materialId}`);
 }
 
 const relinkNfcTagSchema = z.object({
@@ -100,8 +100,8 @@ export async function relinkNfcTag(materialId: string, formData: FormData) {
 
   await db.update(materials).set({ nfcTagId: parsed.nfcTagId }).where(eq(materials.id, materialId));
 
-  revalidatePath('/materials');
-  revalidatePath(`/materials/${materialId}`);
+  revalidatePath('/admin/materials');
+  revalidatePath(`/admin/materials/${materialId}`);
 }
 
 const createRestockSchema = z.object({
@@ -127,7 +127,7 @@ export async function createRestock(materialId: string, formData: FormData) {
     loggedByUserId: session.user.id,
   });
 
-  revalidatePath('/materials');
-  revalidatePath(`/materials/${materialId}`);
-  revalidatePath('/dashboard');
+  revalidatePath('/admin/materials');
+  revalidatePath(`/admin/materials/${materialId}`);
+  revalidatePath('/admin/dashboard');
 }
