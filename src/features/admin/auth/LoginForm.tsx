@@ -21,13 +21,13 @@ export function LoginForm({
     <form action={formAction} className="flex flex-col gap-4">
       <input type="hidden" name="redirectTo" value={callbackUrl} />
       <div className="flex flex-col gap-1">
-        <label htmlFor="email" className="text-sm text-slate">
+        <label htmlFor="email" className="text-sm text-paper/70">
           {messages.email}
         </label>
         <Input id="email" name="email" type="email" required autoComplete="email" />
       </div>
       <div className="flex flex-col gap-1">
-        <label htmlFor="password" className="text-sm text-slate">
+        <label htmlFor="password" className="text-sm text-paper/70">
           {messages.password}
         </label>
         <Input id="password" name="password" type="password" required autoComplete="current-password" />

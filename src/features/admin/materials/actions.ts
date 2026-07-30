@@ -22,6 +22,7 @@ const createMaterialSchema = z.object({
   currentStock: z.coerce.number().nonnegative(),
   lowStockThreshold: z.coerce.number().nonnegative(),
   provider: z.string().min(1).optional(),
+  code: z.string().min(1).optional(),
   nfcTagId: z.string().min(1).optional(),
 });
 
@@ -35,6 +36,7 @@ export async function createMaterial(formData: FormData) {
     currentStock: formData.get('currentStock'),
     lowStockThreshold: formData.get('lowStockThreshold'),
     provider: formData.get('provider') || undefined,
+    code: formData.get('code') || undefined,
     nfcTagId: formData.get('nfcTagId') || undefined,
   });
 
@@ -45,6 +47,7 @@ export async function createMaterial(formData: FormData) {
     currentStock: String(parsed.currentStock),
     lowStockThreshold: String(parsed.lowStockThreshold),
     provider: parsed.provider ?? null,
+    code: parsed.code ?? null,
     nfcTagId: parsed.nfcTagId ?? null,
   });
 
@@ -57,6 +60,7 @@ const updateMaterialSchema = z.object({
   unit: z.string().min(1),
   lowStockThreshold: z.coerce.number().nonnegative(),
   provider: z.string().min(1).optional(),
+  code: z.string().min(1).optional(),
 });
 
 // Deliberately does not touch `currentStock` — it's a running total derived
@@ -70,6 +74,7 @@ export async function updateMaterial(materialId: string, formData: FormData) {
     unit: formData.get('unit'),
     lowStockThreshold: formData.get('lowStockThreshold'),
     provider: formData.get('provider') || undefined,
+    code: formData.get('code') || undefined,
   });
 
   await db
@@ -80,6 +85,7 @@ export async function updateMaterial(materialId: string, formData: FormData) {
       unit: parsed.unit,
       lowStockThreshold: String(parsed.lowStockThreshold),
       provider: parsed.provider ?? null,
+      code: parsed.code ?? null,
     })
     .where(eq(materials.id, materialId));
 

@@ -41,6 +41,7 @@ export default async function MaterialDetailPage({
           required
         />
         <Input name="unit" defaultValue={material.unit} placeholder={messages.unit} required />
+        <Input name="code" defaultValue={material.code ?? ''} placeholder={messages.code} />
         <Input name="provider" defaultValue={material.provider ?? ''} placeholder={messages.provider} />
         <Input
           name="lowStockThreshold"

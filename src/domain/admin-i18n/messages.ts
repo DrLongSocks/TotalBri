@@ -4,6 +4,7 @@ const adminMessages = {
   es: {
     login: {
       title: 'Iniciar sesión',
+      eyebrow: 'Total Bri · Panel Administrativo',
       email: 'Correo electrónico',
       password: 'Contraseña',
       submit: 'Entrar',
@@ -31,6 +32,7 @@ const adminMessages = {
       lowStockThreshold: 'Umbral de stock bajo',
       nfcTagId: 'Etiqueta NFC',
       provider: 'Proveedor',
+      code: 'Código',
       create: 'Agregar material',
       update: 'Guardar cambios',
       relinkTag: 'Reasignar etiqueta',
@@ -109,6 +111,7 @@ const adminMessages = {
   en: {
     login: {
       title: 'Sign in',
+      eyebrow: 'Total Bri · Admin Panel',
       email: 'Email',
       password: 'Password',
       submit: 'Sign in',
@@ -136,6 +139,7 @@ const adminMessages = {
       lowStockThreshold: 'Low-stock threshold',
       nfcTagId: 'NFC tag',
       provider: 'Provider',
+      code: 'Code',
       create: 'Add material',
       update: 'Save changes',
       relinkTag: 'Relink tag',

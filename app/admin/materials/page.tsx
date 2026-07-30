@@ -26,6 +26,7 @@ export default async function MaterialsPage() {
           <thead>
             <tr className="bg-porcelain/50 text-slate">
               <th className="px-4 py-3">{messages.name}</th>
+              <th className="px-4 py-3">{messages.code}</th>
               <th className="px-4 py-3">{messages.provider}</th>
               <th className="px-4 py-3">{messages.category}</th>
               <th className="px-4 py-3">{messages.unit}</th>
@@ -42,6 +43,7 @@ export default async function MaterialsPage() {
                 className="border-t border-ink/8 transition-colors hover:bg-porcelain/40"
               >
                 <td className="px-4 py-3">{material.name}</td>
+                <td className="px-4 py-3">{material.code ?? '—'}</td>
                 <td className="px-4 py-3">{material.provider ?? '—'}</td>
                 <td className="px-4 py-3">{material.category}</td>
                 <td className="px-4 py-3">{material.unit}</td>
@@ -64,6 +66,7 @@ export default async function MaterialsPage() {
         className="grid max-w-xl grid-cols-2 gap-4 rounded-2xl border border-ink/10 bg-card p-6 shadow-[var(--shadow-card)]"
       >
         <Input name="name" placeholder={messages.name} required />
+        <Input name="code" placeholder={messages.code} />
         <Input name="provider" placeholder={messages.provider} />
         <Input name="category" placeholder={messages.category} defaultValue="fragrance" required />
         <Input name="unit" placeholder={messages.unit} required />

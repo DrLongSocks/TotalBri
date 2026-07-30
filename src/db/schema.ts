@@ -35,6 +35,8 @@ export const materials = pgTable(
     weightedAvgCost: numeric('weighted_avg_cost', { precision: 12, scale: 4 }).notNull().default('0'),
     lowStockThreshold: numeric('low_stock_threshold', { precision: 12, scale: 2 }).notNull(),
     provider: text('provider'),
+    // Supplier's own product/reference code — not every material has one.
+    code: text('code'),
     nfcTagId: text('nfc_tag_id'),
     locationId: uuid('location_id'),
     createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
