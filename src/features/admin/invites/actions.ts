@@ -10,6 +10,7 @@ import { db } from '@/db';
 import { invites, users } from '@/db/schema';
 import { isInviteValid } from '@/domain/invites/token';
 import { auth } from '@/lib/auth/auth';
+import { sendInviteEmail } from '@/lib/email/invite';
 
 const INVITE_TTL_MS = 1000 * 60 * 60 * 24 * 7;
 
@@ -29,12 +30,22 @@ export async function createInvite(formData: FormData) {
     role: formData.get('role'),
   });
 
+  const token = randomBytes(32).toString('hex');
+
   await db.insert(invites).values({
     email: parsed.email,
     role: parsed.role,
-    token: randomBytes(32).toString('hex'),
+    token,
     expiresAt: new Date(Date.now() + INVITE_TTL_MS),
   });
+
+  try {
+    await sendInviteEmail({ email: parsed.email, role: parsed.role, token });
+  } catch (error) {
+    // The invite row is already committed and still visible/copyable on the
+    // workers page — a Resend outage shouldn't block invite creation.
+    console.error('Failed to send invite email', error);
+  }
 
   revalidatePath('/admin/workers');
 }
