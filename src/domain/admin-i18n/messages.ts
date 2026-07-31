@@ -72,6 +72,8 @@ const adminMessages = {
     },
     dashboard: {
       title: 'Panel',
+      titleLine2: 'Administrativo',
+      heroEyebrow: 'Total Bri',
       search: 'Buscar material…',
       usageTrend: 'Uso de los últimos 30 días',
       lineView: 'Línea',
@@ -178,7 +180,9 @@ const adminMessages = {
       error: "Couldn't log usage. Try again.",
     },
     dashboard: {
-      title: 'Dashboard',
+      title: 'Admin',
+      titleLine2: 'Dashboard',
+      heroEyebrow: 'Total Bri',
       search: 'Search material…',
       usageTrend: 'Usage over the last 30 days',
       lineView: 'Line',

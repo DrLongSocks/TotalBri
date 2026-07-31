@@ -19,12 +19,15 @@ function CardShell({ title, children }: { title: string; children: React.ReactNo
   );
 }
 
-// Cards 3, 4, 10 — a single honest number, or a zero, never a blank.
+// Cards 3, 4, 10 — a single honest number, or a zero, never a blank. Lives
+// inside the dashboard's dark hero (see app/admin/dashboard/page.tsx), so
+// this is a translucent glass panel rather than the shared light CardShell.
 export function StatCard({ title, value }: { title: string; value: number }) {
   return (
-    <CardShell title={title}>
-      <p className="font-display text-3xl font-extrabold text-ink">{value}</p>
-    </CardShell>
+    <div className="rounded-2xl border border-paper/15 bg-paper/10 p-6 backdrop-blur-sm">
+      <h2 className="eyebrow mb-4 text-paper/70">{title}</h2>
+      <p className="font-display text-3xl font-extrabold text-paper">{value}</p>
+    </div>
   );
 }
 
