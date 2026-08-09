@@ -53,6 +53,10 @@ const adminMessages = {
       restock: 'Reabastecer',
       restockQuantity: 'Cantidad recibida',
       restockTotalCost: 'Costo total de la compra',
+      physicalCount: 'Conteo físico',
+      countedStock: 'Existencia contada',
+      saveCount: 'Guardar conteo',
+      backToMaterials: 'Volver a materiales',
     },
     workers: {
       title: 'Trabajadores',
@@ -173,6 +177,10 @@ const adminMessages = {
       restock: 'Restock',
       restockQuantity: 'Quantity received',
       restockTotalCost: 'Total cost paid',
+      physicalCount: 'Physical count',
+      countedStock: 'Counted stock',
+      saveCount: 'Save count',
+      backToMaterials: 'Back to materials',
     },
     workers: {
       title: 'Workers',

@@ -66,7 +66,12 @@ export default async function MaterialsPage({
 
   return (
     <div className="flex flex-col gap-8">
-      <AdminPageHeading>{messages.title}</AdminPageHeading>
+      <div className="flex items-center justify-between">
+        <AdminPageHeading>{messages.title}</AdminPageHeading>
+        <Link href="/admin/materials/count" className="text-sm text-azure hover:underline">
+          {messages.physicalCount}
+        </Link>
+      </div>
 
       <div className="overflow-x-auto rounded-2xl border border-ink/10 bg-card shadow-[var(--shadow-card)]">
         <table className="w-full text-left text-sm">

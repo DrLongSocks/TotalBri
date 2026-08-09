@@ -5,6 +5,7 @@ import { eq } from 'drizzle-orm';
 import { z } from 'zod';
 import { db } from '@/db';
 import { materials } from '@/db/schema';
+import { adjustStockAtomic } from '@/db/queries/adjust-stock';
 import { restockAtomic } from '@/db/queries/restock';
 import { auth } from '@/lib/auth/auth';
 
@@ -135,5 +136,40 @@ export async function createRestock(materialId: string, formData: FormData) {
 
   revalidatePath('/admin/materials');
   revalidatePath(`/admin/materials/${materialId}`);
+  revalidatePath('/admin/dashboard');
+}
+
+const countFieldSchema = z.coerce.number().nonnegative();
+
+// A physical count enters an absolute counted value per material, not a
+// delta — blank fields are skipped so an admin only corrects what they
+// actually recounted this session, never zeroing out materials they left
+// untouched. Sequential per-material atomic calls, same as restock/usage —
+// this is a low-frequency admin operation, not a concurrency hot path.
+export async function recordInventoryCount(formData: FormData) {
+  const session = await auth();
+  if (session?.user.role !== 'admin') {
+    throw new Error('Forbidden');
+  }
+
+  const entries = Array.from(formData.entries()).filter(
+    (entry): entry is [string, string] => entry[0].startsWith('count_') && entry[1] !== '',
+  );
+
+  for (const [key, rawValue] of entries) {
+    const materialId = key.slice('count_'.length);
+    const parsed = countFieldSchema.safeParse(rawValue);
+    if (!parsed.success) continue;
+
+    await adjustStockAtomic({
+      materialId,
+      countedStock: parsed.data,
+      loggedByUserId: session.user.id,
+      note: 'Physical count',
+    });
+  }
+
+  revalidatePath('/admin/materials');
+  revalidatePath('/admin/materials/count');
   revalidatePath('/admin/dashboard');
 }
