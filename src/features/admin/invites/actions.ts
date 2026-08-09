@@ -9,7 +9,7 @@ import { z } from 'zod';
 import { db } from '@/db';
 import { invites, users } from '@/db/schema';
 import { isInviteValid } from '@/domain/invites/token';
-import { auth } from '@/lib/auth/auth';
+import { requireAdmin } from '@/lib/auth/require-admin';
 import { sendInviteEmail } from '@/lib/email/invite';
 
 const INVITE_TTL_MS = 1000 * 60 * 60 * 24 * 7;
@@ -20,10 +20,7 @@ const createInviteSchema = z.object({
 });
 
 export async function createInvite(formData: FormData) {
-  const session = await auth();
-  if (session?.user.role !== 'admin') {
-    throw new Error('Forbidden');
-  }
+  await requireAdmin();
 
   const parsed = createInviteSchema.parse({
     email: formData.get('email'),

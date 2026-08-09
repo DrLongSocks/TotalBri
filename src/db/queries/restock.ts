@@ -8,6 +8,12 @@ export type RestockResult = {
   weightedAvgCost: number;
 };
 
+// Only needs `.execute` — both `db` and a `db.transaction` callback's `tx`
+// satisfy this, so callers that already have an open transaction (e.g. an
+// invoice import restocking several materials as one unit) can pass it in
+// via `tx` below instead of each row opening its own transaction.
+type Executor = Pick<typeof db, 'execute'>;
+
 // Locks the material row for the duration of the transaction so a restock
 // can never race with a concurrent usage scan or another restock reading a
 // stale currentStock/weightedAvgCost pair — same FOR UPDATE principle as
@@ -22,6 +28,7 @@ export async function restockAtomic({
   loggedByUserId,
   note,
   invoiceImportId,
+  tx,
 }: {
   materialId: string;
   quantity: number;
@@ -29,9 +36,10 @@ export async function restockAtomic({
   loggedByUserId: string;
   note?: string;
   invoiceImportId?: string;
+  tx?: Executor;
 }): Promise<RestockResult> {
-  return db.transaction(async (tx) => {
-    const lockResult = await tx.execute<{ current_stock: string; weighted_avg_cost: string }>(
+  const run = async (executor: Executor): Promise<RestockResult> => {
+    const lockResult = await executor.execute<{ current_stock: string; weighted_avg_cost: string }>(
       sql`SELECT current_stock, weighted_avg_cost FROM materials WHERE id = ${materialId} FOR UPDATE`,
     );
     const row = lockResult.rows[0];
@@ -48,18 +56,21 @@ export async function restockAtomic({
     });
     const newStock = currentStock + quantity;
 
-    await tx.execute(sql`
+    await executor.execute(sql`
       INSERT INTO inventory_transactions
         (material_id, type, quantity, total_cost, logged_by_user_id, logged_at, note, invoice_import_id)
       VALUES
         (${materialId}, 'restock', ${quantity}, ${totalCost}, ${loggedByUserId}, now(), ${note ?? null}, ${invoiceImportId ?? null})
     `);
-    await tx.execute(sql`
+    await executor.execute(sql`
       UPDATE materials
       SET current_stock = ${newStock}, weighted_avg_cost = ${newAvgCost}
       WHERE id = ${materialId}
     `);
 
     return { currentStock: newStock, weightedAvgCost: newAvgCost };
-  });
+  };
+
+  if (tx) return run(tx);
+  return db.transaction((innerTx) => run(innerTx));
 }

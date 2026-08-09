@@ -1,3 +1,4 @@
+@~/.claude/stacks/nextjs-drizzle-postgres-stack.md
 
 ## Permissions
 

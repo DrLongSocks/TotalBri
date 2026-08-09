@@ -5,7 +5,7 @@ import { eq } from 'drizzle-orm';
 import { z } from 'zod';
 import { db } from '@/db';
 import { users } from '@/db/schema';
-import { auth } from '@/lib/auth/auth';
+import { requireAdmin } from '@/lib/auth/require-admin';
 
 const removeWorkerSchema = z.object({
   userId: z.string().uuid(),
@@ -14,10 +14,7 @@ const removeWorkerSchema = z.object({
 // Sets `disabledAt` rather than deleting the row — see the comment on
 // `users.disabledAt` in schema.ts for why a hard delete isn't safe here.
 export async function removeWorker(formData: FormData) {
-  const session = await auth();
-  if (session?.user.role !== 'admin') {
-    throw new Error('Forbidden');
-  }
+  const session = await requireAdmin();
 
   const parsed = removeWorkerSchema.parse({ userId: formData.get('userId') });
   if (parsed.userId === session.user.id) {

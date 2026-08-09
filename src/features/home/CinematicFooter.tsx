@@ -242,11 +242,9 @@ export function CinematicFooter({ heading = '¿Todo listo? Completa tu pedido po
             color: '#F6F3EC',
           } as React.CSSProperties}
         >
-          {/* Ambient glow */}
           <div className="footer-aurora absolute left-1/2 top-1/2 h-[60vh] w-[80vw] -translate-x-1/2 -translate-y-1/2 animate-footer-breathe rounded-[50%] blur-[80px] pointer-events-none z-0" />
           <div className="footer-bg-grid absolute inset-0 z-0 pointer-events-none" />
 
-          {/* Giant bg text */}
           <div
             ref={giantTextRef}
             className="footer-giant-bg-text absolute -bottom-[5vh] left-1/2 -translate-x-1/2 whitespace-nowrap z-0 pointer-events-none select-none"
@@ -254,7 +252,6 @@ export function CinematicFooter({ heading = '¿Todo listo? Completa tu pedido po
             TOTAL BRI
           </div>
 
-          {/* Marquee */}
           <div className="absolute top-12 left-0 w-full overflow-hidden border-y border-white/10 bg-black/20 backdrop-blur-md py-4 z-10 -rotate-2 scale-110 shadow-2xl">
             <div className="flex w-max animate-footer-scroll-marquee text-xs md:text-sm font-bold tracking-[0.3em] uppercase" style={{ color: 'rgba(246,243,236,0.55)' }}>
               <MarqueeItem />
@@ -262,7 +259,6 @@ export function CinematicFooter({ heading = '¿Todo listo? Completa tu pedido po
             </div>
           </div>
 
-          {/* Main content */}
           <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 mt-20 w-full max-w-5xl mx-auto">
             <h2
               ref={headingRef}
@@ -272,7 +268,6 @@ export function CinematicFooter({ heading = '¿Todo listo? Completa tu pedido po
             </h2>
 
             <div ref={linksRef} className="flex flex-col items-center gap-6 w-full">
-              {/* Primary CTAs */}
               <div className="flex flex-wrap justify-center gap-4 w-full">
                 <MagneticButton
                   as="a"
@@ -297,7 +292,6 @@ export function CinematicFooter({ heading = '¿Todo listo? Completa tu pedido po
                 </MagneticButton>
               </div>
 
-              {/* Category pills */}
               <div className="flex flex-wrap justify-center gap-3 md:gap-4 w-full mt-2">
                 <MagneticButton as={Link} href="/tienda/detergentes" className="footer-glass-pill px-6 py-3 rounded-full font-medium text-xs md:text-sm" style={{ color: 'rgba(246,243,236,0.55)' }}>
                   Detergentes
@@ -312,7 +306,6 @@ export function CinematicFooter({ heading = '¿Todo listo? Completa tu pedido po
             </div>
           </div>
 
-          {/* Bottom bar */}
           <div className="relative z-20 w-full pb-24 px-6 md:px-12 lg:pb-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-[10px] md:text-xs font-semibold tracking-widest uppercase order-2 md:order-1" style={{ color: 'rgba(246,243,236,0.40)' }}>
               © 2026 Total Bri · Los Reyes

@@ -1,6 +1,16 @@
 import { redirect } from 'next/navigation';
 import { auth } from '@/lib/auth/auth';
 
+// Throw-based gate for Server Actions (as opposed to requireAdminSession's
+// redirect, which is for page-level rendering).
+export async function requireAdmin() {
+  const session = await auth();
+  if (session?.user.role !== 'admin') {
+    throw new Error('Forbidden');
+  }
+  return session;
+}
+
 // Page-level gate for admin-only routes (materials/workers) — the mutating
 // actions re-check role independently, but a worker session must never even
 // render these pages.

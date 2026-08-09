@@ -7,14 +7,7 @@ import { db } from '@/db';
 import { materials } from '@/db/schema';
 import { adjustStockAtomic } from '@/db/queries/adjust-stock';
 import { restockAtomic } from '@/db/queries/restock';
-import { auth } from '@/lib/auth/auth';
-
-async function requireAdmin() {
-  const session = await auth();
-  if (session?.user.role !== 'admin') {
-    throw new Error('Forbidden');
-  }
-}
+import { requireAdmin } from '@/lib/auth/require-admin';
 
 const createMaterialSchema = z.object({
   name: z.string().min(1),
@@ -117,10 +110,7 @@ const createRestockSchema = z.object({
 });
 
 export async function createRestock(materialId: string, formData: FormData) {
-  const session = await auth();
-  if (session?.user.role !== 'admin') {
-    throw new Error('Forbidden');
-  }
+  const session = await requireAdmin();
 
   const parsed = createRestockSchema.parse({
     quantity: formData.get('quantity'),
@@ -147,10 +137,7 @@ const countFieldSchema = z.coerce.number().nonnegative();
 // untouched. Sequential per-material atomic calls, same as restock/usage —
 // this is a low-frequency admin operation, not a concurrency hot path.
 export async function recordInventoryCount(formData: FormData) {
-  const session = await auth();
-  if (session?.user.role !== 'admin') {
-    throw new Error('Forbidden');
-  }
+  const session = await requireAdmin();
 
   const entries = Array.from(formData.entries()).filter(
     (entry): entry is [string, string] => entry[0].startsWith('count_') && entry[1] !== '',

@@ -9,15 +9,11 @@ import { restockAtomic } from '@/db/queries/restock';
 import { extractInvoiceWithClaude, type InvoiceLineItem } from '@/lib/invoice-import/claude-extract';
 import { extractPdfText } from '@/lib/invoice-import/extract-text';
 import { guessQuantityMl } from '@/domain/inventory/unit-conversion';
-import { auth } from '@/lib/auth/auth';
+import { requireAdmin } from '@/lib/auth/require-admin';
 import { serverEnv } from '@/lib/env.server';
 
-async function requireAdmin() {
-  const session = await auth();
-  if (session?.user.role !== 'admin') {
-    throw new Error('Forbidden');
-  }
-}
+const MAX_INVOICE_FILE_BYTES = 10 * 1024 * 1024;
+const PDF_MAGIC_BYTES = Buffer.from('%PDF-');
 
 export type DraftLineItem = InvoiceLineItem & { matchedMaterialId: string | null; quantityMl: number };
 
@@ -48,8 +44,14 @@ export async function extractInvoiceLineItems(_prevState: ExtractState, formData
   if (!(file instanceof File) || file.type !== 'application/pdf') {
     return { error: 'invalid-file' };
   }
+  if (file.size > MAX_INVOICE_FILE_BYTES) {
+    return { error: 'file-too-large' };
+  }
 
   const buffer = Buffer.from(await file.arrayBuffer());
+  if (!buffer.subarray(0, PDF_MAGIC_BYTES.length).equals(PDF_MAGIC_BYTES)) {
+    return { error: 'invalid-file' };
+  }
 
   const blob = await put(file.name, buffer, {
     access: 'private',
@@ -98,10 +100,7 @@ const rowSchema = z.object({
 export type ConfirmState = { error?: string; success?: boolean } | undefined;
 
 export async function confirmInvoiceRestock(_prevState: ConfirmState, formData: FormData): Promise<ConfirmState> {
-  const session = await auth();
-  if (session?.user.role !== 'admin') {
-    throw new Error('Forbidden');
-  }
+  const session = await requireAdmin();
 
   const fileName = formData.get('fileName');
   const fileUrl = formData.get('fileUrl');
@@ -128,29 +127,35 @@ export async function confirmInvoiceRestock(_prevState: ConfirmState, formData: 
     return { error: 'no-rows' };
   }
 
-  const [importRow] = await db
-    .insert(invoiceImports)
-    .values({
-      fileName,
-      fileUrl,
-      supplierName: typeof supplierName === 'string' && supplierName ? supplierName : null,
-      uploadedByUserId: session.user.id,
-    })
-    .returning();
-  if (!importRow) {
-    throw new Error('Failed to record invoice import');
-  }
+  // One transaction for the import record + every restock row: a failure on
+  // any row (e.g. a stale materialId) must roll back the whole import rather
+  // than leaving a partially-applied invoice.
+  await db.transaction(async (tx) => {
+    const [importRow] = await tx
+      .insert(invoiceImports)
+      .values({
+        fileName,
+        fileUrl,
+        supplierName: typeof supplierName === 'string' && supplierName ? supplierName : null,
+        uploadedByUserId: session.user.id,
+      })
+      .returning();
+    if (!importRow) {
+      throw new Error('Failed to record invoice import');
+    }
 
-  for (const row of rows) {
-    await restockAtomic({
-      materialId: row.materialId,
-      quantity: row.quantityMl,
-      totalCost: row.totalCost,
-      loggedByUserId: session.user.id,
-      note: `Invoice import: ${fileName}`,
-      invoiceImportId: importRow.id,
-    });
-  }
+    for (const row of rows) {
+      await restockAtomic({
+        materialId: row.materialId,
+        quantity: row.quantityMl,
+        totalCost: row.totalCost,
+        loggedByUserId: session.user.id,
+        note: `Invoice import: ${fileName}`,
+        invoiceImportId: importRow.id,
+        tx,
+      });
+    }
+  });
 
   revalidatePath('/admin/materials');
   revalidatePath('/admin/materials/import');

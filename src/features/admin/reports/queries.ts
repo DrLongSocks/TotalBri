@@ -1,6 +1,7 @@
 import 'server-only';
 import { sql } from 'drizzle-orm';
 import { db } from '@/db';
+import { getMaterialsSortedByName } from '@/db/queries/materials';
 import type { DashboardFilters } from '@/domain/inventory/dashboard-filters';
 import { daysUntilStockout, type DaysUntilStockout } from '@/domain/inventory/stockout';
 import { getProductById } from '@/domain/product/repository';
@@ -31,7 +32,7 @@ export async function getStockOverview(): Promise<StockRow[]> {
 }
 
 export async function getMaterialOptions(): Promise<{ id: string; name: string }[]> {
-  const rows = await db.query.materials.findMany({ orderBy: (m, { asc }) => asc(m.name) });
+  const rows = await getMaterialsSortedByName();
   return rows.map((m) => ({ id: m.id, name: m.name }));
 }
 
@@ -290,7 +291,7 @@ export type InventoryValueRow = {
 };
 
 export async function getInventoryValue(): Promise<{ rows: InventoryValueRow[]; total: number }> {
-  const materials = await db.query.materials.findMany({ orderBy: (m, { asc }) => asc(m.name) });
+  const materials = await getMaterialsSortedByName();
   const rows = materials.map((m) => {
     const currentStock = Number(m.currentStock);
     const weightedAvgCost = Number(m.weightedAvgCost);

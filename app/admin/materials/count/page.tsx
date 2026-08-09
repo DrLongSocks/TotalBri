@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { db } from '@/db';
+import { getMaterialsSortedByName } from '@/db/queries/materials';
 import { getAdminMessages } from '@/domain/admin-i18n/messages';
 import { AdminPageHeading } from '@/features/admin/layout/AdminPageHeading';
 import { recordInventoryCount } from '@/features/admin/materials/actions';
@@ -11,10 +11,7 @@ import { requireAdminSession } from '@/lib/auth/require-admin';
 export default async function InventoryCountPage() {
   await requireAdminSession();
 
-  const [locale, allMaterials] = await Promise.all([
-    getAdminLocale(),
-    db.query.materials.findMany({ orderBy: (m, { asc }) => asc(m.name) }),
-  ]);
+  const [locale, allMaterials] = await Promise.all([getAdminLocale(), getMaterialsSortedByName()]);
   const messages = getAdminMessages(locale).materials;
 
   return (

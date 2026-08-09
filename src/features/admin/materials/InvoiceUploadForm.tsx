@@ -19,6 +19,8 @@ function extractErrorMessage(error: string, messages: Messages): string {
       return messages.importErrorNotConfigured;
     case 'invalid-file':
       return messages.importErrorInvalidFile;
+    case 'file-too-large':
+      return messages.importErrorFileTooLarge;
     case 'extraction-failed':
       return messages.importErrorExtractionFailed;
     default:

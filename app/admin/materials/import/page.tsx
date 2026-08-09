@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { db } from '@/db';
+import { getMaterialsSortedByName } from '@/db/queries/materials';
 import { getAdminMessages } from '@/domain/admin-i18n/messages';
 import { AdminPageHeading } from '@/features/admin/layout/AdminPageHeading';
 import { InvoiceUploadForm } from '@/features/admin/materials/InvoiceUploadForm';
@@ -11,7 +12,7 @@ export default async function InvoiceImportPage() {
 
   const [locale, allMaterials, pastImports] = await Promise.all([
     getAdminLocale(),
-    db.query.materials.findMany({ orderBy: (m, { asc }) => asc(m.name) }),
+    getMaterialsSortedByName(),
     db.query.invoiceImports.findMany({ orderBy: (i, { desc }) => desc(i.createdAt), limit: 20 }),
   ]);
   const messages = getAdminMessages(locale).materials;
