@@ -9,7 +9,7 @@ const intlMiddleware = createMiddleware({
   localePrefix: 'as-needed',
 });
 
-const PUBLIC_ADMIN_PATHS = ['/admin/login', '/admin/invite/accept'];
+const PUBLIC_ADMIN_PATHS = ['/admin/login', '/admin/invite/accept', '/admin/reset-password'];
 
 export default async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;

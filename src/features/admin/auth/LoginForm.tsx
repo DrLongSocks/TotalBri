@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useActionState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -32,6 +33,9 @@ export function LoginForm({
         </label>
         <Input id="password" name="password" type="password" required autoComplete="current-password" />
       </div>
+      <Link href="/admin/reset-password" className="self-end text-sm text-azure hover:underline">
+        {messages.forgotPassword}
+      </Link>
       {state?.error && <p className="text-sm text-sale">{messages.error}</p>}
       <Button type="submit" disabled={isPending}>
         {messages.submit}
