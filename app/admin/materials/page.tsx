@@ -3,19 +3,66 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { db } from '@/db';
 import { getAdminMessages } from '@/domain/admin-i18n/messages';
+import { materials } from '@/db/schema';
+import {
+  type MaterialSortColumn,
+  type MaterialsSort,
+  nextSortDirection,
+  resolveMaterialsSort,
+} from '@/domain/materials/sort';
 import { AdminPageHeading } from '@/features/admin/layout/AdminPageHeading';
 import { createMaterial } from '@/features/admin/materials/actions';
 import { getAdminLocale } from '@/lib/admin-locale';
 import { requireAdminSession } from '@/lib/auth/require-admin';
 
-export default async function MaterialsPage() {
+const COLUMN_MAP = {
+  name: materials.name,
+  code: materials.code,
+  provider: materials.provider,
+  category: materials.category,
+  currentStock: materials.currentStock,
+  lowStockThreshold: materials.lowStockThreshold,
+} satisfies Record<MaterialSortColumn, unknown>;
+
+function SortableHeader({
+  column,
+  label,
+  current,
+}: {
+  column: MaterialSortColumn;
+  label: string;
+  current: MaterialsSort;
+}) {
+  const isActive = current.sort === column;
+  const nextDir = nextSortDirection(current, column);
+
+  return (
+    <th className="px-4 py-3">
+      <Link
+        href={`/admin/materials?sort=${column}&dir=${nextDir}`}
+        className="flex items-center gap-1 hover:text-ink"
+      >
+        {label}
+        {isActive && <span aria-hidden>{current.dir === 'asc' ? '↑' : '↓'}</span>}
+      </Link>
+    </th>
+  );
+}
+
+export default async function MaterialsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ sort?: string; dir?: string }>;
+}) {
   await requireAdminSession();
 
-  const [locale, allMaterials] = await Promise.all([
-    getAdminLocale(),
-    db.query.materials.findMany({ orderBy: (m, { asc }) => asc(m.name) }),
-  ]);
+  const [locale, rawParams] = await Promise.all([getAdminLocale(), searchParams]);
+  const sort = resolveMaterialsSort(rawParams);
   const messages = getAdminMessages(locale).materials;
+
+  const allMaterials = await db.query.materials.findMany({
+    orderBy: (m, { asc, desc }) => (sort.dir === 'desc' ? desc(COLUMN_MAP[sort.sort]) : asc(COLUMN_MAP[sort.sort])),
+  });
 
   return (
     <div className="flex flex-col gap-8">
@@ -25,13 +72,13 @@ export default async function MaterialsPage() {
         <table className="w-full text-left text-sm">
           <thead>
             <tr className="bg-porcelain/50 text-slate">
-              <th className="px-4 py-3">{messages.name}</th>
-              <th className="px-4 py-3">{messages.code}</th>
-              <th className="px-4 py-3">{messages.provider}</th>
-              <th className="px-4 py-3">{messages.category}</th>
+              <SortableHeader column="name" label={messages.name} current={sort} />
+              <SortableHeader column="code" label={messages.code} current={sort} />
+              <SortableHeader column="provider" label={messages.provider} current={sort} />
+              <SortableHeader column="category" label={messages.category} current={sort} />
               <th className="px-4 py-3">{messages.unit}</th>
-              <th className="px-4 py-3">{messages.currentStock}</th>
-              <th className="px-4 py-3">{messages.lowStockThreshold}</th>
+              <SortableHeader column="currentStock" label={messages.currentStock} current={sort} />
+              <SortableHeader column="lowStockThreshold" label={messages.lowStockThreshold} current={sort} />
               <th className="px-4 py-3">{messages.nfcTagId}</th>
               <th className="px-4 py-3" />
             </tr>
