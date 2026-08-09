@@ -21,12 +21,14 @@ export async function restockAtomic({
   totalCost,
   loggedByUserId,
   note,
+  invoiceImportId,
 }: {
   materialId: string;
   quantity: number;
   totalCost: number;
   loggedByUserId: string;
   note?: string;
+  invoiceImportId?: string;
 }): Promise<RestockResult> {
   return db.transaction(async (tx) => {
     const lockResult = await tx.execute<{ current_stock: string; weighted_avg_cost: string }>(
@@ -48,9 +50,9 @@ export async function restockAtomic({
 
     await tx.execute(sql`
       INSERT INTO inventory_transactions
-        (material_id, type, quantity, total_cost, logged_by_user_id, logged_at, note)
+        (material_id, type, quantity, total_cost, logged_by_user_id, logged_at, note, invoice_import_id)
       VALUES
-        (${materialId}, 'restock', ${quantity}, ${totalCost}, ${loggedByUserId}, now(), ${note ?? null})
+        (${materialId}, 'restock', ${quantity}, ${totalCost}, ${loggedByUserId}, now(), ${note ?? null}, ${invoiceImportId ?? null})
     `);
     await tx.execute(sql`
       UPDATE materials

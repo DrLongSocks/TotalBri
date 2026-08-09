@@ -43,6 +43,13 @@
       "when": 1785514064981,
       "tag": "0005_wooden_zombie",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1785682497291,
+      "tag": "0006_familiar_jack_power",
+      "breakpoints": true
     }
   ]
 }

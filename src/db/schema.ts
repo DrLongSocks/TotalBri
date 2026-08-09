@@ -75,6 +75,9 @@ export const inventoryTransactions = pgTable(
       .references(() => users.id),
     loggedAt: timestamp('logged_at', { withTimezone: true }).notNull().defaultNow(),
     note: text('note'),
+    // Set only when this restock came from the PDF invoice import flow —
+    // traces the ledger row back to the source document.
+    invoiceImportId: uuid('invoice_import_id').references(() => invoiceImports.id),
   },
   (table) => [
     index('inventory_transactions_material_logged_at').on(table.materialId, table.loggedAt),
@@ -89,6 +92,20 @@ export const invites = pgTable('invites', {
   role: userRole('role').notNull().default('worker'),
   expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
   usedAt: timestamp('used_at', { withTimezone: true }),
+  createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const invoiceImports = pgTable('invoice_imports', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  fileName: text('file_name').notNull(),
+  // Vercel Blob URL for the original PDF — kept for later reference.
+  fileUrl: text('file_url').notNull(),
+  // AI-detected from the PDF text, not user-entered — nullable since
+  // detection can fail.
+  supplierName: text('supplier_name'),
+  uploadedByUserId: uuid('uploaded_by_user_id')
+    .notNull()
+    .references(() => users.id),
   createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
 });
 
