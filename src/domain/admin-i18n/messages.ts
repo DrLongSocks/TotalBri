@@ -149,6 +149,11 @@ const adminMessages = {
       burnRateTitle: 'Ritmo de consumo (costo)',
       burnRateExcluded: 'materiales excluidos por no tener costo registrado',
     },
+    notFound: {
+      title: 'Página no encontrada',
+      body: 'Esta página no existe o fue movida.',
+      cta: 'Volver al panel',
+    },
   },
   en: {
     login: {
@@ -297,6 +302,11 @@ const adminMessages = {
       total: 'Total',
       burnRateTitle: 'Burn rate (cost)',
       burnRateExcluded: 'materials excluded for having no recorded cost yet',
+    },
+    notFound: {
+      title: 'Page not found',
+      body: "This page doesn't exist or was moved.",
+      cta: 'Back to dashboard',
     },
   },
 } as const satisfies Record<AdminLocale, unknown>;

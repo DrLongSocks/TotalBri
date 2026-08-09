@@ -73,6 +73,6 @@ export async function logUsage(_prevState: LogUsageState, formData: FormData): P
     }
   }
 
-  revalidatePath(`/log/${parsed.data.nfcTagId}`);
+  revalidatePath(`/admin/log/${parsed.data.nfcTagId}`);
   return { success: true };
 }

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Barlow_Condensed, Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 
 const barlowCondensed = Barlow_Condensed({
@@ -31,7 +33,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className={`${barlowCondensed.variable} ${inter.variable}`} suppressHydrationWarning>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

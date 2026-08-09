@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-typecheck-test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm lint
+
+      - run: pnpm typecheck
+
+      # DB-integration tests skip themselves without a real DATABASE_URL
+      # (see src/db/queries/*.test.ts) — no DB is provisioned in CI.
+      - run: pnpm test
+
+      # `next build` validates env.server.ts's zod schema at page-data-collection
+      # time even though /admin routes are all dynamic and never open a real DB
+      # connection during build — these are placeholder values shaped to pass
+      # that validation, not real secrets.
+      - run: pnpm build
+        env:
+          NEXT_PUBLIC_WHATSAPP_PRIMARY: '525346880969'
+          NEXT_PUBLIC_SITE_URL: https://totalbri.mx
+          DATABASE_URL: postgresql://ci:ci@localhost:5432/ci
+          AUTH_SECRET: ci-placeholder-secret-at-least-32-chars-long
+          AUTH_URL: http://localhost:3000
+          RESEND_API_KEY: ci-placeholder
+          RESEND_FROM_EMAIL: alerts@totalbri.mx
+          LOW_STOCK_ALERT_EMAIL_PRIMARY: alerts@totalbri.mx
+          LOW_STOCK_ALERT_EMAIL_SECONDARY: alerts@totalbri.mx
