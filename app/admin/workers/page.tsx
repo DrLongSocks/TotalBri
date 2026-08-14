@@ -5,7 +5,7 @@ import { db } from '@/db';
 import { getAdminMessages } from '@/domain/admin-i18n/messages';
 import { isInviteValid } from '@/domain/invites/token';
 import { AdminPageHeading } from '@/features/admin/layout/AdminPageHeading';
-import { createInvite } from '@/features/admin/invites/actions';
+import { createInvite, deleteInvite } from '@/features/admin/invites/actions';
 import { removeWorker } from '@/features/admin/workers/actions';
 import { getAdminLocale } from '@/lib/admin-locale';
 import { auth } from '@/lib/auth/auth';
@@ -75,9 +75,17 @@ export default async function WorkersPage() {
               <span>
                 {invite.email} · {invite.role === 'admin' ? messages.roleAdmin : messages.roleWorker}
               </span>
-              <span className="text-xs text-slate">
-                {messages.inviteLink}: /admin/invite/accept?token={invite.token}
-              </span>
+              <div className="flex items-center gap-3">
+                <span className="text-xs text-slate">
+                  {messages.inviteLink}: /admin/invite/accept?token={invite.token}
+                </span>
+                <form action={deleteInvite}>
+                  <input type="hidden" name="inviteId" value={invite.id} />
+                  <button type="submit" className="font-medium text-sale hover:underline">
+                    {messages.remove}
+                  </button>
+                </form>
+              </div>
             </li>
           ))}
         </ul>

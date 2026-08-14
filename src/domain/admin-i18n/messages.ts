@@ -167,6 +167,9 @@ const adminMessages = {
       body: 'Esta página no existe o fue movida.',
       cta: 'Volver al panel',
     },
+    scan: {
+      instructions: 'Toca una etiqueta NFC para registrar el uso de una fragancia.',
+    },
   },
   en: {
     login: {
@@ -333,6 +336,9 @@ const adminMessages = {
       title: 'Page not found',
       body: "This page doesn't exist or was moved.",
       cta: 'Back to dashboard',
+    },
+    scan: {
+      instructions: 'Tap an NFC tag to log fragrance usage.',
     },
   },
 } as const satisfies Record<AdminLocale, unknown>;

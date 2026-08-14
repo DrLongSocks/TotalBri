@@ -6,8 +6,12 @@ const envSchema = z.object({
   DATABASE_URL_UNPOOLED: z.string().url().optional(),
   AUTH_SECRET: z.string().min(32),
   AUTH_URL: z.string().url(),
-  RESEND_API_KEY: z.string().min(1),
-  RESEND_FROM_EMAIL: z.string().email(),
+  // GMAIL_USER doubles as both the SMTP auth username and the "from"
+  // address — Gmail's SMTP requires the from address to match the
+  // authenticated account (or a verified alias), so there's no separate
+  // "from" var the way the previous Resend setup had one.
+  GMAIL_USER: z.string().email(),
+  GMAIL_APP_PASSWORD: z.string().min(1),
   LOW_STOCK_ALERT_EMAIL_PRIMARY: z.string().email(),
   LOW_STOCK_ALERT_EMAIL_SECONDARY: z.string().email(),
   // Optional, unlike the vars above: invoice import is the only feature that
@@ -24,8 +28,8 @@ export const serverEnv = envSchema.parse({
   DATABASE_URL_UNPOOLED: process.env.DATABASE_URL_UNPOOLED,
   AUTH_SECRET: process.env.AUTH_SECRET,
   AUTH_URL: process.env.AUTH_URL,
-  RESEND_API_KEY: process.env.RESEND_API_KEY,
-  RESEND_FROM_EMAIL: process.env.RESEND_FROM_EMAIL,
+  GMAIL_USER: process.env.GMAIL_USER,
+  GMAIL_APP_PASSWORD: process.env.GMAIL_APP_PASSWORD,
   LOW_STOCK_ALERT_EMAIL_PRIMARY: process.env.LOW_STOCK_ALERT_EMAIL_PRIMARY,
   LOW_STOCK_ALERT_EMAIL_SECONDARY: process.env.LOW_STOCK_ALERT_EMAIL_SECONDARY,
   ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,

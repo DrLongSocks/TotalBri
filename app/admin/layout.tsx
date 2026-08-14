@@ -26,7 +26,7 @@ export default async function AdminLayout({ children }: { children: ReactNode })
       <header className="sticky top-0 z-30 w-full">
         <div className="bg-ink text-paper">
           <div className="container-shell flex h-16 items-center gap-3 md:h-20 md:gap-4">
-            {isAuthed && <AdminMobileNav locale={locale} isAdmin={isAdmin} />}
+            {isAuthed && isAdmin && <AdminMobileNav locale={locale} isAdmin={isAdmin} />}
             <span className="font-display text-base font-extrabold uppercase tracking-wide md:text-lg">
               Total Bri Admin
             </span>
@@ -81,7 +81,7 @@ export default async function AdminLayout({ children }: { children: ReactNode })
         </div>
       </header>
 
-      {isAuthed ? (
+      {isAuthed && isAdmin ? (
         <main className="container-shell flex flex-1 flex-col gap-7 pb-20 pt-6 md:pb-24 md:pt-8 lg:grid lg:grid-cols-[240px_1fr]">
           <div className="hidden lg:block">
             <div className="sticky top-24">

@@ -15,7 +15,8 @@ customer accounts). The admin panel is a separate, authenticated surface with it
   config, no `tailwind.config.js`), next-intl for i18n.
 - **Admin panel**: the same Next.js app, `/admin/**`, backed by Drizzle ORM + Postgres (Neon
   serverless in production, local Postgres for dev), NextAuth v5 (beta) for auth, bcryptjs for
-  password hashing, Resend for transactional email (invites, password reset, low-stock alerts),
+  password hashing, Gmail SMTP (via nodemailer) for transactional email (invites, password reset,
+  low-stock alerts),
   Vercel Blob for invoice PDF storage, `@anthropic-ai/sdk` for AI-assisted invoice line-item
   extraction.
 - **Testing**: Vitest. **Monitoring**: Vercel Analytics + Speed Insights (zero-config, wired into
@@ -67,8 +68,8 @@ DATABASE_URL=...            # Neon pooled connection string
 DATABASE_URL_UNPOOLED=...   # Neon direct connection — used for migrations
 AUTH_SECRET=...             # 32+ chars
 AUTH_URL=https://totalbri.mx
-RESEND_API_KEY=...
-RESEND_FROM_EMAIL=alerts@totalbri.mx
+GMAIL_USER=...              # Gmail SMTP auth user, also the "from" address
+GMAIL_APP_PASSWORD=...      # Google Account > Security > App Passwords, not the real password
 LOW_STOCK_ALERT_EMAIL_PRIMARY=...
 LOW_STOCK_ALERT_EMAIL_SECONDARY=...
 
@@ -171,7 +172,8 @@ runtime-switchable, `src/domain/admin-i18n/messages.ts`).
 - **Invoice import** — upload a supplier PDF/quote, Claude extracts line items, admin reviews and
   confirms, restock is applied atomically (import row + every line item in one transaction).
   Gracefully disabled if `ANTHROPIC_API_KEY`/`BLOB_READ_WRITE_TOKEN` aren't set.
-- **Workers** — invite via email (Resend), soft-delete (`disabledAt`, never a hard delete).
+- **Workers** — invite via email (Gmail SMTP), soft-delete (`disabledAt`, never a hard delete),
+  pending invites can also be deleted outright.
 - **NFC usage logging** — tap a shelf tag to log consumption; triggers a low-stock email alert on
   threshold crossing.
 - **Dashboard** — ~13 report cards/charts (stock overview, usage trends, days-until-stockout, cost
@@ -184,7 +186,7 @@ runtime-switchable, `src/domain/admin-i18n/messages.ts`).
 - 4 remaining product photos (see "Where to drop real assets").
 - Favicon.
 - Newsletter backend — the form validates, shows a success toast, but doesn't POST anywhere yet.
-  Needs a provider decision (Resend audience API, Mailchimp, etc.) before wiring up.
+  Needs a provider decision (Mailchimp, a Gmail-based list, etc.) before wiring up.
 - Payment integration — intentionally not built. WhatsApp is the checkout.
 - Reviews / ratings — not in scope.
 - Production deployment — the app has not yet been deployed to a live environment. To ship:

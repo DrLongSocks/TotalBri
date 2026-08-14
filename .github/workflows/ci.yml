@@ -42,7 +42,7 @@ jobs:
           DATABASE_URL: postgresql://ci:ci@localhost:5432/ci
           AUTH_SECRET: ci-placeholder-secret-at-least-32-chars-long
           AUTH_URL: http://localhost:3000
-          RESEND_API_KEY: ci-placeholder
-          RESEND_FROM_EMAIL: alerts@totalbri.mx
+          GMAIL_USER: ci-placeholder@example.com
+          GMAIL_APP_PASSWORD: ci-placeholder
           LOW_STOCK_ALERT_EMAIL_PRIMARY: alerts@totalbri.mx
           LOW_STOCK_ALERT_EMAIL_SECONDARY: alerts@totalbri.mx

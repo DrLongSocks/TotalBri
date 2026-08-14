@@ -67,7 +67,7 @@ export async function logUsage(_prevState: LogUsageState, formData: FormData): P
         threshold,
       });
     } catch (error) {
-      // A Resend outage must not block the worker's tap-to-log flow — the
+      // An email-send failure must not block the worker's tap-to-log flow — the
       // usage transaction already committed above.
       console.error('Failed to send low-stock alert', error);
     }

@@ -11,13 +11,14 @@ export async function requireAdmin() {
   return session;
 }
 
-// Page-level gate for admin-only routes (materials/workers) — the mutating
-// actions re-check role independently, but a worker session must never even
-// render these pages.
+// Page-level gate for admin-only routes (dashboard/materials/workers) — the
+// mutating actions re-check role independently, but a worker session must
+// never even render these pages. Redirects to /admin/scan, not /admin/dashboard
+// — the dashboard is itself admin-only, so redirecting there would loop.
 export async function requireAdminSession() {
   const session = await auth();
   if (session?.user.role !== 'admin') {
-    redirect('/admin/dashboard');
+    redirect('/admin/scan');
   }
   return session;
 }

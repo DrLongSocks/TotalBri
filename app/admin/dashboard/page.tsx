@@ -38,7 +38,7 @@ import {
 import { StockTable } from '@/features/admin/reports/StockTable';
 import { UsageTrendChart } from '@/features/admin/reports/UsageTrendChart';
 import { getAdminLocale } from '@/lib/admin-locale';
-import { requireSession } from '@/lib/auth/require-admin';
+import { requireAdminSession } from '@/lib/auth/require-admin';
 
 function toSingle(value: string | string[] | undefined): string | undefined {
   return Array.isArray(value) ? value[0] : value;
@@ -49,7 +49,7 @@ export default async function AdminDashboardPage({
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  await requireSession();
+  await requireAdminSession();
 
   const [locale, rawParams] = await Promise.all([getAdminLocale(), searchParams]);
   const messages = getAdminMessages(locale);

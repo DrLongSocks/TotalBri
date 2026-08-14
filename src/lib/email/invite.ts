@@ -1,8 +1,6 @@
 import 'server-only';
-import { Resend } from 'resend';
 import { serverEnv } from '@/lib/env.server';
-
-const resend = new Resend(serverEnv.RESEND_API_KEY);
+import { sendEmail } from './mailer';
 
 const roleLabels = { admin: 'administrador', worker: 'trabajador' } as const;
 
@@ -18,9 +16,8 @@ export async function sendInviteEmail({
   const acceptUrl = new URL('/admin/invite/accept', serverEnv.AUTH_URL);
   acceptUrl.searchParams.set('token', token);
 
-  await resend.emails.send({
-    from: serverEnv.RESEND_FROM_EMAIL,
-    to: [email],
+  await sendEmail({
+    to: email,
     subject: 'Invitación al panel de Total Bri',
     text: `Fuiste invitado al panel de Total Bri como ${roleLabels[role]}.\n\nCrea tu cuenta aquí: ${acceptUrl.toString()}\n\nEste enlace expira en 7 días.`,
   });

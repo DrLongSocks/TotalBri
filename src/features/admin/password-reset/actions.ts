@@ -45,8 +45,8 @@ export async function requestPasswordReset(
     try {
       await sendPasswordResetEmail({ email: user.email, token });
     } catch (error) {
-      // A Resend outage must not reveal whether the account exists via a
-      // different error path than the generic success state.
+      // An email-send failure must not reveal whether the account exists via
+      // a different error path than the generic success state.
       console.error('Failed to send password reset email', error);
     }
   }

@@ -40,9 +40,26 @@ export async function createInvite(formData: FormData) {
     await sendInviteEmail({ email: parsed.email, role: parsed.role, token });
   } catch (error) {
     // The invite row is already committed and still visible/copyable on the
-    // workers page — a Resend outage shouldn't block invite creation.
+    // workers page — an email-send failure shouldn't block invite creation.
     console.error('Failed to send invite email', error);
   }
+
+  revalidatePath('/admin/workers');
+}
+
+const deleteInviteSchema = z.object({
+  inviteId: z.string().uuid(),
+});
+
+// Hard delete, unlike removeWorker's soft-delete — nothing else in the
+// schema references invites.id, so there's no ledger-style reason to keep
+// a deleted invite's row around.
+export async function deleteInvite(formData: FormData) {
+  await requireAdmin();
+
+  const parsed = deleteInviteSchema.parse({ inviteId: formData.get('inviteId') });
+
+  await db.delete(invites).where(eq(invites.id, parsed.inviteId));
 
   revalidatePath('/admin/workers');
 }
