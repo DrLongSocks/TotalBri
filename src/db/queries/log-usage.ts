@@ -31,7 +31,7 @@ export async function logUsageAtomic({
   materialId: string;
   quantityDelta: number;
   productId: string;
-  productQuantity: number;
+  productQuantity?: number;
   loggedByUserId: string;
   note?: string;
 }): Promise<LogUsageResult> {
@@ -43,7 +43,7 @@ export async function logUsageAtomic({
       INSERT INTO inventory_transactions
         (material_id, type, quantity, product_id, product_quantity, logged_by_user_id, logged_at, note)
       VALUES
-        (${materialId}, 'usage', ${quantityDelta}, ${productId}, ${productQuantity}, ${loggedByUserId}, now(), ${note ?? null})
+        (${materialId}, 'usage', ${quantityDelta}, ${productId}, ${productQuantity ?? null}, ${loggedByUserId}, now(), ${note ?? null})
     ),
     upd AS (
       UPDATE materials

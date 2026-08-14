@@ -17,7 +17,7 @@ const logUsageSchema = z.object({
   productId: z.string().min(1).refine((id) => getProductById(id) !== undefined, {
     message: 'Unknown product',
   }),
-  productQuantity: z.coerce.number().positive(),
+  productQuantity: z.coerce.number().positive().optional(),
 });
 
 export type LogUsageState = { error?: string; success?: boolean } | undefined;
@@ -36,7 +36,7 @@ export async function logUsage(_prevState: LogUsageState, formData: FormData): P
     nfcTagId: formData.get('nfcTagId'),
     amountMl: formData.get('amountMl'),
     productId: formData.get('productId'),
-    productQuantity: formData.get('productQuantity'),
+    productQuantity: formData.get('productQuantity') || undefined,
   });
   if (!parsed.success) {
     return { error: 'invalid' };

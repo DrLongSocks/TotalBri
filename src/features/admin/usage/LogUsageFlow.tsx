@@ -66,7 +66,6 @@ function LogUsageForm({
   onDone: () => void;
 }) {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [productQuantity, setProductQuantity] = useState('');
   const [amount, setAmount] = useState('');
   const [unit, setUnit] = useState<WorkerEnteredUnit>('ml');
   const [state, formAction, isPending] = useActionState(logUsage, undefined);
@@ -77,7 +76,7 @@ function LogUsageForm({
   }, [state]);
 
   const amountMl = amount ? convertToMl(Number(amount), unit) : 0;
-  const canSubmit = Boolean(selectedProduct) && Number(productQuantity) > 0 && amountMl > 0;
+  const canSubmit = Boolean(selectedProduct) && amountMl > 0;
   const unitLabel = { ml: messages.unitMl, l: messages.unitL, kg: messages.unitKg }[unit];
 
   const now = new Date();
@@ -102,7 +101,6 @@ function LogUsageForm({
       <form action={formAction} className="flex flex-col gap-4">
         <input type="hidden" name="nfcTagId" value={nfcTagId} />
         <input type="hidden" name="productId" value={selectedProduct?.id ?? ''} />
-        <input type="hidden" name="productQuantity" value={productQuantity} />
         <input type="hidden" name="amountMl" value={amountMl || ''} />
 
         <div className="flex flex-col gap-1">
@@ -114,21 +112,6 @@ function LogUsageForm({
             recentLabel={messages.recentProducts}
             value={selectedProduct}
             onSelect={setSelectedProduct}
-          />
-        </div>
-
-        <div className="flex flex-col gap-1">
-          <label className="text-sm text-slate">
-            {messages.productQuantity}
-            {selectedProduct ? ` (${selectedProduct.unit})` : ''}
-          </label>
-          <Input
-            type="number"
-            step="0.01"
-            inputMode="decimal"
-            value={productQuantity}
-            onChange={(event) => setProductQuantity(event.target.value)}
-            disabled={!selectedProduct}
           />
         </div>
 
@@ -176,7 +159,7 @@ function LogUsageForm({
             </Dialog.Title>
             <p className="text-sm text-ink">
               {materialName}: {amount}
-              {unitLabel} → {selectedProduct?.name.es}: {productQuantity} {selectedProduct?.unit}
+              {unitLabel} → {selectedProduct?.name.es}
             </p>
             <Button type="button" className="mt-6 w-full" onClick={onDone}>
               {messages.done}
