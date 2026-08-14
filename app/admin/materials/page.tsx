@@ -75,6 +75,9 @@ export default async function MaterialsPage({
           <Link href="/admin/materials/count" className="text-sm text-azure hover:underline">
             {messages.physicalCount}
           </Link>
+          <Link href="/admin/materials/nfc-setup" className="text-sm text-azure hover:underline">
+            {getAdminMessages(locale).nfcSetup.title}
+          </Link>
         </div>
       </div>
 

@@ -12,3 +12,16 @@ export function guessQuantityMl(quantity: number, unit: string): number {
   }
   return quantity;
 }
+
+export type WorkerEnteredUnit = 'ml' | 'l' | 'kg';
+
+// For the NFC tap-to-log flow: the worker picks a unit from a fixed dropdown
+// (not free text) since materials are tracked in ml but a worker might
+// measure in liters or kilos. Same 1kg≈1000ml approximation as
+// guessQuantityMl above.
+export function convertToMl(quantity: number, unit: WorkerEnteredUnit): number {
+  if (unit === 'l' || unit === 'kg') {
+    return quantity * 1000;
+  }
+  return quantity;
+}

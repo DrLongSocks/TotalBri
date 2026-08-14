@@ -11,7 +11,7 @@ export default async function LogUsagePage({
 }: {
   params: Promise<{ nfcTagId: string }>;
 }) {
-  await requireSession();
+  const session = await requireSession();
 
   const { nfcTagId } = await params;
   const [locale, material] = await Promise.all([
@@ -22,7 +22,7 @@ export default async function LogUsagePage({
 
   if (!material) {
     return (
-      <div className="mx-auto max-w-sm">
+      <div className="mx-auto max-w-sm rounded-2xl border border-ink/10 bg-card p-6 shadow-[var(--shadow-card)]">
         <p className="text-sm text-sale">{messages.unknownTag}</p>
       </div>
     );
@@ -34,15 +34,15 @@ export default async function LogUsagePage({
     .filter((product) => product !== undefined);
 
   return (
-    <div className="mx-auto max-w-sm">
-      <h1 className="mb-2 font-display text-2xl">{material.name}</h1>
+    <div className="mx-auto max-w-sm rounded-2xl border border-ink/10 bg-card p-6 shadow-[var(--shadow-card)]">
+      <h1 className="mb-1 font-display text-2xl">{material.name}</h1>
       <p className="mb-6 text-sm text-slate">
         {messages.currentStock}: {material.currentStock} {material.unit}
       </p>
       <LogUsageFlow
         nfcTagId={nfcTagId}
         materialName={material.name}
-        materialUnit={material.unit}
+        workerName={session.user.name}
         products={getAllProducts()}
         recentProducts={recentProducts}
         messages={messages}

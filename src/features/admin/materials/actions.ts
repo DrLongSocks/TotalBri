@@ -160,3 +160,37 @@ export async function recordInventoryCount(formData: FormData) {
   revalidatePath('/admin/materials/count');
   revalidatePath('/admin/dashboard');
 }
+
+// One coherent "finish setting up NFC" action, unlike recordInventoryCount's
+// independent per-material corrections — a failure partway through must not
+// leave some tags saved and others not, so this wraps every row in one
+// transaction and rejects in-submission duplicates up front rather than
+// letting the DB's unique constraint surface a confusing error mid-loop.
+export async function bulkSetNfcTags(formData: FormData) {
+  await requireAdmin();
+
+  const entries = Array.from(formData.entries()).filter(
+    (entry): entry is [string, string] => entry[0].startsWith('nfcTagId_') && entry[1] !== '',
+  );
+
+  const rows = entries
+    .map(([key, value]) => ({ materialId: key.slice('nfcTagId_'.length), nfcTagId: value.trim() }))
+    .filter((row) => row.nfcTagId !== '');
+
+  const seen = new Set<string>();
+  for (const row of rows) {
+    if (seen.has(row.nfcTagId)) {
+      throw new Error(`Duplicate NFC tag in this submission: "${row.nfcTagId}"`);
+    }
+    seen.add(row.nfcTagId);
+  }
+
+  await db.transaction(async (tx) => {
+    for (const row of rows) {
+      await tx.update(materials).set({ nfcTagId: row.nfcTagId }).where(eq(materials.id, row.materialId));
+    }
+  });
+
+  revalidatePath('/admin/materials');
+  revalidatePath('/admin/materials/nfc-setup');
+}
