@@ -8,7 +8,7 @@ export async function getRecentProductIdsForMaterial(materialId: string, limit =
   const result = await db.execute<{ product_id: string }>(sql`
     SELECT product_id
     FROM inventory_transactions
-    WHERE material_id = ${materialId} AND type = 'usage' AND product_id IS NOT NULL
+    WHERE material_id = ${materialId} AND type = 'usage' AND voided_at IS NULL AND product_id IS NOT NULL
     GROUP BY product_id
     ORDER BY MAX(logged_at) DESC
     LIMIT ${limit}

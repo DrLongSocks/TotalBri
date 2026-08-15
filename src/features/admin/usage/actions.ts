@@ -1,12 +1,15 @@
 'use server';
 
 import { revalidatePath } from 'next/cache';
+import { and, eq, isNull } from 'drizzle-orm';
 import { z } from 'zod';
 import { db } from '@/db';
+import { inventoryTransactions } from '@/db/schema';
 import { logUsageAtomic } from '@/db/queries/log-usage';
 import { didCrossLowStockThreshold } from '@/domain/inventory/stock';
 import { getProductById } from '@/domain/product/repository';
 import { auth } from '@/lib/auth/auth';
+import { requireAdmin } from '@/lib/auth/require-admin';
 import { sendLowStockAlert } from '@/lib/email/low-stock-alert';
 
 const logUsageSchema = z.object({
@@ -75,4 +78,39 @@ export async function logUsage(_prevState: LogUsageState, formData: FormData): P
 
   revalidatePath(`/admin/log/${parsed.data.nfcTagId}`);
   return { success: true };
+}
+
+const voidUsageSchema = z.object({
+  transactionId: z.string().uuid(),
+});
+
+// Excludes a mistaken usage entry from every usage-based dashboard aggregate
+// without editing or deleting the row (see schema.ts's comment on
+// voidedAt) — deliberately never touches materials.currentStock, since a
+// void corrects historical reporting for a mistake whose stock impact was
+// already fixed separately (typically via a physical count adjustment).
+export async function voidUsageEntry(formData: FormData) {
+  const session = await requireAdmin();
+
+  const parsed = voidUsageSchema.parse({ transactionId: formData.get('transactionId') });
+
+  const [updated] = await db
+    .update(inventoryTransactions)
+    .set({ voidedAt: new Date(), voidedByUserId: session.user.id })
+    .where(
+      and(
+        eq(inventoryTransactions.id, parsed.transactionId),
+        eq(inventoryTransactions.type, 'usage'),
+        isNull(inventoryTransactions.voidedAt),
+      ),
+    )
+    .returning();
+
+  if (!updated) {
+    throw new Error('Entry not found, not a usage entry, or already voided');
+  }
+
+  revalidatePath('/admin/materials');
+  revalidatePath(`/admin/materials/${updated.materialId}`);
+  revalidatePath('/admin/dashboard');
 }

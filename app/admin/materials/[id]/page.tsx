@@ -2,9 +2,12 @@ import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { db } from '@/db';
+import { getRecentUsageForMaterial } from '@/db/queries/inventory-transactions';
 import { getAdminMessages } from '@/domain/admin-i18n/messages';
+import { getProductById } from '@/domain/product/repository';
 import { AdminPageHeading } from '@/features/admin/layout/AdminPageHeading';
 import { createRestock, relinkNfcTag, updateMaterial } from '@/features/admin/materials/actions';
+import { voidUsageEntry } from '@/features/admin/usage/actions';
 import { getAdminLocale } from '@/lib/admin-locale';
 import { requireAdminSession } from '@/lib/auth/require-admin';
 
@@ -24,6 +27,7 @@ export default async function MaterialDetailPage({
     notFound();
   }
   const messages = getAdminMessages(locale).materials;
+  const recentUsage = await getRecentUsageForMaterial(material.id);
 
   return (
     <div className="flex max-w-xl flex-col gap-8">
@@ -99,6 +103,40 @@ export default async function MaterialDetailPage({
             {messages.restock}
           </Button>
         </form>
+      </div>
+
+      <div className="rounded-2xl border border-ink/10 bg-card p-6 shadow-[var(--shadow-card)]">
+        <h2 className="eyebrow mb-3 text-slate">{messages.recentUsageTitle}</h2>
+        {recentUsage.length === 0 ? (
+          <p className="text-sm text-slate">{messages.noRecentUsage}</p>
+        ) : (
+          <ul className="flex flex-col gap-2">
+            {recentUsage.map((entry) => {
+              const product = entry.productId ? getProductById(entry.productId) : undefined;
+              return (
+                <li
+                  key={entry.id}
+                  className={`flex items-center justify-between gap-3 text-sm ${entry.voidedAt ? 'text-slate line-through' : 'text-ink'}`}
+                >
+                  <span>
+                    {new Date(entry.loggedAt).toLocaleString()} · {-Number(entry.quantity)}ml
+                    {product ? ` → ${product.name.es}` : ''} · {entry.loggedByUser.name}
+                  </span>
+                  {entry.voidedAt ? (
+                    <span className="shrink-0 text-xs text-slate">{messages.voided}</span>
+                  ) : (
+                    <form action={voidUsageEntry}>
+                      <input type="hidden" name="transactionId" value={entry.id} />
+                      <button type="submit" className="shrink-0 text-xs font-medium text-sale hover:underline">
+                        {messages.void}
+                      </button>
+                    </form>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        )}
       </div>
     </div>
   );

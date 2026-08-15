@@ -50,7 +50,7 @@ export async function getUsageTrend(days = 30): Promise<UsageTrendPoint[]> {
       INTERVAL '1 day'
     ) AS gs(day)
     LEFT JOIN inventory_transactions it
-      ON it.type = 'usage' AND date_trunc('day', it.logged_at) = gs.day
+      ON it.type = 'usage' AND it.voided_at IS NULL AND date_trunc('day', it.logged_at) = gs.day
     GROUP BY gs.day
     ORDER BY gs.day;
   `);
@@ -84,10 +84,10 @@ export async function getDaysUntilStockout(materialId?: string): Promise<Stockou
     SELECT
       m.id, m.name, m.unit, m.current_stock,
       COALESCE(SUM(-it.quantity) FILTER (
-        WHERE it.type = 'usage' AND it.logged_at >= now() - interval '14 days'
+        WHERE it.type = 'usage' AND it.voided_at IS NULL AND it.logged_at >= now() - interval '14 days'
       ), 0) / 14.0 AS avg_daily_usage,
       COUNT(DISTINCT date_trunc('day', it.logged_at)) FILTER (
-        WHERE it.type = 'usage' AND it.logged_at >= now() - interval '14 days'
+        WHERE it.type = 'usage' AND it.voided_at IS NULL AND it.logged_at >= now() - interval '14 days'
       ) AS usage_days
     FROM materials m
     LEFT JOIN inventory_transactions it ON it.material_id = m.id
@@ -114,7 +114,7 @@ export async function getTotalVolumeUsed(filters: DashboardFilters): Promise<num
   const result = await db.execute<{ total: string }>(sql`
     SELECT COALESCE(SUM(-quantity), 0) AS total
     FROM inventory_transactions
-    WHERE type = 'usage' AND logged_at >= ${filters.from} AND logged_at <= ${filters.to}
+    WHERE type = 'usage' AND voided_at IS NULL AND logged_at >= ${filters.from} AND logged_at <= ${filters.to}
     ${materialFilterFragment(filters.materialId)}
   `);
   return Number(result.rows[0]?.total ?? 0);
@@ -125,7 +125,7 @@ export async function getDistinctFragrancesToday(): Promise<number> {
   const result = await db.execute<{ count: string }>(sql`
     SELECT COUNT(DISTINCT material_id) AS count
     FROM inventory_transactions
-    WHERE type = 'usage'
+    WHERE type = 'usage' AND voided_at IS NULL
       AND logged_at >= date_trunc('day', now())
       AND logged_at < date_trunc('day', now()) + interval '1 day'
   `);
@@ -147,7 +147,7 @@ export async function getProductsMade(filters: DashboardFilters): Promise<Produc
   const result = await db.execute<{ product_id: string; total: string }>(sql`
     SELECT product_id, COALESCE(SUM(product_quantity), 0) AS total
     FROM inventory_transactions
-    WHERE type = 'usage' AND product_id IS NOT NULL
+    WHERE type = 'usage' AND voided_at IS NULL AND product_id IS NOT NULL
       AND logged_at >= ${filters.from} AND logged_at <= ${filters.to}
       ${materialFilterFragment(filters.materialId)}
     GROUP BY product_id
@@ -179,7 +179,8 @@ export async function getUsageByMaterial(filters: DashboardFilters, limit = 8): 
     SELECT m.name, COALESCE(SUM(-it.quantity), 0) AS total
     FROM inventory_transactions it
     JOIN materials m ON m.id = it.material_id
-    WHERE it.type = 'usage' AND it.logged_at >= ${filters.from} AND it.logged_at <= ${filters.to}
+    WHERE it.type = 'usage' AND it.voided_at IS NULL
+      AND it.logged_at >= ${filters.from} AND it.logged_at <= ${filters.to}
     ${materialFilterFragment(filters.materialId)}
     GROUP BY m.name
     ORDER BY total DESC
@@ -200,7 +201,7 @@ export async function getFragrancePerUnitPoints(productId: string, limit = 30): 
   const result = await db.execute<{ logged_at: string; quantity: string; product_quantity: string }>(sql`
     SELECT logged_at, quantity, product_quantity
     FROM inventory_transactions
-    WHERE type = 'usage' AND product_id = ${productId} AND product_quantity IS NOT NULL
+    WHERE type = 'usage' AND voided_at IS NULL AND product_id = ${productId} AND product_quantity IS NOT NULL
     ORDER BY logged_at DESC
     LIMIT ${limit}
   `);
@@ -221,7 +222,7 @@ export async function getWorkerVolume(filters: DashboardFilters): Promise<Worker
       COALESCE(SUM(-it.quantity) FILTER (WHERE it.type = 'usage'), 0) AS total_ml
     FROM inventory_transactions it
     JOIN users u ON u.id = it.logged_by_user_id
-    WHERE it.logged_at >= ${filters.from} AND it.logged_at <= ${filters.to}
+    WHERE it.voided_at IS NULL AND it.logged_at >= ${filters.from} AND it.logged_at <= ${filters.to}
     GROUP BY u.id, u.name
     ORDER BY log_count DESC
   `);
@@ -321,7 +322,7 @@ export async function getBurnRate(filters: DashboardFilters): Promise<{
   const result = await db.execute<{ material_id: string; used: string }>(sql`
     SELECT material_id, COALESCE(SUM(-quantity), 0) AS used
     FROM inventory_transactions
-    WHERE type = 'usage' AND logged_at >= ${filters.from} AND logged_at <= ${filters.to}
+    WHERE type = 'usage' AND voided_at IS NULL AND logged_at >= ${filters.from} AND logged_at <= ${filters.to}
     GROUP BY material_id
   `);
 

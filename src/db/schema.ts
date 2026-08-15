@@ -78,6 +78,14 @@ export const inventoryTransactions = pgTable(
     // Set only when this restock came from the PDF invoice import flow —
     // traces the ledger row back to the source document.
     invoiceImportId: uuid('invoice_import_id').references(() => invoiceImports.id),
+    // Voiding excludes a mistaken 'usage' row from every usage-based
+    // dashboard aggregate (see the queries filtering type = 'usage') without
+    // editing or deleting it, and deliberately never touches
+    // materials.currentStock — a void corrects historical reporting for a
+    // mistake whose stock impact was already fixed separately (typically via
+    // a physical count adjustment). Nullable: most rows are never voided.
+    voidedAt: timestamp('voided_at', { withTimezone: true }),
+    voidedByUserId: uuid('voided_by_user_id').references(() => users.id),
   },
   (table) => [
     index('inventory_transactions_material_logged_at').on(table.materialId, table.loggedAt),
